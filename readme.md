@@ -1,4 +1,8 @@
-# Technical Interview Prep
+WORK IN PROGRESS
+
+# Interview Prep
+
+Technical interview lessons, personal branding tips, and everything you need to land a job.
 
 ## Unit 1: Personal Brand
 * Social Profiles
@@ -16,6 +20,7 @@
 * Graph Theory
 * Linked Lists
 * Doubly Linked List
+* Trees
 * Design Patterns
 
 ## Unit 3: JavaScript
