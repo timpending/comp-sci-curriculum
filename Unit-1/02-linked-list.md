@@ -34,24 +34,11 @@ Implement the following methods on your own linked list:
 * Delete
 * Reverse
 
-### Doubly Linked List Exercise
-Implement the same methods using a doubly linked list.  Which methods are easier to write using a doubly linked list?
-
-* Push(append)
-* Unshift(prepend)
-* To_String
-* Length
-* Find
-* Insert_After
-* Delete
-* Reverse
-
 ## Bonus Challenges
 
 * Write a method to find the *kth* to last node in a linked list
 * Write a sort method that will sort a given linked list(assume all the values are numbers)
 * Write a method that will merge to linked lists . Assume the lists are already sorted.
-* Implement a circular linked list with all the methods we wrote today
 
 ```
 class Node
@@ -177,3 +164,4 @@ end
 
 ## Exercises:
 * https://github.com/gSchool/linked_lists
+* https://github.com/gSchool/ruby-oop-warmup-linked-list
