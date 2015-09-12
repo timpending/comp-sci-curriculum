@@ -55,16 +55,19 @@ Sure, there is a decent ammount of math relating to these data structures, algor
 
 Once you feel like you have a good understanding of how these data structures and algorithms work, the next step is to try to implement them on your own. Like most coding problems, start by __thinking__ about a solution. Draw some diagrams, write some pseudocode, but by no means jump into Sublime.
 
+# Exercise
 
+https://github.com/gSchool/searching-algorithms
 
 
 ## Resources:
-* Overview of selected data structures, operations, and their complexity: [http://bigocheatsheet.com/](http://bigocheatsheet.com/)
-* The classic Algorithms textbook by Cormen, Leierson, Rivest, and Stein: [http://mitpress.mit.edu/books/introduction-algorithms](http://mitpress.mit.edu/books/introduction-algorithms)
-* Good introduction to complexity analysis by Dionysis Zindros [http://discrete.gr/complexity/](http://discrete.gr/complexity/)
-* MIT notes on Big O: [http://web.mit.edu/16.070/www/lecture/big_o.pdf](http://web.mit.edu/16.070/www/lecture/big_o.pdf)
-* Harvard CS50 Shorts [https://www.youtube.com/playlist?list=PLhQjrBD2T380dhmG9KMjsOQogweyjEeVQ](https://www.youtube.com/playlist?list=PLhQjrBD2T380dhmG9KMjsOQogweyjEeVQ)
 
+[Depth First Search](https://www.youtube.com/watch?v=bkROCj-BTWE)
 
-https://github.com/gSchool/searching-algorithms
-https://github.com/gSchool/fullstack-curriculum/blob/65b3e0072cfe426ea7cda401d0cbdbd783c41090/weekly-g6/week-24/day-2.md
+[Recursion](https://www.youtube.com/watch?v=2MKjci3sRf0)
+
+[Trees](https://www.youtube.com/watch?v=aHKGZrv6G6g)
+
+### Other links
+
+[Visualization](https://www.cs.usfca.edu/~galles/visualization/DFS.html)
