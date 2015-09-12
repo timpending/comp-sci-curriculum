@@ -1,5 +1,3 @@
-WORK IN PROGRESS
-
 # Computer Science Curriculum
 
 # Unit 1: Data Structures
