@@ -57,3 +57,10 @@ B-tree is a tree data structure that keeps data sorted and allows searches, sequ
 ####  AVL Tree
 
 AVL (or height-balanced) binary search tree is any node-based binary search tree that automatically keeps its height (maximal number of levels below the root) small in the face of arbitrary item insertions and deletions
+
+
+
+
+https://github.com/gSchool/binary-tree
+
+http://visualgo.net/bst.html
