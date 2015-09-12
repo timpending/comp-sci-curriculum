@@ -1,3 +1,5 @@
+# Graphs
+
 Also a non-linear data structure, a hierarchical structure!
 
 A graph is a collection of objects we call nodes or vertices connect to each other through a set of edges. In a tree there are rules dictating edges, in a graph we have none! In a tree, all nodes must be accessible from the root. So in short, a tree is just a type of graph.
