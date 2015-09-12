@@ -1,5 +1,13 @@
 # Linked Lists
 
+A linked list is a data structure consisting of a group of nodes which together represent a sequence. Under the simplest form, each node is composed of a data and a reference (in other words, a link) to the next node in the sequence
+
+## Singly Linked List
+
+In a singly linked list each node in the list stores the contents of the node and a pointer or reference to the next node in the list.
+
+![http://www.lisha.ufsc.br/teaching/sce/ine6511-2003-2/work/gp/lists_files/image001.gif](http://www.lisha.ufsc.br/teaching/sce/ine6511-2003-2/work/gp/lists_files/image001.gif)
+
 ### Ruby Arrays vs. C Arrays!
 In C, arrays are not dynamic.  You must decide exactly how long an array will be when you create it. Elements must all be of the same type
 
