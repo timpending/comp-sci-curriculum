@@ -6,14 +6,11 @@ WORK IN PROGRESS
 * Intro to Data Structures
 * Linked Lists
 * Doubly Linked List
+* Queues and Stacks
 * Trees
 
 # Unit 2: Algorithms
 * Intro to Algorithms
 * Sorting
 * Searching
-* Graph Theory
 * Big O
-
-# Unit 3: Design Patterns
-* Design Patterns
