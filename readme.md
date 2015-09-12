@@ -11,7 +11,8 @@
 * Intro to Algorithms
 * Sorting
 * Searching
-* Big O
+* Recursion
+* Big O Notation
 
 # Unit 3
 * Intro to Memory Management
