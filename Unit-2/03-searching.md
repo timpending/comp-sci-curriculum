@@ -1,12 +1,12 @@
-## Some common searching algorithms
+# Searching Algorithms
 
-#### Linear Search
+## Linear Search
 
 Linear search or sequential search is a method for finding a particular value in a list, that consists of checking every one of its elements, one at a time and in sequence, until the desired one is found. Linear search is the simplest search algorithm; it is a special case of brute-force search.
 
 Linear search runs on average at O(n)
 
-#### Binary Search
+## Binary Search
 
 The key here is that we have a array of n element
 
@@ -18,7 +18,7 @@ Binary search runs on average at O(log n) -> THIS IS FAST!
 
 Graph traversal is the problem of visiting all the nodes in a graph in a particular manner, updating and/or checking their values along the way. Tree traversal is a special case of graph traversal. Graph traversal is very challenging! The two algorithms we used for traversal are DFS (Depth First Search) and BFS (Breadth First Search)
 
-#### Depth First Search for a Tree (DFS)
+### Depth First Search for a Tree (DFS)
 
 One of the most common ways of searching through a graph is using DFS or Depth First Search.
 
@@ -30,7 +30,7 @@ Here is an example of DFS in a tree:
 
 Sure...but what happens when we are just traversing a graph? This becomes much more difficult! If you're interested in learning how this is done, check out [this](https://www.youtube.com/watch?v=iaBEKo5sM7w) video (make sure you are familiar with the __stack__ data structure).
 
-#### Breadth First Search for a Tree (BFS)
+### Breadth First Search for a Tree (BFS)
 
 Breadth-first search (BFS) is a strategy for searching in a graph when search is limited to essentially two operations: (a) visit and inspect a node of a graph; (b) gain access to visit the nodes that neighbor the currently visited node. The BFS begins at a root node and inspects all the neighboring nodes. Then for each of those neighbor nodes in turn, it inspects their neighbor nodes which were unvisited, and so on.
 
@@ -40,7 +40,7 @@ Here is an example of BFS in a tree:
 
 That's cool...but what happens when we are just traversing a graph? This is a serious challenge! If you're interested in learning how this is done, check out [this](https://www.youtube.com/watch?v=QRq6p9s8NVg)   video (make sure you are familiar with the __queue__ data structure).
 
-### So which one is better? BFS or DFS?
+#### So which one is better? BFS or DFS?
 
 From a stackoverflow post [here](http://stackoverflow.com/questions/3332947/when-is-it-practical-to-use-dfs-vs-bfs):
 
@@ -49,7 +49,7 @@ That heavily depends on the structure of the search tree and the number and loca
 
 ### Ok... So I've made it this far, but I'm not good at math so how can I ever learn this stuff?
 
-Sure, there is a decent ammount of math relating to these data structures, algorithms and their runtimes, but a knowledge of calculus or linear algebra is not necessary to answer questions about these algorithms or even understand them conceptually. The most important thing you can take away from this readme is an understanding of __what__ these algorithms and data structures look like and how they work. Without a fundamental knowledge of these algorithms and data structures you have no chance of implementing them let alone understanding them. __MOST IMPORTANTLY - Don't ever let something as silly as thinking "I'm not good at math" stop you from learning about this fascinating area of computer science! Anyone can learn this stuff!__
+Sure, there is a decent amount of math relating to these data structures, algorithms and their runtimes, but a knowledge of calculus or linear algebra is not necessary to answer questions about these algorithms or even understand them conceptually. The most important thing you can take away from this readme is an understanding of __what__ these algorithms and data structures look like and how they work. Without a fundamental knowledge of these algorithms and data structures you have no chance of implementing them let alone understanding them. __MOST IMPORTANTLY - Don't ever let something as silly as thinking "I'm not good at math" stop you from learning about this fascinating area of computer science! Anyone can learn this stuff!__
 
 ### So I made it here...what's next?
 
@@ -58,7 +58,6 @@ Once you feel like you have a good understanding of how these data structures an
 # Exercise
 
 https://github.com/gSchool/searching-algorithms
-
 
 ## Resources:
 
