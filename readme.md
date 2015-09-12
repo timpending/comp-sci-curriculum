@@ -14,3 +14,16 @@ WORK IN PROGRESS
 * Sorting
 * Searching
 * Big O
+
+# Unit 3
+* Intro to Memory Management
+* Garbage
+* Pointers
+* Stack & Heap
+* Bits & Bytes
+* Threads
+
+# Unit 4
+* Binary
+* ASCII
+* UTF8
