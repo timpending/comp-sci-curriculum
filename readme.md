@@ -1,39 +1,19 @@
 WORK IN PROGRESS
 
-# Interview Prep
+# Computer Science Curriculum
 
-Technical interview lessons, personal branding tips, and everything you need to land a job.
-
-## Unit 1: Personal Brand
-* Social Profiles
-* Personal Website
-* Blogging
-* Resume
-* Cover Letter
-* Networking
-
-## Unit 2: Data Structures and Algorithms
-* Intro to Algorithms
+# Unit 1: Data Structures
 * Intro to Data Structures
-* Sorting
-* Searching
-* Graph Theory
 * Linked Lists
 * Doubly Linked List
 * Trees
-* Design Patterns
 
-## Unit 3: JavaScript
-* This
-* Prototype
-* Classical Inheritance & OOP
-* Recursion
-* Closures
-* Scope
-* Async and Callback Hell
-* NaN
-* Type Coercion
-* Strict Equality
-* Hoisting
-* Null vs Undefined
-* ES6
+# Unit 2: Algorithms
+* Intro to Algorithms
+* Sorting
+* Searching
+* Graph Theory
+* Big O
+
+# Unit 3: Design Patterns
+* Design Patterns
