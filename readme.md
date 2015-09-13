@@ -1,5 +1,7 @@
 # Computer Science Curriculum
 
+Computer Science is important because it's better to understand something based on [first, basic principles](https://www.youtube.com/watch?v=L-s_3b5fRd8&t=22m38s).
+
 # Unit 1: Data Structures
 * Intro to Data Structures
 * Linked Lists

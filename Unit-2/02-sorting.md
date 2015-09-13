@@ -41,6 +41,21 @@ And here is an example of the process
 
 Watch [Alex explain quick sort](https://www.youtube.com/watch?v=XE4VP_8Y0BU&feature=iv&src_vid=M5c_RFKVkko&annotation_id=annotation_155416) on Computerphile.
 
-# Exercies:
+## Picking an Sorting Algorithm
+
+With all of the sorting algorithms to choose from – and we've only named a few – which one is **best**? Well, it depends. This largely depends on the type of data we're sorting, how large the input is, and how much performance and speed matter to us.
+
+You don't have a way to measure these sorting algorithms until the Big-O Notation lesson in this unit. Until then, consider watching [15 Sorting Algorithms in 6 Minutes](https://www.youtube.com/watch?v=kPRA0W1kECg) to see how some of them compare visually.
+
+### Bonus question
+
+Most programming languages have a sorting mechanism built in. What sorting algorithm does your language of choice use?
+
+# Exercises:
+
+Once you're comfortable with the general idea of sorting algorithms, the best way to solidify your understanding is to write one out in code. Pick from one of these (or do both!) to practice writing sorting algorithms.
+
 - Implement bubble sort (https://github.com/gschool/bubble_sort)
 - Implement merge sort (https://github.com/gSchool/js_merge_sort)
+
+## Bonus
