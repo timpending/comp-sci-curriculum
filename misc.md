@@ -9,3 +9,13 @@ https://github.com/gSchool/g11-course-curriculum/blob/9640beffdeb5b44b5f44e79294
 Recursion:
 
 https://github.com/gSchool/recursion-ruby
+
+
+
+
+Videos:
+
+Speech recognition
+https://www.youtube.com/watch?v=yxxRAHVtafI
+
+https://www.youtube.com/watch?v=keo0dglCj7I

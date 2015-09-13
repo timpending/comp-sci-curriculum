@@ -20,7 +20,8 @@ Here is what an ASCII table looks like
 
 If you look at the table you can see the that capital letters always have a 0 in the 2^5 spot where lowercase letters always have 1 there. This was intentional and a smart way to distinguish easily between uppercase and lowercase letters
 
+Take 10 minutes (or watch it at double speed and take 5 minutes) to watch the [Tom Scott video on Unicode](https://www.youtube.com/watch?v=MijmeoH9LT4).
 
 ### Ok...nice history lesson, but why do I care about this?
 
-Believe it or not, we use this quite a bit, this is what our .charCodeAt function does in JavaScript! Try typing `"A".charCodeAt(0);` in chrome console and see what you get? Then look up the value in an ASCII table and you will see it corresponds to `01000001`. You can use `charCode` to do manipulation with letters and strings which is very useful!
+Believe it or not, we use this quite a bit: this is what our .charCodeAt function does in JavaScript! Try typing `"A".charCodeAt(0);` in chrome console and see what you get? Then look up the value in an ASCII table and you will see it corresponds to `01000001`. You can use `charCode` to do manipulation with letters and strings which is very useful!

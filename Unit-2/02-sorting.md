@@ -37,6 +37,10 @@ And here is an example of the process
 
 ![http://www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/Sorting/Gifs/mergeSort.gif](http://www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/Sorting/Gifs/mergeSort.gif)
 
+## Quick Sort
+
+Watch [Alex explain quick sort](https://www.youtube.com/watch?v=XE4VP_8Y0BU&feature=iv&src_vid=M5c_RFKVkko&annotation_id=annotation_155416) on Computerphile.
+
 # Exercies:
 - Implement bubble sort (https://github.com/gschool/bubble_sort)
 - Implement merge sort (https://github.com/gSchool/js_merge_sort)
