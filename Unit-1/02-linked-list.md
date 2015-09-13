@@ -171,5 +171,6 @@ end
 ```
 
 ## Exercises:
+* https://github.com/gSchool/linked_list_practice
 * https://github.com/gSchool/linked_lists
 * https://github.com/gSchool/ruby-oop-warmup-linked-list
