@@ -174,3 +174,7 @@ end
 * https://github.com/gSchool/linked_list_practice
 * https://github.com/gSchool/linked_lists
 * https://github.com/gSchool/ruby-oop-warmup-linked-list
+
+## Resources:
+
+* Read [Linked Lists in JavaScript](http://www.nczonline.net/blog/2009/04/13/computer-science-in-javascript-linked-list/)

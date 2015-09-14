@@ -1,3 +1,5 @@
+http://www.nczonline.net/blog/tag/computer-science/
+https://www.khanacademy.org/computing/computer-science/algorithms
 
 Sort:
 https://github.com/gSchool/js_merge_sort

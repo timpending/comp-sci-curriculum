@@ -1,5 +1,9 @@
 # Binary
 
+Let's learn to count like computers.
+
+Computers only use the numbers zero and one. Everything that you see or hear on the computer, every interaction, click, scroll and computation is stored using just those two numbers!
+
 <table>
 <tr>
   <td>Position</td>
