@@ -17,7 +17,23 @@ https://github.com/gSchool/recursion-ruby
 
 Videos:
 
+Data types:
+https://www.youtube.com/playlist?list=PLA7BE376E483F4EE4
+Search and srot:
+https://www.youtube.com/playlist?list=PLB506CF2AF32D8617
+
 Speech recognition
 https://www.youtube.com/watch?v=yxxRAHVtafI
 
 https://www.youtube.com/watch?v=keo0dglCj7I
+
+
+Linked list:
+https://www.youtube.com/watch?v=JA_DhelMeJs
+http://www.dzautner.com/on-linked-lists-mapping-folding-and-recursion/
+
+Relational databases:
+https://www.youtube.com/playlist?list=PL6D2AA443FA10BBBC
+
+OO:
+https://www.youtube.com/watch?v=lbXsrHGhBAU
