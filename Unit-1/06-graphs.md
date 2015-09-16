@@ -61,6 +61,11 @@ Some more examples of weighted vs unweighted and directed vs undirected graphs:
 - World Wide Web - Unweighted, Directed graph
 - Intracity - Weighted, Directed graph
 
-https://github.com/gSchool/graphs
+### Graph Exercises
 
+#### Graphs in object oriented JavaScript
 https://github.com/gSchool/graph-js/tree/master
+
+
+#### Graphs in python
+https://github.com/gSchool/graphs
