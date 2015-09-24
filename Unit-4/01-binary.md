@@ -4,6 +4,16 @@ Let's learn to count like computers.
 
 Computers only use the numbers zero and one. Everything that you see or hear on the computer, every interaction, click, scroll and computation is stored using just those two numbers!
 
+Numeric values can be represented in binary.  The binary value `10`, is 2 in base 10 (base 10 is how we think about numbers normally).  `10` represents 2 because the left most value is 1 * 2^1 and the 0 is equivalent to 0 * 2^0. In other words: `10 (binary) = 1 * 2^1 + 0 * 2^0 = 2 (base 10).
+
+Now you should get the following joke:
+
+> There are 10 types of people in the world, those who understand binary and those who don't.
+
+Another example would be `101` = 1 * 2^2 + 0 * 2^1 + 1 * 2^0 = 5 (base 10).
+
+The chart below shows the binary value `01000111`:
+
 <table>
 <tr>
   <td>Position</td>
@@ -129,7 +139,7 @@ What is `10010101 + 11110010?`
 </tr>
 </table>
 
-We now take this sum and multiple the total binary amounts by their respective base 2 amount
+We now take this sum and multiply the total binary amounts by their respective base 2 amount
 
 <table>
 <tr>
