@@ -9,29 +9,30 @@ Computer Science is important because it's better to understand something based 
 Finally, I think it's appropriate to take 10 minutes to explore the history of computer science and programming in general with the [Art of Writing Software](https://www.youtube.com/watch?v=QdVFvsCWXrA).
 
 # Unit 1: Data Structures
-* Intro to Data Structures
-* Linked Lists
-* Doubly Linked List
-* Queues and Stacks
-* Trees
+* [Intro to Data Structures](Unit-1/01-intro-to-data-structures.md)
+* [Linked Lists](Unit-1/02-linked-list.md)
+* [Doubly Linked List](Unit-1/03-doubly-linked-list.md)
+* [Queues and Stacks](Unit-1/04-stacks-and-queues.md)
+* [Trees](Unit-1/05-trees.md)
+* [Graphs](Unit-1/06-graphs.md)
 
 # Unit 2: Algorithms
-* Intro to Algorithms
-* Big O Notation
-* Sorting
-* Searching
-* Recursion
+* [Intro to Algorithms](Unit-2/01-intro-to-algorithms.md)
+* [Big O Notation](Unit-2/02-big-o-notation.md)
+* [Sorting](Unit-2/03-sorting.md)
+* [Searching](Unit-2/04-searching.md)
+* [Recursion](Unit-2/05-recursion.md)
 
 
 # Unit 3
-* Intro to Memory Management
-* Garbage
-* Pointers
-* Stack & Heap
-* Bits & Bytes
-* Threads
+* [Intro to Memory Management](Unit-3/01-intro-to-memory.md)
+* [Garbage](Unit-3/02-garbage.md)
+* [Pointers](Unit-3/03-pointers.md)
+* [Stack & Heap](Unit-3/04-stack-and-heap.md)
+* [Bits & Bytes](05-bits-and-bytes.md)
+* [Threads](Unit-3/06-threads.md)
 
 # Unit 4
-* Binary
-* ASCII
-* UTF8
+* [Binary](Unit-4/01-binary.md)
+* [ASCII](Unit-4/02-ascii.md)
+* [UTF8](03-utf.md)
