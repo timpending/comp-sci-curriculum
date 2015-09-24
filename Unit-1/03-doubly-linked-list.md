@@ -16,4 +16,9 @@ Implement the same methods using a doubly linked list.  Which methods are easier
 * Insert_After
 * Delete
 * Reverse
-https://github.com/gSchool/DoublyLinkedListRuby
+
+## Resources
+
+A partial implementation of a doubly linked list in ruby:
+
+* [Doubly Linked List - Ruby](https://github.com/gSchool/DoublyLinkedListRuby)
