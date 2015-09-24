@@ -24,11 +24,16 @@ There are lots of different types of graphs, but here are a few examples.
 
 - Undirected Graph
 
-![http://penguin.ewu.edu/class/cscd320/Topic/Graph/SuppProb/Sahni_17-20a.gif](http://penguin.ewu.edu/class/cscd320/Topic/Graph/SuppProb/Sahni_17-20a.gif)
+![](http://www.xatlantis.ch/examples/graphics/graph1_example.png)
+
 
 - Directed Graph
 
 ![directed graph](http://upload.wikimedia.org/wikipedia/commons/a/a0/CPT-Graphs-directed-weighted-ex2.svg)
+
+- Directed Acyclic Graph (DAG)
+
+![](https://upload.wikimedia.org/wikipedia/commons/4/4b/Directed_acyclic_graph.svg)
 
 If you're interested in learning more about graphs, check out [this](https://www.youtube.com/watch?v=gXgEDyodOJU&list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P&index=38) video
 
