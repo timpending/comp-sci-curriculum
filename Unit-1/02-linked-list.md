@@ -171,9 +171,10 @@ end
 ```
 
 ## Exercises:
-* https://github.com/gSchool/linked_list_practice
-* https://github.com/gSchool/linked_lists
-* https://github.com/gSchool/ruby-oop-warmup-linked-list
+* [Linked List Practice](https://github.com/gSchool/linked_list_practice)
+* [https://github.com/gSchool/linked_lists](https://github.com/gSchool/linked_lists)
+* [https://github.com/gSchool/ruby-oop-warmup-linked-list](https://github.com/gSchool/ruby-oop-warmup-linked-list)
+* [Singly Linked List in Ruby](https://github.com/gSchool/SinglyLinkedListRuby)
 
 ## Resources:
 
