@@ -17,10 +17,11 @@ Finally, I think it's appropriate to take 10 minutes to explore the history of c
 
 # Unit 2: Algorithms
 * Intro to Algorithms
+* Big O Notation
 * Sorting
 * Searching
 * Recursion
-* Big O Notation
+
 
 # Unit 3
 * Intro to Memory Management
