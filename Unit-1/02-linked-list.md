@@ -9,9 +9,11 @@ In a singly linked list each node in the list stores the contents of the node an
 ![http://www.lisha.ufsc.br/teaching/sce/ine6511-2003-2/work/gp/lists_files/image001.gif](http://www.lisha.ufsc.br/teaching/sce/ine6511-2003-2/work/gp/lists_files/image001.gif)
 
 ### Ruby Arrays vs. C Arrays!
-In C, arrays are not dynamic.  You must decide exactly how long an array will be when you create it. Elements must all be of the same type
+In C and C++, arrays are not dynamic.  You must decide exactly how long an array will be when you create it. Elements must all be of the same type
 
 `int examplearray[99];`
+
+Arrays in C and C++ have one advantage though: looking up any element is quick.  When you create an array of elements, the memory you are request is contiguous.  In other words, `examplearray[0]` and `examplearry[1]` are stored right next to each other in memory.  In fact all items in the array are stored next to each other in a line.  Looking up a single item is very fast if you know the index.  The computer just finds the start of the array in memory and then jumps directly from that address to the index you're looking for.  This property makes arrays great for random access but not so great for other tasks.
 
 If you wanted to insert an element into the beginning or middle of the array, you would have to manually move elements over one by one.
 How is that different than Ruby arrays?  Since Ruby is written in C, how do you think Ruby arrays are actually implemented?
