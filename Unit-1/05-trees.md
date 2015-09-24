@@ -38,7 +38,11 @@ Everywhere! Including:
 
 ### Binary Tree
 
-A tree in which each node can have at most 2 children is called a binary tree. This tree gives us a nice structure for very fast search (binary search).
+A tree in which each node can have at most 2 children is called a binary tree.
+
+### Binary Search Tree
+
+A special type of binary tree which maintains a sorted ordering of nodes. A binary search tree maintains the property that for any node, the child to its left is a smaller value and the child to its right is a larger value than itself.  The binary search tree sorted ordering gives us a nice structure for very fast search.  Specifically, if we are looking for a value X and there are N nodes, we only have to look at log(N) numbers of nodes on average.
 
 ### Trie
 
@@ -50,17 +54,16 @@ Tries are exceptionally powerful and used in dictionary lookups, such as one fou
 
 ### Other types of trees
 
-#### B Tree
-
-B-tree is a tree data structure that keeps data sorted and allows searches, sequential access, insertions, and deletions in logarithmic time. The B-tree is a generalization of a binary search tree in that a node can have more than two children (Comer 1979, p. 123). Unlike self-balancing binary search trees, the B-tree is optimized for systems that read and write large blocks of data. It is commonly used in databases and filesystems.
-
 ####  AVL Tree
 
 AVL (or height-balanced) binary search tree is any node-based binary search tree that automatically keeps its height (maximal number of levels below the root) small in the face of arbitrary item insertions and deletions
 
+#### B Tree
 
+B-tree is a tree data structure that keeps data sorted and allows searches, sequential access, insertions, and deletions in logarithmic time. Unlike a binary tree, a node in the B-tree can have much more than two children (Comer 1979, p. 123). Unlike self-balancing binary search trees, the B-tree is optimized for systems that read and write large blocks of data. It is commonly used in databases and filesystems to make lookup of data faster.
 
+## Resources
 
-https://github.com/gSchool/binary-tree
+[https://github.com/gSchool/BinarySearchTreeRuby](https://github.com/gSchool/BinarySearchTreeRuby)
 
-http://visualgo.net/bst.html
+[http://visualgo.net/bst.html](http://visualgo.net/bst.html)
