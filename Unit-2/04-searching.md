@@ -57,7 +57,10 @@ Once you feel like you have a good understanding of how these data structures an
 
 # Exercise
 
-https://github.com/gSchool/searching-algorithms
+* https://github.com/gSchool/searching-algorithms
+
+* In javascript (no jQuery or other libraries) implement `getElementById`. You can only use the `document.documentElement` property and the `.children` method to iterate over the dom. Implement the method twice: once with depth first search and once with breadth first search. Do not use  selectors or other DOM methods!  Try out your code in the browser.  Paste your function into the console and search for an element on the page.
+	* [Solution (Don't peak until you've attempted the code)](https://github.com/gSchool/getElementById_dfs_and_bfs)
 
 ## Resources:
 
