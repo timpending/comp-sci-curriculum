@@ -45,7 +45,7 @@ Or a real life example of a queue
 
 And remember, the regular Array structure in Javascript is a Stack (first in, last out) and can also be used as a Queue (first in, first out) depending on the calls you make.
 
+## Exercises
 
-
-https://github.com/gSchool/data-structures-ruby
-https://github.com/gSchool/data-structures-js
+* [Data Structures in Ruby](https://github.com/gSchool/data-structures-ruby)
+* [Data Structures in JS](https://github.com/gSchool/data-structures-js)
