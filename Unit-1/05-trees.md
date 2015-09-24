@@ -48,7 +48,7 @@ A special type of binary tree which maintains a sorted ordering of nodes. A bina
 
 Trees can also have nodes with text in them. In computer science, a trie, also called digital tree and sometimes radix tree or prefix tree (as they can be searched by prefixes), is an ordered tree data structure that is used to store strings. Unlike a binary search tree, no node in the tree stores the key associated with that node; instead, its position in the tree defines the key with which it is associated. All the descendants of a node have a common prefix of the string associated with that node, and the root is associated with the empty string
 
-![Trie](https://www.cs.duke.edu/courses/fall12/cps100/Recitations/images/trie.jpg)
+![Trie](http://www.cs.duke.edu/courses/fall12/cps100/Recitations/images/trie.jpg)
 
 Tries are exceptionally powerful and used in dictionary lookups, such as one found on a mobile telephone or for autocompletion and spell-checking.
 
