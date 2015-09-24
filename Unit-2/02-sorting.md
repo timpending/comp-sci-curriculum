@@ -39,7 +39,7 @@ And here is an example of the process
 
 Watch [Alex explain quick sort](https://www.youtube.com/watch?v=XE4VP_8Y0BU&feature=iv&src_vid=M5c_RFKVkko&annotation_id=annotation_155416) on Computerphile.
 
-## Picking an Sorting Algorithm
+## Picking a Sorting Algorithm
 
 With all of the sorting algorithms to choose from – and we've only named a few – which one is **best**? Well, it depends. This largely depends on the type of data we're sorting, how large the input is, and how much performance and speed matter to us.
 
