@@ -8,6 +8,10 @@ Computer Science is important because it's better to understand something based 
 
 Finally, I think it's appropriate to take 10 minutes to explore the history of computer science and programming in general with the [Art of Writing Software](https://www.youtube.com/watch?v=QdVFvsCWXrA).
 
+# Unit 0: Memory Diagrams
+
+* [Memory Diagrams](Unit-0/01-memory-diagrams.md)
+
 # Unit 1: Data Structures
 * [Intro to Data Structures](Unit-1/01-intro-to-data-structures.md)
 * [Linked Lists](Unit-1/02-linked-list.md)
