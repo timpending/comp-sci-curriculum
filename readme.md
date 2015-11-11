@@ -33,10 +33,10 @@ Finally, I think it's appropriate to take 10 minutes to explore the history of c
 * [Garbage](Unit-3/02-garbage.md)
 * [Pointers](Unit-3/03-pointers.md)
 * [Stack & Heap](Unit-3/04-stack-and-heap.md)
-* [Bits & Bytes](05-bits-and-bytes.md)
+* [Bits & Bytes](Unit-3/05-bits-and-bytes.md)
 * [Threads](Unit-3/06-threads.md)
 
 # Unit 4
 * [Binary](Unit-4/01-binary.md)
 * [ASCII](Unit-4/02-ascii.md)
-* [UTF8](03-utf.md)
+* [UTF8](Unit-4/03-utf.md)
