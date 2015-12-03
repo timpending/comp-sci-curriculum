@@ -16,97 +16,106 @@ Watch [this video on asymptotic complexity from CS50](https://www.youtube.com/wa
 
 The best way to get started with big-O notation is to start with some examples:
 
-```ruby
-# O(n)
+```javascript
+// O(n)
 
-def square(arr)
-  arr.map { |x| x * x }
-end
+function square(arr) {
+  return arr.map(function(el) {
+    return el * el;
+  });
+}
 ```
-The above example is O(n) run time, which means given a input of size n (the length of the array is equal to n), the runtime of the application will be linear in relationship to the input size.  In other words, if every x * x operation takes some unit of time, we can expect N of those operations to take place.
+
+The above example is O(n) run time, which means given a input of size n (the length of the array is equal to n), the runtime of the application will be linear in relationship to the input size.  In other words, if every x * x operation takes some unit of time, we can expect n of those operations to take place.
 
 Below is another example of an O(n) algorithm:
 
-```ruby
-# O(n)
+```javascript
+// O(n)
 
-def squareAndDouble(arr)
-  tempArr = arr.map{ |x| x * x }
-  tempArr = tempArr.map{ |x| x * 2 }
-end
+function squareAndDouble(arr) {
+  var tempArr = arr.map(function(el) {
+    return el * el;
+  });
+  return tempArr.map(function(el) {
+    return 2 * el;
+  });
+}
 ```
 
 In the above example the runtime is **O(n + n)** or **O(2 * n)**. The runtime is O(2 * n) because the first `arr.map` iterates over all n elements in the array, and the second `tempArr.map` also iterates over all n elements in the array.  However, the runtime is actually O(n), because in big-O notation, constants are ignored.
 
 **RULE: Big-O notation ignores constants.**
 
-```ruby
+```javascript
 // O(1)
 
-def print_nums
-  50.times {|i| puts i}
-end
+function print50nums() {
+  for (var i = 0; i < 50; i++) {
+    console.log(i);
+  }
+}
 ```
 
 The runtime of the above example is not bound by a variable sized input.  Instead it is bound by the constant 50.  The runtime of the program is O(50), but since constants do not matter in big-O notation, we simplify it to O(1).
 
-```ruby
+```javascript
 // O(1)
 
-def print_nums
-  500000.times {|i| puts i}
-end
+function print500000nums() {
+  for (var i = 0; i < 500000; i++) {
+    console.log(i);
+  }
+}
 ```
 The example above is still O(1) because 500,000 is still a constant number of iterations.
 
 **EXERCISE**
 
-What is the runtime of the following two example:
+What is the runtime of the following two examples:
 
 
-```ruby
-def do_stuff(a, b)
-  x = 50
-  y = 30
-  sum = x + y
-  square = sum * sum
-  z = -250
-  square += z
-  a * a  + b * b * b + square
-end
+```javascript
+function doStuff(a,b) {
+  var x = 50;
+  var y = 30;
+  var sum = x + y;
+  var square = sum * sum;
+  var z = -250;
+  square += z;
+  return a * a + b * b * b + square;
+}
 ```
 
+```javascript
+function sumValuesAndRemoveOdds(arr) {
+  var i = 0;
+  while (i < arr.length) {
+    var sum = 0;
+    var j = i;
+    while (j < arr.length) {
+      sum += arr[j];
+      j += 1;
+    }
+    arr[i] = sum;
+    i += 1;
+  }
 
-```ruby
+  var newArr = [];
 
-def sumValuesAndRemoveOdds(arr)
-  i = 0
-  while (i < arr.length)
-    sum = 0
-    j = i
-    while (j < arr.length)
-      sum += arr[j]
-      j += 1
-    end
-    arr[i] = sum
-    i += 1
-  end
+  i = 0;
 
-  newArr = []
+  while (i < arr.length) {
+    if (arr[i] % 2 === 0) {
+      newArr.push(arr[i]);
+    }
+    i += 1;
+  }
 
-  i = 0
-
-  while (i < arr.length)
-    if arr[i] % 2 != 1
-      newArr.push arr[i]
-    end
-    i += 1
-  end
-
-  newArr
-end
+  return newArr;
+}
 ```
-![](http://i.stack.imgur.com/WcBRI.png)
+![](http://images.contentful.com/7h71s48744nc/3naPsJv6IE0KewGmqUOMUu/a00a2a2cbe0c580cfce1b502c1ebdc9f/a-beautiful-mind.jpg)
 
 In the above exercises, the first program is O(1) because all all operations in the program do not depend on input size.
 
@@ -116,13 +125,13 @@ The second exercise above is O(n*n + n).  The first n*n (n^2) comes from the whi
 
 **EXERCISE**:
 
-Reduce the following big-O expressions:
+Reduce the following big-O expressions. If they can't be reduced, explain why.
 
 1. O(5555593939) + O(n^2) + O(n * n * n)
 2. O(93939283940) + O(8274920484) + O(12)
-3. O(3N + 2N + 5N + 9N)
-4. O(N^3 * N)
-5. O(n * m)
+3. O(n * n)
+4. O(3n + 2n + 5n + 9n)
+5. O(n^3 + n) + O(2^n)
 6. O(n * log(n) + log(n))
 7. O(n^n)
 
