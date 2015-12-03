@@ -23,9 +23,10 @@ Finally, I think it's appropriate to take 10 minutes to explore the history of c
 # Unit 2: Algorithms
 * [Intro to Algorithms](Unit-2/01-intro-to-algorithms.md)
 * [Big O Notation](Unit-2/02-big-o-notation.md)
-* [Sorting](Unit-2/03-sorting.md)
-* [Searching](Unit-2/04-searching.md)
-* [Recursion](Unit-2/05-recursion.md)
+* [Lists Revisited](Unit-2/03-lists-revisited.md)
+* [Sorting](Unit-2/04-sorting.md)
+* [Searching](Unit-2/05-searching.md)
+* [Recursion](Unit-2/06-recursion.md)
 
 
 # Unit 3
