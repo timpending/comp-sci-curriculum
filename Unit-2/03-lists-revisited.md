@@ -43,55 +43,57 @@ Look at the implementation of a [singly linked list](https://github.com/gSchool/
 
 A doubly linked list is a list where each node has two pointers.  A next pointer and a previous pointer.  Keeping track of next and previous has some advantages.  For example, the `pop` is method is now much easier.  Since we have access to the element before, the operations is O(1).  Instead of O(n) with a singly linked list.
 
-Here is the push method for a doubly linked list
+Here is an implementation of the push method for a doubly linked list (assuming a constructor function for Nodes):
 
-```ruby
-  def push(value)
-    if @head == nil
-      @head = Node.new(value)
-      @tail = @head
-    else
-      old_tail = @tail
-      @tail = Node.new(value)
-      old_tail.next = @tail
-      @tail.previous = old_tail
-    end
-    @length += 1
-    nil
-  end
+```javascript
+
+  DoublyLinkedList.prototype.push = function(value) {
+
+    var newNode = new Node(value);
+
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = this.head;
+    } else {
+      var oldTail = this.tail
+      this.tail = newNode;
+      oldTail.next = this.tail;
+      this.tail.previous = oldTail;
+    }
+
+    this.length++;
+
+  }
 ```
 
-And here is the pop method:
+And here is an implementation of the pop method:
 
-```ruby
-  def pop
-    return nil if @length == 0
+```javascript
 
-    # special case where the length of the list is 1
-    # so the head and tail need to be set to nil
-    if @length == 1
-      return_value = @tail.value
-      nil_node(@tail)
-      @tail = nil
-      @head = nil
-      @length = 0
-      return return_value
-    end
+  DoublyLinkedList.prototype.pop = function() {
 
-    old_tail = @tail
-    @tail = old_tail.previous
-    @tail.next = nil
+    if (this.length === 0) return null;
 
-    return_value = old_tail.value
+    // special case where the length of the list is 1
+    // so the head and tail need to be set to null
 
-    @length -= 1
+    if (this.length === 1) {
+      var returnValue = this.tail.value;
+      this.length = 0;
+      this.head = this.tail = null;
+      return returnValue;
+    }
 
-    # Making sure the old_tail has no references to nodes or
-    # values.
-    nil_node(old_tail)
+    var oldTail = this.tail;
+    this.tail = oldTail.previous;
+    this.tail.next = null;
+    oldTail.previous = null;
+    var returnValue = oldTail.value;
 
-    return_value
-  end
+    this.length--;
+
+    return returnValue;
+  }
 ```
 
 Notice that both `push` and `pop` are now constant time operations.
