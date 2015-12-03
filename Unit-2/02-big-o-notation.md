@@ -7,10 +7,20 @@ To put it yet another way, Big-O runtime deals with asymptotic approximations of
 ## Objectives
 
 * Learn about big O and see some examples of algorithms and big O
+* Explore runtimes for different functions in the Chrome console
 * Prepare you for interview questions relating to data structures, algorithmic efficiency and optimization
 
 Watch [this video on asymptotic complexity from CS50](https://www.youtube.com/watch?v=iOq5kSKqeR4).
 
+## Big-O Definition
+
+Here's the technical definition of big-O notation. If it's difficult to comprehend, don't worry! We'll show plenty of examples below. The rigorous definition is a helpful point of reference, however, especially as you begin to familiarize yourself with the concept.
+
+Suppose you have two mathematical functions, `f(x)` and `g(x)`. A function `f(x)` is said to be `O(g(x))` (pronounced 'Big O of g(x)') if there exists some positive constant `C` such that `|f(x)| &leq; C * |g(x)|` for `x` sufficiently large.
+
+When we talk about Big O in this class, `f(x)` will typically roughly correspond to the runtime of some javascript function (or, if you prefer, the number of operations that function needs to perform), while `g(x)` will roughly correspond to the size of that function's input.
+
+Huh? What does that mean? Let's get down to brass tacks, and look at some examples.
 
 ## Big-O Examples
 
@@ -28,11 +38,30 @@ function square(arr) {
 
 The above example is O(n) run time, which means given a input of size n (the length of the array is equal to n), the runtime of the application will be linear in relationship to the input size.  In other words, if every x * x operation takes some unit of time, we can expect n of those operations to take place.
 
-Below is another example of an O(n) algorithm:
+Let's take a look at this even more concretely. The following function takes in two arguments: a callback and an array. It returns the time it takes your computer to execute the code in the callback.
 
 ```javascript
-// O(n)
+function testPerformance(callback, arr) {
+  var t0 = performance.now();
+  callback(arr);
+  var t1 = performance.now();
+  return t1 - t0;
+}
+``` 
 
+**Exercise** Create an array of length 1,000,000, where each entry is the number 2. Then test the performance of `square` on this array, using `testPerformance`.
+
+If you run `testPerformance` many times on the same arguments, you should see different outputs. This makes sense; as you saw in the CS50 video, the time it takes to run a certain block of code is highly variable not just across machines, but also for a given machine.
+
+Even so, it can be helpful to plot several data points and look for trends. 
+
+**Exercise** Repeat the previous exercise for arrays of 2 million, 3 million, and so on up to 10 million. Then record the times you get in [this table](https://www.desmos.com/calculator/i64rd3xdsv), and you'll wind up with a nice little graph of your data. What sort of trend do you see?
+
+**Bonus** If you want to decrease the variability in the times output by your performance test, what could you do?
+
+Below is another example. In terms of big-O, what do you think the runtime of this function is?
+
+```javascript
 function squareAndDouble(arr) {
   var tempArr = arr.map(function(el) {
     return el * el;
@@ -42,6 +71,10 @@ function squareAndDouble(arr) {
   });
 }
 ```
+
+**EXERCISE** Make an educated guess about the runtime of this function. Then do some performance testing. Do you stand by your guess?
+
+![](http://giphy.com/embed/105vP29Bs1YTYI)
 
 In the above example the runtime is **O(n + n)** or **O(2 * n)**. The runtime is O(2 * n) because the first `arr.map` iterates over all n elements in the array, and the second `tempArr.map` also iterates over all n elements in the array.  However, the runtime is actually O(n), because in big-O notation, constants are ignored.
 
@@ -142,6 +175,10 @@ Which is the faster big O runtime (Make sure to reduce both expressions first):
 3. O(n^n) or (n^50000)
 4. O(1) or O(9999999999999)
 5. O(n * n * 5 * n) or O(n^2)
+
+CHALLENGES 
+
+1. Prove, using the definition of big-O, why constants don't matter in the notation (e.g. why O(2n) is the same as O(n)).
 
 # Resources
 

@@ -4,15 +4,15 @@ A linked list is a data structure that helps keep an order list of data.  The li
 
 ### Data Structures And Memory
 
-Modern programming languages hide a lot of the complexity of dealing with a computer.  In ruby we never have to worry about memory allocation, but it is important to know what is going on behind the scenes when you use it.
+Modern programming languages hide a lot of the complexity of dealing with a computer.  In languages like javascript and ruby we never have to worry about memory allocation, but it is important to know what is going on behind the scenes when you use it.
 
 **Arrays**
 
-The ruby array appears to hold an infinite ammount of data simply by using the `push` method.  However, under the hood, there is a lot more going on.  When you first create an array, ruby allocates a certain amount of memory.
+The javascript array appears to hold an infinite ammount of data simply by using the `push` method.  However, under the hood, there is a lot more going on.  When you first create an array, javascript allocates a certain amount of memory.
 
 ![](http://web.cs.ucla.edu/classes/winter12/cs111/scribe/1c/img4.jpg)
 
-If you continue to push data, the allocated memory will eventually run out!  Once the memory runs out, ruby is still able to make the array larger, but the operation to make the array larger is O(n).  The steps are as follows:
+If you continue to push data, the allocated memory will eventually run out!  Once the memory runs out, javascript is still able to make the array larger, but the operation to make the array larger is O(n).  The steps are as follows:
 
 * Allocate more memory so we can fit the new item we want to push.
   * If the array used to be of size z, an implementation might allocate 2 * z sized memory to leave some room to grow.
