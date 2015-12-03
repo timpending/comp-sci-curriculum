@@ -9,7 +9,7 @@ To put it yet another way, Big-O runtime deals with asymptotic approximations of
 * Learn about big O and see some examples of algorithms and big O
 * Prepare you for interview questions relating to data structures, algorithmic efficiency and optimization
 
-Watch [big-O for the self-taught programmer](https://www.youtube.com/watch?v=nEquiifH33w).
+Watch [this video on asymptotic complexity from CS50](https://www.youtube.com/watch?v=iOq5kSKqeR4).
 
 
 ## Big-O Examples
