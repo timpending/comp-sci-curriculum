@@ -72,7 +72,7 @@ function squareAndDouble(arr) {
 }
 ```
 
-**EXERCISE** Make an educated guess about the runtime of this function. Then do some performance testing. Do you stand by your guess?
+**EXERCISE** Make an educated guess about the runtime of this function. Then do some performance testing and graph your results. Do you stand by your guess?
 
 ![](http://giphy.com/embed/105vP29Bs1YTYI)
 
@@ -105,7 +105,7 @@ The example above is still O(1) because 500,000 is still a constant number of it
 
 **EXERCISE**
 
-What is the runtime of the following two examples:
+What is the runtime of the following two examples (do some performance testing if you're unsure!):
 
 
 ```javascript
@@ -155,6 +155,16 @@ In the above exercises, the first program is O(1) because all all operations in 
 The second exercise above is O(n*n + n).  The first n*n (n^2) comes from the while loop that iterates over all of the elements in the array and has another while loop inside that also iterates over all elements in the array.  The second n comes from the final while loop that iterates over all elements and remvoes odds.  The expression can also be simplified further.  Any time there is addition in the big O notation, the worst case runtime is kept. All other values are dropped. In this case, the runtime would just be O(n^2).
 
 **RULE: When big-O values are added, keep the worst case runtime, and drop all other additional values.**
+
+**EXERCISE**:
+
+<!-- add non-named functions -->
+
+**EXERCISE**
+
+<!-- add link, show functions -->
+
+<!-- Add addendum on logs and factorials -->
 
 **EXERCISE**:
 
