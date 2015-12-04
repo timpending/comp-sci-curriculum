@@ -2,8 +2,6 @@
 
 A data structure is a way to store and organize data in a computer, so that it can be used efficiently. The key word here is "efficiently". At the end of the day, we are only interested in data structures that are efficient (we will discuss how we measure efficiency later).
 
-With the definition out of the way, let's think about a data structure we have used since the beginning of our coding journey. How about an Array? An array is a very simple data structure, but what does it do well? What does it not do well? Start here http://stackoverflow.com/questions/8423493/what-is-the-performance-of-objects-arrays-in-javascript-specifically-for-googl.
-
 ## Objectives
 * Learn the concepts behind data structures and algorithms
 * Get to a point where you can understand the data structure or algorithm and start thinking how to implement them in your language of choice
