@@ -16,7 +16,7 @@ Watch [this video on asymptotic complexity from CS50](https://www.youtube.com/wa
 
 Here's the technical definition of big-O notation. If it's difficult to comprehend, don't worry! We'll show plenty of examples below. The rigorous definition is a helpful point of reference, however, especially as you begin to familiarize yourself with the concept.
 
-Suppose you have two mathematical functions, `f(x)` and `g(x)`. A function `f(x)` is said to be `O(g(x))` (pronounced 'Big O of g(x)') if there exists some positive constant `C` such that `|f(x)| &leq; C * |g(x)|` for `x` sufficiently large.
+Suppose you have two mathematical functions, `f(x)` and `g(x)`. A function `f(x)` is said to be `O(g(x))` (pronounced 'Big O of g(x)') if there exists some positive constant `C` such that `|f(x)|` is less than or equal to  `C * |g(x)|` for `x` sufficiently large.
 
 When we talk about time complexity and Big O in this class, `f(x)` will typically roughly correspond to the runtime of some javascript function (or, if you prefer, the number of operations that function needs to perform), while `g(x)` will roughly correspond to the size of that function's input. (You can also talk about Big O within the context of [space complexity](https://www.cs.northwestern.edu/academics/courses/311/html/space-complexity.html), but we'll save that for another time.)
 
@@ -74,7 +74,7 @@ function squareAndDouble(arr) {
 
 **EXERCISE** Make an educated guess about the runtime of this function. Then do some performance testing and graph your results. Do you stand by your guess?
 
-![](http://giphy.com/embed/105vP29Bs1YTYI)
+![](http://images-cdn.9gag.com/photo/a9LGndm_700b_v1.jpg)
 
 In the above example the runtime is **O(n + n)** or **O(2 * n)**. The runtime is O(2 * n) because the first `arr.map` iterates over all n elements in the array, and the second `tempArr.map` also iterates over all n elements in the array.  However, the runtime is actually O(n), because in big-O notation, constants are ignored.
 
@@ -156,9 +156,9 @@ The second exercise above is O(n*n + n).  The first n*n (n^2) comes from the whi
 
 **EXERCISE**
 
-1. Check out [this graph](https://www.desmos.com/calculator/qx1ovkphv7) for data on the functions you've explored today, as well as some data on different algorithms we've seen or will encounter later on: bubble sort, binary search, naive Fibonacci, merge sort, and bogo sort. Take a look at the data and the trends. What's the complexity of each algorithm? Which algorithm is the most/least efficient? (Need a refresher on some of the math functions that appear? Scroll down!)
+1. Check out [this graph](https://www.desmos.com/calculator/agmx3utnm4) for data on the functions you've explored today, as well as some data on different algorithms we've seen or will encounter later on: bubble sort, binary search, naive Fibonacci, merge sort, and bogo sort. Take a look at the data and the trends. What's the complexity of each algorithm? Which algorithm is the most/least efficient? (Need a refresher on some of the math functions that appear? Scroll down!)
 
-**EXERCISE**:
+**EXERCISE:**
 
 Reduce the following big-O expressions. If they can't be reduced, explain why.
 
@@ -178,13 +178,37 @@ Which is the faster big O runtime (Make sure to reduce both expressions first):
 4. O(1) or O(9999999999999)
 5. O(n * n * 5 * n) or O(n^2)
 
-CHALLENGES 
+**CHALLENGES:**
 
 1. What is the complexity of each of the functions in [this graph](https://www.desmos.com/calculator/e6335rf6ao)?
 
 2. Prove, using the definition of big-O, why constants don't matter in the notation (e.g. why O(2n) is the same as O(n)).
 
 3. Prove that big-O notation is _transitive_. In other words, if `f(x)` is `O(g(x))`, and `g(x)` is `O(h(x))`, then `f(x)` is `O(h(x))`.
+
+**Addendum: Math Function Review!**
+
+You've seen a few functions in this section, such as `log(x)` and `x!`, that may be bringing back some (hopefully fond!) memories of high school math classes. If you need a quick refresher on logs or factorials, read on.
+
+**Logarithms**
+
+A very simple entry point for logarithms can be found in the book [How Not To Be Wrong](http://www.amazon.com/How-Not-Be-Wrong-Mathematical/dp/0143127535) by mathematician Jordan Ellenberg:
+
+> It has come to my attention that hardly anybody knows what the logarithm is. Let me take a step towards fixing this. The logarithm of a positive number N, called _log N_, is the number of digits it has.
+
+> Wait, really? That's it?
+
+> No. That's not _really_ it. We can call the number of digits the "fake logarithm", or _flogarithm_. It's close enough to the real thing to give the general idea of what the logarithm means in a context like this one. The flogarithm (whence also the logarithm) is a very slowly growing function indeed: the flogarithm of a thousand is 4, the flogarithm of a million, a thousand times greater, is 7, and the flogarithm of a billion is still only 10.
+
+Here's a graph that lets you compare the logarithm function to the flogarithm function. You can also adjust the _base_ of the logarithm and flogarithm. For example, when the base is 2, the flogarithm shows the number of digits a number has base 2. (That's why the graph passes through the point (8, 3), since 8 base 2 is 100, which has 3 digits.)
+
+Another way to think of logarithms (which may be more familiar to you from high school math) is as inverses to exponential functions. The base-10 logarithm, commonly written _log N_, is the inverse to the function 10<sup><em>x</em></sup>. Graphically, this helps to explain the shape of the log graph; it's just a reflection of an exponential graph. This relationship between logarithms and exponentials also explains the slow growth of the logarithm: as _x_ grows, exponential functions produce large changes in output for small changes in input, while logs require large changes in input for small changes in output.
+
+But why use words to explain the relationship, when graphs will do the job even better? Check [this one](https://www.desmos.com/calculator/qa1sbhk6if) out. 
+
+If all else fails, just remember that a log is an exponent. The log base _b_ of some value _x_ (written log<sub><em>b</em></sub>(<em>x</em>)) is the exponent that satisfies the equality <em>b</em><sup>log<sub><em>b</em></sub>(<em>x</em>)</sup> = <em>x</em>. For example, log<sub>3</sub>(81) = 4, since 4 is the exponent in the equation 3<sup>4</sup> = 81.
+
+Factorials are a little more straightforward. The factorial of a positive integer _n_ is just the product of all numbers from 1 to _n_: 1! = 1, 2! = 2, 3! = 6, 4! = 24, and so on. It's possible to extend the definition of this function so that it makes sense for all numbers, not just positive integers: see [here](https://www.desmos.com/calculator/kup5ttpbj9). As shown by the graph, the factorial function grows fast. Super fast. Faster, even, than an exponential function. This is why factorial complexity is even worse than exponential complexity.
 
 # Resources
 
