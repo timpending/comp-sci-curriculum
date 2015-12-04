@@ -1,6 +1,6 @@
 # Linked Lists
 
-A linked list is a data structure consisting of a group of nodes which together represent a sequence. Under the simplest form, each node is composed of a data and a reference (in other words, a link) to the next node in the sequence
+A linked list is a data structure consisting of a group of nodes which together represent a sequence. Under the simplest form, each node is composed of a data value and a reference (in other words, a link) to the next node in the sequence
 
 ## Singly Linked List
 
@@ -13,7 +13,7 @@ In C and C++, arrays are not dynamic.  You must decide exactly how long an array
 
 `int examplearray[99];`
 
-Arrays in C and C++ have one advantage though: looking up any element is quick.  When you create an array of elements, the memory you are request is contiguous.  In other words, `examplearray[0]` and `examplearry[1]` are stored right next to each other in memory.  In fact all items in the array are stored next to each other in a line.  Looking up a single item is very fast if you know the index.  The computer just finds the start of the array in memory and then jumps directly from that address to the index you're looking for.  This property makes arrays great for random access but not so great for other tasks.
+Arrays in C and C++ have one advantage though: looking up any element is quick.  When you create an array of elements, the memory you request is contiguous.  In other words, `examplearray[0]` and `examplearry[1]` are stored right next to each other in memory.  In fact all items in the array are stored next to each other in a line.  Looking up a single item is very fast if you know the index.  The computer just finds the start of the array in memory and then jumps directly from that address to the index you're looking for.  This property makes arrays great for random access but not so great for other tasks.
 
 If you wanted to insert an element into the beginning or middle of the array, you would have to manually move elements over one by one.
 
