@@ -18,7 +18,7 @@ Here's the technical definition of big-O notation. If it's difficult to comprehe
 
 Suppose you have two mathematical functions, `f(x)` and `g(x)`. A function `f(x)` is said to be `O(g(x))` (pronounced 'Big O of g(x)') if there exists some positive constant `C` such that `|f(x)| &leq; C * |g(x)|` for `x` sufficiently large.
 
-When we talk about Big O in this class, `f(x)` will typically roughly correspond to the runtime of some javascript function (or, if you prefer, the number of operations that function needs to perform), while `g(x)` will roughly correspond to the size of that function's input.
+When we talk about time complexity and Big O in this class, `f(x)` will typically roughly correspond to the runtime of some javascript function (or, if you prefer, the number of operations that function needs to perform), while `g(x)` will roughly correspond to the size of that function's input. (You can also talk about Big O within the context of [space complexity](https://www.cs.northwestern.edu/academics/courses/311/html/space-complexity.html), but we'll save that for another time.)
 
 Huh? What does that mean? Let's get down to brass tacks, and look at some examples.
 
@@ -105,18 +105,15 @@ The example above is still O(1) because 500,000 is still a constant number of it
 
 **EXERCISE**
 
-What is the runtime of the following two examples (do some performance testing if you're unsure!):
-
+Here are three more functions. Do some performance tests and graph the results. What is the complexity of each one?
 
 ```javascript
-function doStuff(a,b) {
-  var x = 50;
-  var y = 30;
-  var sum = x + y;
-  var square = sum * sum;
-  var z = -250;
-  square += z;
-  return a * a + b * b * b + square;
+function addSomeNumbers(arr) {
+  sum = 0;
+  for (var i=0; i < Math.min(arr.length,1e7); i++) {
+    sum += arr[i];
+  }
+  return sum;
 }
 ```
 
@@ -148,23 +145,18 @@ function sumValuesAndRemoveOdds(arr) {
   return newArr;
 }
 ```
+
 ![](http://images.contentful.com/7h71s48744nc/3naPsJv6IE0KewGmqUOMUu/a00a2a2cbe0c580cfce1b502c1ebdc9f/a-beautiful-mind.jpg)
 
-In the above exercises, the first program is O(1) because all all operations in the program do not depend on input size.
+In the above exercises, the first program is O(1) because all all operations in the program do not depend on input size. No matter how large the array, there's an upper bound on the number of operations that the function will perform.
 
 The second exercise above is O(n*n + n).  The first n*n (n^2) comes from the while loop that iterates over all of the elements in the array and has another while loop inside that also iterates over all elements in the array.  The second n comes from the final while loop that iterates over all elements and remvoes odds.  The expression can also be simplified further.  Any time there is addition in the big O notation, the worst case runtime is kept. All other values are dropped. In this case, the runtime would just be O(n^2).
 
 **RULE: When big-O values are added, keep the worst case runtime, and drop all other additional values.**
 
-**EXERCISE**:
-
-<!-- add non-named functions -->
-
 **EXERCISE**
 
-<!-- add link, show functions -->
-
-<!-- Add addendum on logs and factorials -->
+1. Check out [this graph](https://www.desmos.com/calculator/qx1ovkphv7) for data on the functions you've explored today, as well as some data on different algorithms we've seen or will encounter later on: bubble sort, binary search, naive Fibonacci, merge sort, and bogo sort. Take a look at the data and the trends. What's the complexity of each algorithm? Which algorithm is the most/least efficient? (Need a refresher on some of the math functions that appear? Scroll down!)
 
 **EXERCISE**:
 
@@ -188,7 +180,11 @@ Which is the faster big O runtime (Make sure to reduce both expressions first):
 
 CHALLENGES 
 
-1. Prove, using the definition of big-O, why constants don't matter in the notation (e.g. why O(2n) is the same as O(n)).
+1. What is the complexity of each of the functions in [this graph](https://www.desmos.com/calculator/e6335rf6ao)?
+
+2. Prove, using the definition of big-O, why constants don't matter in the notation (e.g. why O(2n) is the same as O(n)).
+
+3. Prove that big-O notation is _transitive_. In other words, if `f(x)` is `O(g(x))`, and `g(x)` is `O(h(x))`, then `f(x)` is `O(h(x))`.
 
 # Resources
 
