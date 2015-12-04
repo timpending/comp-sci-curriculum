@@ -188,3 +188,7 @@ We now take this sum and multiply the total binary amounts by their respective b
 `10010101 + 11110010` = `391`
 
 Try subtraction! It works too!
+
+## Resources
+
+- http://www.garlikov.com/Soc_Meth.html
