@@ -8,7 +8,6 @@ To put it yet another way, Big-O runtime deals with asymptotic approximations of
 
 * Learn about big O and see some examples of algorithms and big O
 * Explore runtimes for different functions in the Chrome console
-* Prepare you for interview questions relating to data structures, algorithmic efficiency and optimization
 
 Watch [this video on asymptotic complexity from CS50](https://www.youtube.com/watch?v=iOq5kSKqeR4).
 
