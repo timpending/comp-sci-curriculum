@@ -75,7 +75,7 @@ function squareAndDouble(arr) {
 
 ![](http://images-cdn.9gag.com/photo/a9LGndm_700b_v1.jpg)
 
-In the above example the runtime is **O(n + n)** or **O(2 * n)**. The runtime is O(2 * n) because the first `arr.map` iterates over all n elements in the array, and the second `tempArr.map` also iterates over all n elements in the array.  However, the runtime is actually O(n), because in big-O notation, constants are ignored.
+In the above example the runtime is O(n + n) or O(2 * n). The runtime is O(2 * n) because the first `arr.map` iterates over all n elements in the array, and the second `tempArr.map` also iterates over all n elements in the array.  However, the runtime is actually O(n), because in big-O notation, constants are ignored.
 
 **RULE: Big-O notation ignores constants.**
 
@@ -104,7 +104,7 @@ The example above is still O(1) because 500,000 is still a constant number of it
 
 **EXERCISE**
 
-Here are three more functions. Do some performance tests and graph the results. What is the complexity of each one?
+Here are two more functions. Do some performance tests and graph the results. What is the complexity of each one?
 
 ```javascript
 function addSomeNumbers(arr) {
