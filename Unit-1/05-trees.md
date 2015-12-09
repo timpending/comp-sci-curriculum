@@ -25,7 +25,7 @@ Some tree facts:
 - Link - connection from a node to another node
 - In a tree with N nodes, there will always be N-1 edges.
 
-![Binary Tree](http://www.cs.cmu.edu/~adamchik/15-121/lectures/Trees/pix/tree1.bmp)
+
 
 ### So where do we see trees in the real world?
 
@@ -40,7 +40,13 @@ Everywhere! Including:
 
 A tree in which each node can have at most 2 children is called a binary tree.
 
+![Binary Tree](http://www.cs.cmu.edu/~adamchik/15-121/lectures/Trees/pix/tree1.bmp)
+
 ### Binary Search Tree
+
+![Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree#/media/File:Binary_search_tree.svg)
+
+**Based on these two differences - what do you think a binary search tree is?**
 
 A special type of binary tree which maintains a sorted ordering of nodes. A binary search tree maintains the property that for any node, the child to its left is a smaller value and the child to its right is a larger value than itself.  The binary search tree sorted ordering gives us a nice structure for very fast search.  Specifically, if we are looking for a value X and there are N nodes, we only have to look at log(N) numbers of nodes on average.
 
