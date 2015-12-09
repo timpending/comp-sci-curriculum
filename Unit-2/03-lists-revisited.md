@@ -98,4 +98,8 @@ Notice that both `push` and `pop` are now constant time operations.
 
 **EXERCISE**
 
-Look at the code for a doubly linked list [here](https://github.com/gSchool/DoublyLinkedListRuby). Implement the remaining methods and make the tests pass.
+Look at the code for a doubly linked list [here](https://github.com/gSchool/LinkedListsJS). Implement the remaining methods and make the tests pass.
+
+**EXERCISE**
+
+Work on part 3 of the doubly linked list exercises [here](https://github.com/gSchool/LinkedListsJS).
