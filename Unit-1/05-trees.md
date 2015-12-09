@@ -60,7 +60,7 @@ Here is an example of DFS Pre-order for a tree:
 
 ### Pre-order vs In-order vs Post-order
 
-For DFS, there are actually three ways to perform the operation! As we see in the gif above, the process for searching through the tree looks like this:
+Here is some potential step by step pseudo code for implementing DFS Pre-order (with a return value of an array of all the nodes - this can also be done with a callback for additional functionality)
 
 1. Create an array called `data` to store our results
 2. Create a variable called `current` and set it equal to the root
@@ -71,7 +71,7 @@ For DFS, there are actually three ways to perform the operation! As we see in th
 4. Call the `search` function passing in the value of `current`
 4. Return the array
 
-To see the differences between these three, you can read more [here](https://en.wikipedia.org/wiki/Tree_traversal#Depth-first) and [here](// http://datastructuresnotes.blogspot.com/2009/02/binary-tree-traversal-preorder-inorder.html
+For DFS, there are actually three ways to perform the operation! As we see in the gif above, these are called Pre-order, In-order and Post-order. To see the differences between these three, you can read more [here](https://en.wikipedia.org/wiki/Tree_traversal#Depth-first) and [here](// http://datastructuresnotes.blogspot.com/2009/02/binary-tree-traversal-preorder-inorder.html
 ) 
 
 ### Breadth First Search for a Tree (BFS)
