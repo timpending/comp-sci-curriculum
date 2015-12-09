@@ -44,7 +44,7 @@ A tree in which each node can have at most 2 children is called a binary tree.
 
 ### Binary Search Tree
 
-![Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree#/media/File:Binary_search_tree.svg)
+![Binary Search Tree](https://upload.wikimedia.org/wikipedia/commons/d/da/Binary_search_tree.svg)
 
 **Based on these two differences - what do you think a binary search tree is?**
 
