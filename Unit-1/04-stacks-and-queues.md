@@ -13,6 +13,7 @@ You can think of a stack simply as some items stacked on top of each other just 
 ### Where do we see stacks in the real world?
 
 - How about the call stack? Remember what that is? [http://en.wikipedia.org/wiki/Call_stack](http://en.wikipedia.org/wiki/Call_stack)
+- The 'undo' command in a text editor can be modeled with a stack. 
 - We use stacks to help in the implementation of more complex data structures and algorithms
 - A stack is an extremely useful and efficient data structure for solving algorithms like figuring out a palindrome.
 - Typical application areas include compilers, operating systems, handling of program memory (nested function calls)
@@ -49,3 +50,4 @@ And remember, the regular Array structure in Javascript is a Stack (first in, la
 
 * [Data Structures in Ruby](https://github.com/gSchool/data-structures-ruby)
 * [Data Structures in JS](https://github.com/gSchool/data-structures-js)
+* If you've implemented linked lists already, modify them to create implementations for stacks and queues.
