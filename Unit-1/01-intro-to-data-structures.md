@@ -28,6 +28,6 @@ Some questions you have to ask and decisions you have to make are:
 * Trees
 * Graphs
 
-Once again, the most important takeaway you can get from these lessons is an understanding of just __what__ these data structures are. This is called ADT or Abstract Data Structure. When learning about a data structure, the more important thing to remember is that you want to strive to gain an understanding of just __WHAT__ it is before you even think about how to implement one.
+Once again, the most important takeaway you can get from these lessons is an understanding of just __what__ these data structures are. This is called ADT or Abstract Data Type. When learning about a data structure, the more important thing to remember is that you want to strive to gain an understanding of just __WHAT__ it is before you even think about how to implement one.
 
 The following lessons on data structures will focus mostly on the definition, application and value. The implementation will be left up to you! Let's start with one of the simplest data structures - linked lists.
