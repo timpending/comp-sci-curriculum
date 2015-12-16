@@ -100,4 +100,4 @@ So draw a dark line at the bottom to represent prototypes, and an arrow to point
 
 With these basic drawing tools, you should be able to represent even fairly complex, self-referential data structures, and be able to start to _see_ in your head how object references work.
 
-Now you are ready for some [exercises](exercises.md)!
+Now you are ready for some [exercises](./03-memory-diagrams-exercises.md)!
