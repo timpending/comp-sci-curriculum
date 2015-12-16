@@ -108,7 +108,7 @@ function swap(arr, a, b) {
 }
 ```
 
-Here is one way to partition the array:
+Here is one way to **partition** the array:
 
 ```js
 function partition(items, left, right) {
@@ -134,7 +134,7 @@ function partition(items, left, right) {
             j--;
         }
     }
-    // return i to be used as index for recursive calls in quickSort function
+    // return i to be used as index for left or right pointers in recursive calls of quicksort
     return i;
 }
 ```
