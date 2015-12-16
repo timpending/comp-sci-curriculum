@@ -17,8 +17,9 @@ Finally, I think it's appropriate to take 10 minutes to explore the history of c
 * [Linked Lists](Unit-1/02-linked-list.md)
 * [Doubly Linked List](Unit-1/03-doubly-linked-list.md)
 * [Queues and Stacks](Unit-1/04-stacks-and-queues.md)
-* [Trees](Unit-1/05-trees.md)
-* [Graphs](Unit-1/06-graphs.md)
+* [Hash Tables](Unit-1/05-hash-tables.md)
+* [Trees](Unit-1/06-trees.md)
+* [Graphs](Unit-1/07-graphs.md)
 
 # Unit 2: Algorithms
 * [Intro to Algorithms](Unit-2/01-intro-to-algorithms.md)
