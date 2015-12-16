@@ -85,7 +85,7 @@ Watch [Alex explain quick sort](https://www.youtube.com/watch?v=XE4VP_8Y0BU&feat
 
 > Quicksort is a divide and conquer algorithm in the style of merge sort. The basic idea is to find a “pivot” item in the array to compare all other items against, then shift items such that all of the items before the pivot are less than the pivot value and all the items after the pivot are greater than the pivot value. After that, recursively perform the same operation on the items before and after the pivot.
 
-> There are two basic operations in the algorithm, swapping items in place and partitioning a section of the array. The basic steps to partition an array are:
+There are two basic operations in the algorithm, swapping items in place and partitioning a section of the array. The basic steps to **partition** an array are:
 
 **Pseudo code:**
 
@@ -98,7 +98,15 @@ Watch [Alex explain quick sort](https://www.youtube.com/watch?v=XE4VP_8Y0BU&feat
 1. Move the left pointer to the right by one and the right pointer to the left by one.
 1. If the left pointer and right pointer don’t meet, go to step 1.
 
-**The swap function is the same as the one used by Bubble and Selection sort (see above).**
+The **swap** function is very easy to implement:
+
+```js
+function swap(arr, a, b) {
+    var temp = arr[a];
+    arr[a] = arr[b];
+    arr[b] = temp;
+}
+```
 
 Here is one way to partition the array:
 
