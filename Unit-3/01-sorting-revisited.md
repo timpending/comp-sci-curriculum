@@ -187,8 +187,10 @@ Most programming languages have a sorting mechanism built in. What sorting algor
 
 Once you're comfortable with the general idea of sorting algorithms, the best way to solidify your understanding is to write one out in code. Pick from one of these (or do both!) to practice writing sorting algorithms.
 
-- Implement merge sort (https://github.com/gSchool/js_merge_sort)
+- [Implement merge sort](https://github.com/gSchool/js_merge_sort)
 - Implement quick sort 
+
+## Resources: 
 
 * [Merge Sort in JavaScript](http://www.nczonline.net/blog/2012/10/02/computer-science-and-javascript-merge-sort/)
 * [Merge Sort Wikipedia](https://en.wikipedia.org/wiki/Merge_sort)
