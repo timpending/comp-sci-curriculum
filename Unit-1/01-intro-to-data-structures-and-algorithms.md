@@ -30,4 +30,18 @@ Some questions you have to ask and decisions you have to make are:
 
 Once again, the most important takeaway you can get from these lessons is an understanding of just __what__ these data structures are. This is called ADT or Abstract Data Type. When learning about a data structure, the more important thing to remember is that you want to strive to gain an understanding of just __WHAT__ it is before you even think about how to implement one.
 
-The following lessons on data structures will focus mostly on the definition, application and value. The implementation will be left up to you! Let's start with one of the simplest data structures - linked lists.
+The following lessons on data structures will focus mostly on the definition, application and value. The implementation will be left up to you! 
+
+# Intro to Algorithms
+
+An algorithm is a well defined, step by step computational procedure for solving a problem.
+
+Algorithms are:
+
+- Deterministic - they have a goal
+	- They terminate at some point in time.
+- They take input
+- They produce output
+
+In this unit we will explore several common algorithms and learn about their complexities.
+

@@ -4,18 +4,13 @@
 * Link files from outline
 
 ## Unit 0 - Fundamentals Part 1 (the concepts)
-- binary 
-- memory diagrams
-- ascii / utf  / garbage / threads
-- threads
-- garbage 
-- memory
-- stack and heap
-- bits and bytes **Add more about bitwise operators**
+- Intro To Memory 
+- Memory Diagrams
+- Memory Diagrams Exercises
+- Binary
 
 ## Unit 1 - Fundamentals Part 2 (the application)
-- intro to DS
-- intro to Algorithms
+- intro to Data Structures and Algorithms
 - big O
 - pointers
 - recursion
@@ -31,9 +26,8 @@
 
 ## Unit 3 - DS + Algorithms Part 2
 - Trie
-- Graphs (BFS / DFS **Add Dijkstras**)
+- Graphs (BFS / DFS)
 - merge / quick sort
 - **Add Skip List** 
-- **Add Graph Traversal** 
-- **Add AVL / Red Black Trees**
+- **Add Djikstra** 
 - **Add Heapsort / Radix Sort** 
