@@ -48,7 +48,7 @@ __What is the problem with an infinite array implementation?__
 
 It is extremely wasteful because we have to create a very large array to hold all possible keys.  A better way to solve the problem would be to map the set of keys into a smaller space.
 
-__Hash Function: Maps a Set of Keys to a Smaller Space__
+### Hash Function: Maps a Set of Keys to a Smaller Space
 
 A hash function is a function that maps keys into a smaller space.  This way, a hash table can take any key as input, and the hash function is responsible for mapping it into a smaller array.  A basic hash function looks like the following
 
@@ -75,13 +75,17 @@ Notices that the hash key that is generated is always in the range 0 to 58 in th
 
 Now we have a funciton that maps an seemingly infinite set of keys to a finite set of keys between 0 and 58.
 
-__Hash Collisions__
+### Hash Collisions
 
 A collision occurs in the hash table when two keys map to the same index.  The hash table has to have some policy for handling these issues so that a previously hashed key with the same index does not get written over.  One policy to fix the problem is __chaining__.
 
 __Chaining__
 
 Chaining is way to resolve collisions in a hash table. Instead of starting with an empty array, each array element contains a data structure to store collisions.  A common data structure to use is a linked list, but others can be used such a binary search tree or even another hash table.  Whenever an element is inserted, both the key and the value are inserted into the data structure as that index (linked list for example).
+
+__Linear Probing__
+
+Another category of solving collision problems is probing.  Linear probing is one such scheme.  Rather than solve a collsion with an extra data structure, the scheme tries to put the key and value in a different spot in the array.  With linear probing, if there is a collision at index i, the algorithm tries to put the key and value at index i + 1, then index i + 2, etc. Until it finds an open slot.  To find out of a key is in the hash, the algorithm must hash to an index.  If the key and value exists at that index, then it is found.  If the key and value do no exist at that index, then continue looking linearly through the array until the key and value are found, or an empty space is found in the array.  If there is an empty space, you know the key and value are not in the array.
 
 ## Big O Runtime of Hash Tables
 
