@@ -29,8 +29,8 @@ Finally, I think it's appropriate to take 10 minutes to explore the history of c
 * [Trees](Unit-2/06-trees.md)
 
 ## Unit 3: Data Structures +  Algorithms Part 2
-* [Sorting Algorithms - Part 2](Unit-2/01-sorting-revisited.md)
-* [Hash Tables](Unit-2/02-hash-tables.md)
-* [Tries](Unit-2/03-trie.md)
-* [Graphs](Unit-2/04-graphs.md)
+* [Sorting Algorithms - Part 2](Unit-3/01-sorting-revisited.md)
+* [Hash Tables](Unit-3/02-hash-tables.md)
+* [Tries](Unit-3/03-trie.md)
+* [Graphs](Unit-3/04-graphs.md)
 
