@@ -15,6 +15,61 @@ How can we make bubble sort even smarter? We can always count to see the number 
 
 Bubble sort is NOT an efficient algorithm, it's worst case performance is O(n^2), because you have to make n iterations through a list checking all n elements each pass so n * n = n^2. This runtime means that as the number of elements sorted increase, the runtime increase quadratically. But efficiency isn't a major concern or if you are sorting a small number of elements, it's a great way to start.
 
+###  Selection Sort
+
+The selection sort algorithm, similar to Bubble Sort in that it shares O(n²) complexity, augments the Bubble Sort algorithm slightly. Instead of comparing each array item to its neighbor, the goal is to locate the *smallest* remaining value and drop it into the correct place in the array. The basic algorithm looks like this:
+
+**Pseudo code:**
+
+1. Assume the first item is the smallest value (minimum).
+1. Compare this item to the second item.
+1. If the second item is smaller than the first, set the second item as the new minimum.
+1. Continue until you reach the end of the array.
+1. If the minimum value (index) is not the item (index) you started with, swap them.
+
+#### [Practice with this interactive card game](https://www.khanacademy.org/computing/computer-science/algorithms/sorting-algorithms/a/sorting)
+
+We'll need two functions, one to handle our swapping, and one to handle the rest of the sorting logic.
+
+The swap function looks like this:
+
+```js
+function swap(arr, a, b) {
+    var temp = arr[a];
+    arr[a] = arr[b];
+    arr[b] = temp;
+}
+```
+
+The sorting logic is as follows:
+
+```js
+function selectionSort(arr) {
+    // declare variable min to be used later
+    var min;
+    // loop through array
+    for (var i = 0; i < arr.length; i++) {
+        // set min to i for each iteration
+        min = i;
+        // loop through array, one item ahead of i, for value comparisons
+        for (var j = i + 1; j < arr.length; j++) {
+            // if any of the items are less than the current min item
+            // set min equal to that new item's index
+            if (arr[j] < arr[min]) {
+                min = j;
+            }
+        }
+        // if the current i no longer equals min, then min must be smaller
+        // therefore we swap i with min
+        if (i !== min) {
+            swap(arr, i, min);
+        }
+    }
+    // when outer loop completes, return the array
+    return arr;
+}
+```
+
 ### Insertion Sort
 
 ![http://upload.wikimedia.org/wikipedia/commons/9/9c/Insertion-sort-example.gif](http://upload.wikimedia.org/wikipedia/commons/9/9c/Insertion-sort-example.gif)
@@ -25,15 +80,41 @@ Worst case of insertion sort -> O(n^2)
 
 Best case of insertion sort -> O(n)
 
-## Merge Sort
+> An insertion sort works by separating an array into two sections, a sorted section and an unsorted section. Initially, of course, the entire array is unsorted. The sorted section is then considered to be empty. The first step is to add a value to the sorted section, so the first item in the array is used (a list of one item is always sorted). Then at each item in the unsorted section:
 
-Similar to quick sort, This is one of the most efficient ways of sorting an array. It has three steps, divide, conquer(sort) and then combine(merge).
+1. If the item value goes after the last item in the sorted section, then do nothing.
+1. If the item value goes before the last item in the sorted section, remove the item value from the array and shift the last sorted item into the now-vacant spot.
+1. Compare the item value to the previous value (second to last) in the sorted section.
+1. If the item value goes after the previous value and before the last value, then place the item into the open spot between them, otherwise, continue this process until the start of the array is reached.
 
-![http://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif](http://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif)
+```js
+function insertionSort(items) {
 
-And here is an example of the process
+    var len     = items.length,     // number of items in the array
+        value,                      // the value currently being compared
+        i,                          // index into unsorted section
+        j;                          // index into sorted section
 
-![http://www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/Sorting/Gifs/mergeSort.gif](http://www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/Sorting/Gifs/mergeSort.gif)
+    for (i=0; i < len; i++) {
+
+        // store the current value because it may shift later
+        value = items[i];
+
+        /*
+         * Whenever the value in the sorted section is greater than the value
+         * in the unsorted section, shift all items in the sorted section over
+         * by one. This creates space in which to insert the value.
+         */
+        for (j=i-1; j > -1 && items[j] > value; j--) {
+            items[j+1] = items[j];
+        }
+
+        items[j+1] = value;
+    }
+
+    return items;
+}
+```
 
 ## Picking a Sorting Algorithm
 
