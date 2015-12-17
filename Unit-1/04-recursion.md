@@ -41,9 +41,10 @@ Write both an iterative and recursive solution to each problem:
 3. Define a recursive function that returns true if a string is a palindrome and false otherwise.
 4.  Get the JSON data from this Reddit post using an http gem: `http://www.reddit.com/r/aww/comments/zzg3k/my_local_humane_society_posts_pictures_of_new/.json`.  Write code to print out the text of each comment in your terminal.  Write code that counts the number of comments, as well.
 
+[https://github.com/gSchool/js-hof-filter-map-reduce](https://github.com/gSchool/js-hof-filter-map-reduce)
+
 #### Bonus challenges
 1. Convert Roman Numerals to Integers
-2. Read about Merge Sort and implement it yourself
 
 ## Recursion Write Up
 
