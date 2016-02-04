@@ -2,6 +2,7 @@
 * Include https://github.com/gSchool/graph-js/tree/master
 * Add overview / description to readme
 * Link files from outline
+* Include a link to http://www.csfieldguide.org.nz/
 
 ## Unit 0 - Fundamentals Part 1 (the concepts)
 - Intro To Memory 
