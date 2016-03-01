@@ -21,7 +21,7 @@ test[myObj] = 'the last value';
 test['[object Object]'] // returns the string 'the last value'
 ```
 
-The example above also illustrates why an object in javascript is not quite a hash table.  All keys of an object are turned into a string. This means that complex objects cannot be used as keys in another object. 
+The example above also illustrates why an object in javascript is not quite a hash table.  All keys of an object are turned into a string. This means that complex objects cannot be used as keys in another object.
 
 ## How Hash Tables Work Internally
 
@@ -29,7 +29,7 @@ Now that we understand how to use a hash table, let's understand how it works in
 
 __Array Access Is Constant Time__
 
-First, recall that an array has constant time access because all items in the array are stored contiguously in memory.  Looking up any one item is simply a mathematical operation that uses the start of the array's memory address and adds the index to find the memory address of the index that is desired. 
+First, recall that an array has constant time access because all items in the array are stored contiguously in memory.  Looking up any one item is simply a mathematical operation that uses the start of the array's memory address and adds the index to find the memory address of the index that is desired.
 
 __Imagine An Infinitely Long Array__
 
@@ -73,7 +73,7 @@ key = 5001, hash_key = (5001 * 122611) % 59 = 51
 
 Notices that the hash key that is generated is always in the range 0 to 58 in this case.  The range is within the bounds of the array of size 59 that we have created to store the values for our hash.
 
-Now we have a funciton that maps an seemingly infinite set of keys to a finite set of keys between 0 and 58.
+Now we have a function that maps an seemingly infinite set of keys to a finite set of keys between 0 and 58.
 
 ### Hash Collisions
 
@@ -85,15 +85,14 @@ Chaining is way to resolve collisions in a hash table. Instead of starting with 
 
 __Linear Probing__
 
-Another category of solving collision problems is probing.  Linear probing is one such scheme.  Rather than solve a collsion with an extra data structure, the scheme tries to put the key and value in a different spot in the array.  With linear probing, if there is a collision at index i, the algorithm tries to put the key and value at index i + 1, then index i + 2, etc. Until it finds an open slot.  To find out of a key is in the hash, the algorithm must hash to an index.  If the key and value exists at that index, then it is found.  If the key and value do no exist at that index, then continue looking linearly through the array until the key and value are found, or an empty space is found in the array.  If there is an empty space, you know the key and value are not in the array.
+Another category of solving collision problems is probing.  Linear probing is one such scheme.  Rather than solve a collision with an extra data structure, the scheme tries to put the key and value in a different spot in the array.  With linear probing, if there is a collision at index i, the algorithm tries to put the key and value at index i + 1, then index i + 2, etc. Until it finds an open slot.  To find out of a key is in the hash, the algorithm must hash to an index.  If the key and value exists at that index, then it is found.  If the key and value do no exist at that index, then continue looking linearly through the array until the key and value are found, or an empty space is found in the array.  If there is an empty space, you know the key and value are not in the array.
 
 ## Big O Runtime of Hash Tables
 
-A hash table has impressive performance characteristics: 
+A hash table has impressive performance characteristics:
 
 * __Inserting__: O(1)
 * __Removing__: O(1)
 * __Accessing a Value Using a Key__: O(1)
 * __Finding A Value (without key)__: O(n)
 * __Space Complexity__: O(n)
-
