@@ -8,16 +8,16 @@ Modern programming languages hide a lot of the complexity of dealing with a comp
 
 **Arrays**
 
-The javascript array appears to hold an infinite ammount of data simply by using the `push` method.  However, under the hood, there is a lot more going on.  When you first create an array, javascript allocates a certain amount of memory.
+The javascript array appears to hold an infinite amount of data simply by using the `push` method.  However, under the hood, there is a lot more going on.  When you first create an array, javascript allocates a certain amount of memory.
 
 ![](http://web.cs.ucla.edu/classes/winter12/cs111/scribe/1c/img4.jpg)
 
 If you continue to push data, the allocated memory will eventually run out!  Once the memory runs out, javascript is still able to make the array larger, but the operation to make the array larger is O(n).  The steps are as follows:
 
 * Allocate more memory so we can fit the new item we want to push.
-  * If the array used to be of size z, an implementation might allocate 2 * z sized memory to leave some room to grow.
+* If the array used to be of size z, an implementation might allocate 2 * z sized memory to leave some room to grow.
 * For all n elements in the array, copy the values from the old memory to the new memory.
-* Add the new value we want to push to the end of tne new array.
+* Add the new value we want to push to the end of the new array.
 * Update the size of the array.
 * Delete the old memory
 
@@ -27,7 +27,7 @@ If the runtime of pushing is important to your program, you may want to use a di
 
 ###Singly Linked List
 
-A singly linked list is stored in memory using references to other memory locations.  In drawing below, the list looks as if it's all in a line, but in fact, in memory, the list is skattered all over the place.  The first object could be at a very high memory address and the second object could be at a very low memory address.  The only thing that keeps the list together is the next pointers.  The next pointers are references to where the next element in the linked list list located.  
+A singly linked list is stored in memory using references to other memory locations.  In drawing below, the list looks as if it's all in a line, but in fact, in memory, the list is scattered all over the place.  The first object could be at a very high memory address and the second object could be at a very low memory address.  The only thing that keeps the list together is the next pointers.  The next pointers are references to where the next element in the linked list list located.  
 
 ![](http://www.cs.usfca.edu/~srollins/courses/cs112-f07/web/notes/linkedlists/ll2.gif)
 
@@ -72,7 +72,7 @@ And here is an implementation of the pop method:
 
 DoublyLinkedList.prototype.pop = function() {
   if (!this.head) return undefined;
-  
+
   // special case where the length of the list is 1
   // so the head and tail need to be set to null
   if (this.length === 1) {
