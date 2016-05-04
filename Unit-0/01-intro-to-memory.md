@@ -41,7 +41,7 @@ The heap is memory set aside for dynamic allocation. Unlike the stack, there's n
 
 Here is a nice visual:
 
-![stack and heap](http://techinerd.com/wp-content/uploads/2014/05/stack_heap.jpg)
+![stack and heap](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/116/stacknheap.png)
 
 
 Read [more](http://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap) on StackOverflow
