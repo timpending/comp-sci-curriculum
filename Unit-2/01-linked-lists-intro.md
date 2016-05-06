@@ -2,6 +2,14 @@
 
 A linked list is a data structure that helps keep an order list of data.  The linked list can be thought of as similar to other ordered data structures like arrays.  The key difference is how an array is stored verses a linked list.
 
+## Objectives
+
+By the end of this lesson you should be able to:
+
+1. Implement a singly linked list using Javascript
+2. Write and describe basic algorithms associated with manipulating singly linked lists
+3. Reverse a singly linked list in place iteratively and recursively
+
 ## Data Structures And Memory
 
 Modern programming languages hide a lot of the complexity of dealing with a computer.  In languages like javascript and ruby we never have to worry about memory allocation, but it is important to know what is going on behind the scenes when you use it.
