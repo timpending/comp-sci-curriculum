@@ -28,7 +28,7 @@ Finally, it's appropriate to take 10 minutes to explore the history of computer 
 * Define and describe the purpose of Heap, Stack, Threads, Bits, Bytes, and Garbage Collection.
 * Represent "static" objects, arrays, functions, and variables in diagrams
 * Explain the difference between mutable values and immutable values
-* Interpret basic binary
+* Interpret unsigned binary integers
 * Describe UTF-8 and ASCII including the differences between the two
 
 #### Lessons
@@ -73,8 +73,18 @@ Finally, it's appropriate to take 10 minutes to explore the history of computer 
 * Describe and implement Singly & Doubly Linked Lists
 * Describe and implement Stacks & Queues
 * Describe the concepts of LIFO & FIFO and give real-life analogies
-* Describe the differences between Bubble Sort, Selection Sort, Insertion Sort, Linear Search, and Binary Search
-* Describe the purpose of trees in programming and define Binary Trees, Binary Search Trees, Depth First Search, Breadth First Search, Pre-order, In-order, and Post-order Traversal
+* Describe the differences between:
+  * Bubble Sort _( also should be able to implement )_
+  * Selection Sort
+  * Insertion Sort
+  * Linear Search
+  * Binary Search _( also should be able to implement )_
+* Describe the purpose of trees in programming and define:
+  * Binary Trees
+  * Binary Search Trees
+  * Depth First Search _( also should be able to implement )_
+  * Breadth First Search
+  * Pre-order, In-order, and Post-order Traversal
 
 #### Lessons
 
@@ -95,9 +105,10 @@ Finally, it's appropriate to take 10 minutes to explore the history of computer 
 
 #### Objectives
 
-* Describe the difference between Merge Sort and Quick Sort
+* Implement and describe the difference between Merge Sort and Quick Sort
 * Describe why hash tables are used instead of infinity arrays
-* Define Tries and Graphs
+* Define Tries
+* Define and describe the relationships depicted in a Graph
 
 #### Lessons
 

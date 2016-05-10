@@ -5,10 +5,11 @@
 * Include a link to http://www.csfieldguide.org.nz/ and http://blog.benoitvallon.com/data-structures-in-javascript/data-structures-in-javascript/
 
 ## Unit 0 - Fundamentals Part 1 (the concepts)
-- Intro To Memory 
+- Intro To Memory
 - Memory Diagrams
 - Memory Diagrams Exercises
 - Binary
+- **Add signed magnitude and two's complement**
 
 ## Unit 1 - Fundamentals Part 2 (the application)
 - intro to Data Structures and Algorithms
@@ -23,12 +24,12 @@
 -  bubble / insertion / selection sort / bogosort
 -  binary search tree
 -  hash tables
--  **Add Heap** 
+-  **Add Heap**
 
 ## Unit 3 - DS + Algorithms Part 2
 - Trie
 - Graphs (BFS / DFS)
 - merge / quick sort
-- **Add Skip List** 
-- **Add Djikstra** 
-- **Add Heapsort / Radix Sort** 
+- **Add Skip List**
+- **Add Djikstra**
+- **Add Heapsort / Radix Sort**
