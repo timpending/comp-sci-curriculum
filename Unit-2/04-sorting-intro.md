@@ -130,7 +130,7 @@ Most programming languages have a sorting mechanism built in. What sorting algor
 
 Once you're comfortable with the general idea of sorting algorithms, the best way to solidify your understanding is to write one out in code. Pick from one of these (or do both!) to practice writing sorting algorithms.
 
-- [Implement bubble sort](https://github.com/gschool/bubble_sort)
+- [Implement bubble sort](https://github.com/gSchool/js_sorting_algorithms)
 - Implement insertion sort
 - Implement selection sort
 
