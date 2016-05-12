@@ -6,21 +6,88 @@ Computer Science is important because it's better to understand something based 
 2. Most of this will be useful in the job interview process.
 3. You don't need a computer science degree to learn about computer science.
 
-Finally, I think it's appropriate to take 10 minutes to explore the history of computer science and programming in general with the [Art of Writing Software](https://www.youtube.com/watch?v=QdVFvsCWXrA).
+Finally, it's appropriate to take 10 minutes to explore the history of computer science and programming in general with the [Art of Writing Software](https://www.youtube.com/watch?v=QdVFvsCWXrA).
 
-## Unit 0: Fundamentals Part 1 
+
+## Overall Standards
+
+* Analyze an algorithm and identify the Big O
+* Identify and diagram common data structures
+* Implement common algorithms and describe more complex algorithms
+* Implement, evaluate, and use some common data structures
+
+
+## Unit 0: Fundamentals Part 1
+
+#### Standards
+
+* Identify and diagram common data structures
+
+#### Objectives
+
+* Define and describe the purpose of Heap, Stack, Threads, Bits, Bytes, and Garbage Collection.
+* Represent "static" objects, arrays, functions, and variables in diagrams
+* Explain the difference between mutable values and immutable values
+* Interpret unsigned binary integers
+* Describe UTF-8 and ASCII including the differences between the two
+
+#### Lessons
+
 * [Intro To Memory](Unit-0/01-intro-to-memory.md)
 * [Memory Diagrams](Unit-0/02-memory-diagrams.md)
 * [Memory Diagrams Exercises](Unit-0/03-memory-diagrams-exercises.md)
 * [Binary-ASCII-UTF8](Unit-0/04-binary-ascii-utf8.md)
 
-## Unit 1: Fundamentals Part 2 
+
+## Unit 1: Fundamentals Part 2
+
+#### Standards
+
+* Analyze an algorithm and identify the Big O
+
+#### Objectives
+
+* Define "Abstract Data Type" (ADT) and algorithm
+* Discuss what Time Complexity and Space Complexity refer to and how they differ
+* Describe Big O Notation and identify the complexity of any given function
+* Describe what a pointer is
+* Describe and implement recursive functions
+
+#### Lessons
+
 * [Intro to Data Structures and Algorithms](Unit-1/01-intro-to-data-structures-and-algorithms.md)
 * [Big O Notation](Unit-1/02-big-o-notation.md)
 * [Pointers](Unit-1/03-pointers.md)
 * [Recursion](Unit-1/04-recursion.md)
 
+
 ## Unit 2: Data Structures + Algorithms Part 1
+
+#### Standards
+
+* Implement common algorithms and describe more complex algorithms
+* Implement, evaluate, and use some common data structures
+
+#### Objectives
+
+* Describe and implement Singly & Doubly Linked Lists
+* Describe and implement Stacks & Queues
+* Describe the concepts of LIFO & FIFO and give real-life analogies
+* Describe the differences between:
+  * Bubble Sort _( also should be able to implement )_
+  * Selection Sort
+  * Insertion Sort
+  * Linear Search
+  * Binary Search _( also should be able to implement )_
+* Describe the purpose of trees in programming and define:
+  * Binary Trees
+  * Binary Search Trees
+  * Depth First Search _( also should be able to implement )_
+  * Breadth First Search
+  * Pre-order, In-order, and Post-order Traversal
+
+#### Lessons
+
 * [Linked Lists](Unit-2/01-linked-lists-intro.md)
 * [Doubly Linked List](Unit-2/02-doubly-linked-list.md)
 * [Stacks and Queues](Unit-2/03-stacks-and-queues.md)
@@ -28,9 +95,24 @@ Finally, I think it's appropriate to take 10 minutes to explore the history of c
 * [Searching Algorithms](Unit-2/05-searching-algorithms.md)
 * [Trees](Unit-2/06-trees.md)
 
+
 ## Unit 3: Data Structures +  Algorithms Part 2
+
+#### Standards
+
+* Implement common algorithms and describe more complex algorithms
+* Implement, evaluate, and use some common data structures
+
+#### Objectives
+
+* Implement and describe the difference between Merge Sort and Quick Sort
+* Describe why hash tables are used instead of infinity arrays
+* Define Tries
+* Define and describe the relationships depicted in a Graph
+
+#### Lessons
+
 * [Sorting Algorithms - Part 2](Unit-3/01-sorting-revisited.md)
 * [Hash Tables](Unit-3/02-hash-tables.md)
 * [Tries](Unit-3/03-trie.md)
 * [Graphs](Unit-3/04-graphs.md)
-
