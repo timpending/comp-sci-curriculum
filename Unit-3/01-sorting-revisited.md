@@ -1,83 +1,63 @@
+# Sorting Algorithms, Part 2
+
+## Objectives
+
+* Implement a merge sort algorithm in Javascript
+* Implement a quicksort algorithm in Javascript
+
+## Introduction
+
+In [Part 1](../Unit-2/04-sorting-intro.md), you learned about three relatively straightforward sorting algorithms: bubble sort, selection sort, and insertion sort. Compared to other sorting algorithms, these three are some of the most approachable and easy to reason about. However, if you're trying to sort an array with millions of values, these algorithms are also not terribly efficient: on average, all three of them are O(n<sup>2</sup>), where n represents the size of the array being sorted.
+
+In this section, we'll learn about two other sorting algorithms: merge sort and quicksort. These two algorithms perform better on average as the size of the array grows, but they're also a bit more complicated. Let's talk about these algorithms conceptually and create some pseudo-code; you'll be asked to implement each of these algorithms at the end.
+
 ## Merge Sort
 
-Similar to quick sort, This is one of the most efficient ways of sorting an array. It has three steps, divide, conquer(sort) and then combine(merge).
+Merge sort works by decomposing the array into smaller chunks, which are then sorted and merged together. This process goes all the way down to arrays of size 1, which are super easy to sort!
 
-![http://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif](http://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif)
-
-And here is an example of the process
-
-![http://www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/Sorting/Gifs/mergeSort.gif](http://www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/Sorting/Gifs/mergeSort.gif)
+Here's a step-by-step description of merge sort:
 
 **Pseudo Code:**
 
-1. If the list is of length 0 or 1, then it is already sorted. Otherwise:
-1. Divide the unsorted list into two sublists of about half the size.
-1. Sort each sublist recursively by re-applying merge sort.
-1. Merge the two sublists back into one sorted list.
+1. If your array has a length less than 2, congratulations! It's already sorted.
+2. Otherwise, cut your array in half, and consider the two sub-arrays separately.
+3. Sort each of your smaller subarrays using merge sort.
+4. Merge your two subarrays together.
 
-![Merge Sort](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Merge_sort_algorithm_diagram.svg/600px-Merge_sort_algorithm_diagram.svg.png)
+![merge sort](../Unit-2/sort-gifs/mergesort.gif)
 
-**Implemented in JavaScript:**
+Through this recursive process, you'll wind up with a sorted array!
 
-Merge function:
+In order to implement this function, it's useful to have a helper function that takes two sorted arrays and merges them together to create a new, larger sorted array. Here's some pseudo-code to get you started:
 
 ```js
-function merge(left, right){
-    var result  = [],
-        il      = 0,
-        ir      = 0;
+function merge(arr1, arr2) {
 
-    while (il < left.length && ir < right.length){
-        if (left[il] < right[ir]){
-            result.push(left[il++]);
-        } else {
-            result.push(right[ir++]);
-        }
-    }
+	// 1. declare a new empty array, and pointers corresponding to indices in arr1 and arr2 (set them both to 0)
+	// 2. if the first element in arr1 is less than the first element in arr2, push the first element in arr1 to the new array, and move the pointer for arr1 one spot to the right. Otherwise, do this for arr2.
+	// 3. Repeat this process until you've gone through one of the arrays
+	// return the new array, concatenated with whatever elements are remaining from the array that you haven't exhausted yet.
 
-    return result.concat(left.slice(il)).concat(right.slice(ir));
 }
 ```
 
-Version that returns a new array:
+Once you've implemented this merge function, you can implement merge sort using the pseudo code outlined above.
 
-```js
-function mergeSort(items){
+**Time Complexity**
 
-    // Terminal case: 0 or 1 item arrays don't need sorting
-    if (items.length < 2) {
-        return items;
-    }
+Determining the time complexity of merge sort requires some careful though. From a high level, merge sort works by subdividing the original array into subarrays that are half as long, until the subarrays can't be divided any further and are therefore already sorted. 
 
-    var middle = Math.floor(items.length / 2),
-        left    = items.slice(0, middle),
-        right   = items.slice(middle);
+Then comes the merging. At each level (1-element arrays to 2-element arrays, 2-element arrays to 4-element arrays, and so on), there are O(n) operations that need to be performed. And how many levels are there? Well, the number of levels equals the number of times you can divide n by 2 before you get a quotient that's less than or equal to 1. But this is just log<sub>2</sub>(n). Therefore, the time complexity is log(n) copies of O(n), a.k.a. O(n log(n))!
 
-    return merge(mergeSort(left), mergeSort(right));
-}
-```
+![http://i.stack.imgur.com/rPhxO.png](http://i.stack.imgur.com/rPhxO.png)
 
-In-place version:
+Vieiwing the image above as a tree, its height is roughly equal to log<sub>2</sub>(n).
 
-```js
-function mergeSort(items){
+(For some more discussion on this, check out this [programmers stackexchange](http://programmers.stackexchange.com/questions/297160/why-is-mergesort-olog-n) The above image comes from that conversation).
 
-    if (items.length < 2) {
-        return items;
-    }
+**Space Complexity**
 
-    var middle = Math.floor(items.length / 2),
-        left    = items.slice(0, middle),
-        right   = items.slice(middle),
-        params = merge(mergeSort(left), mergeSort(right));
-
-    // Add the arguments to replace everything between 0 and last item in the array
-    params.unshift(0, items.length);
-    items.splice.apply(items, params);
-    return items;
-}
-```
-
+Because merge sort requires the use of a merge function which takes two arrays and creates a new array that's (roughly) twice as large, the space complexity of merge sort is O(n).
 
 ## Quick Sort
 
