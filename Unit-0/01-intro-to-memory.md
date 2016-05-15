@@ -9,7 +9,7 @@ There is another huge difference between C, C++ and all the other languages list
 ```javascript
 var num = 123
 ```
-In the above JavaScript code, memory is allocated for a number.  But you do not have to write any extra code to make sure that memory exists; this is handled for you.  Additionaly, when that memory is no longer needed, it will be automatically removed from your computer.  This process is known as __garbage collection__.
+In the above JavaScript code, memory is allocated for a number.  But you do not have to write any extra code to make sure that memory exists; this is handled for you.  Additionally, when that memory is no longer needed, it will be automatically removed from your computer.  This process is known as __garbage collection__.
 
 ## Garbage collector
 
