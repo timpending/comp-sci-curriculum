@@ -1,8 +1,8 @@
-# Big-O Notation 
+# Big-O Notation
 
-Big-O notation is how developers discuss the complexity of an algorithm as a way to understand how fast a program will run given it's input. Big-O notation deals with the **worst** case scenario for the algorithm.  In other words, if the program **may** run quickly, but there is a chance it could take a long time given some input, then the Big-O runtime will deal with the longer case.
+[Big-O notation](https://en.wikipedia.org/wiki/Big_O_notation) is how developers discuss the complexity of an algorithm as a way to understand how fast a program will run given it's input. Big-O notation deals with the **worst** case scenario for the algorithm.  In other words, if the program **may** run quickly, but there is a chance it could take a long time given some input, then the Big-O runtime will deal with the longer case.
 
-To put it yet another way, Big-O runtime deals with asymptotic approximations of the complexity of the algorithm.  It tends to care much more about how complex a program is when the input size is very large because that is typically when the performance matters the most.
+To put it yet another way, Big-O runtime deals with [asymptotic approximations](https://en.wikipedia.org/wiki/Asymptotic_analysis) of the complexity of the algorithm.  It tends to care much more about how complex a program is when the input size is very large because that is typically when the performance matters the most.
 
 ## Objectives
 
@@ -13,17 +13,19 @@ Watch [this video on asymptotic complexity from CS50](https://www.youtube.com/wa
 
 ## Big-O Definition
 
-Here's the technical definition of big-O notation. If it's difficult to comprehend, don't worry! We'll show plenty of examples below. The rigorous definition is a helpful point of reference, however, especially as you begin to familiarize yourself with the concept.
+Here's the technical definition of big-O notation.
 
 Suppose you have two mathematical functions, `f(x)` and `g(x)`. A function `f(x)` is said to be `O(g(x))` (pronounced 'Big O of g(x)') if there exists some positive constant `C` such that `|f(x)|` is less than or equal to  `C * |g(x)|` for `x` sufficiently large.
 
 When we talk about time complexity and Big O in this class, `f(x)` will typically roughly correspond to the runtime of some javascript function (or, if you prefer, the number of operations that function needs to perform), while `g(x)` will roughly correspond to the size of that function's input. (You can also talk about Big O within the context of [space complexity](https://www.cs.northwestern.edu/academics/courses/311/html/space-complexity.html), but we'll save that for another time.)
 
-Huh? What does that mean? Let's get down to brass tacks, and look at some examples.
+> Don't worry if that's difficult to comprehend! We'll show plenty of examples below. The rigorous definition is a helpful point of reference, especially as you begin to familiarize yourself with the concept.
 
 ## Big-O Examples
 
-The best way to get started with big-O notation is to start with some examples:
+The best way to get started with big-O notation is to start with some examples...
+
+### [O(n) / Linear Time](https://en.wikipedia.org/wiki/Time_complexity#Linear_time)
 
 ```javascript
 // O(n)
@@ -35,7 +37,7 @@ function square(arr) {
 }
 ```
 
-The above example is O(n) run time, which means given a input of size n (the length of the array is equal to n), the runtime of the application will be linear in relationship to the input size.  In other words, if every x * x operation takes some unit of time, we can expect n of those operations to take place.
+The above example is [O(n](https://en.wikipedia.org/wiki/Time_complexity#Linear_time)) run time, which means given a input of size n (the length of the array is equal to n), the runtime of the application will be linear in relationship to the input size.  In other words, if every x * x operation takes some unit of time, we can expect n of those operations to take place.
 
 Let's take a look at this even more concretely. The following function takes in two arguments: a callback and an array. It returns the time it takes your computer to execute the code in the callback.
 
@@ -46,13 +48,13 @@ function testPerformance(callback, arr) {
   var t1 = performance.now();
   return t1 - t0;
 }
-``` 
+```
 
 **Exercise** Create an array of length 1,000,000, where each entry is the number 2. Then test the performance of `square` on this array, using `testPerformance`.
 
-If you run `testPerformance` many times on the same arguments, you should see different outputs. This makes sense; as you saw in the CS50 video, the time it takes to run a certain block of code is highly variable not just across machines, but also for a given machine.
+If you run `testPerformance` many times on the same arguments, you should see different outputs. As you saw in the CS50 video, the time it takes to run a certain block of code is highly variable not just across machines, but also for a given machine.
 
-Even so, it can be helpful to plot several data points and look for trends. 
+Even so, it can be helpful to plot several data points and look for trends.
 
 **Exercise** Repeat the previous exercise for arrays of 2 million, 3 million, and so on up to 10 million. Then record the times you get in [this table](https://www.desmos.com/calculator/i64rd3xdsv), and you'll wind up with a nice little graph of your data. What sort of trend do you see?
 
@@ -76,6 +78,8 @@ function squareAndDouble(arr) {
 ![](http://images-cdn.9gag.com/photo/a9LGndm_700b_v1.jpg)
 
 In the above example the runtime is O(n + n) or O(2 * n). The runtime is O(2 * n) because the first `arr.map` iterates over all n elements in the array, and the second `tempArr.map` also iterates over all n elements in the array.  However, the runtime is actually O(n), because in big-O notation, constants are ignored.
+
+### [O(1) / Constant Time](https://en.wikipedia.org/wiki/Time_complexity#Constant_time)
 
 **RULE: Big-O notation ignores constants.**
 
@@ -102,9 +106,7 @@ function print500000nums() {
 ```
 The example above is still O(1) because 500,000 is still a constant number of iterations.
 
-**EXERCISE**
-
-Here are two more functions. Do some performance tests and graph the results. What is the complexity of each one?
+**EXERCISE** Do some performance tests and graph the results. What is the complexity?
 
 ```javascript
 function addSomeNumbers(arr) {
@@ -115,6 +117,12 @@ function addSomeNumbers(arr) {
   return sum;
 }
 ```
+
+This is O(1) because all operations in the program do not depend on input size. No matter how large the array, there's an upper bound on the number of operations that the function will perform.
+
+### O(n^2) / Quadratic time
+
+**EXERCISE** Again, do some performance tests and graph the results. What is the complexity?
 
 ```javascript
 function sumValuesAndRemoveOdds(arr) {
@@ -147,11 +155,11 @@ function sumValuesAndRemoveOdds(arr) {
 
 ![](http://images.contentful.com/7h71s48744nc/3naPsJv6IE0KewGmqUOMUu/a00a2a2cbe0c580cfce1b502c1ebdc9f/a-beautiful-mind.jpg)
 
-In the above exercises, the first program is O(1) because all all operations in the program do not depend on input size. No matter how large the array, there's an upper bound on the number of operations that the function will perform.
-
-The second exercise above is O(n*n + n).  The first n*n (n^2) comes from the while loop that iterates over all of the elements in the array and has another while loop inside that also iterates over all elements in the array.  The second n comes from the final while loop that iterates over all elements and remvoes odds.  The expression can also be simplified further.  Any time there is addition in the big O notation, the worst case runtime is kept. All other values are dropped. In this case, the runtime would just be O(n^2).
+This is O(n\*n + n).  The first n*n (n^2) comes from the while loop that iterates over all of the elements in the array and has another while loop inside that also iterates over all elements in the array.  The second n comes from the final while loop that iterates over all elements and remvoes odds.  The expression can also be simplified further.  Any time there is addition in the big O notation, the worst case runtime is kept. All other values are dropped. In this case, the runtime would just be O(n^2).
 
 **RULE: When big-O values are added, keep the worst case runtime, and drop all other additional values.**
+
+## More Exercises
 
 **EXERCISE**
 
@@ -185,11 +193,11 @@ Which is the faster big O runtime (Make sure to reduce both expressions first):
 
 3. Prove that big-O notation is _transitive_. In other words, if `f(x)` is `O(g(x))`, and `g(x)` is `O(h(x))`, then `f(x)` is `O(h(x))`.
 
-**Addendum: Math Function Review!**
+## Addendum
 
 You've seen a few functions in this section, such as `log(x)` and `x!`, that may be bringing back some (hopefully fond!) memories of high school math classes. If you need a quick refresher on logs or factorials, read on.
 
-**Logarithms**
+### Logarithms
 
 A very simple entry point for logarithms can be found in the book [How Not To Be Wrong](http://www.amazon.com/How-Not-Be-Wrong-Mathematical/dp/0143127535) by mathematician Jordan Ellenberg:
 
@@ -197,13 +205,11 @@ A very simple entry point for logarithms can be found in the book [How Not To Be
 
 > Wait, really? That's it?
 
-> No. That's not _really_ it. We can call the number of digits the "fake logarithm", or _flogarithm_. It's close enough to the real thing to give the general idea of what the logarithm means in a context like this one. The flogarithm (whence also the logarithm) is a very slowly growing function indeed: the flogarithm of a thousand is 4, the flogarithm of a million, a thousand times greater, is 7, and the flogarithm of a billion is still only 10.
-
-Here's a graph that lets you compare the logarithm function to the flogarithm function. You can also adjust the _base_ of the logarithm and flogarithm. For example, when the base is 2, the flogarithm shows the number of digits a number has base 2. (That's why the graph passes through the point (8, 3), since 8 base 2 is 100, which has 3 digits.)
+> No. That's not _really_ it. We can call the number of digits the "fake logarithm", or _flogarithm_. It's close enough to the real thing to give the general idea of what the logarithm means in a context like this one. The flogarithm (hence also the logarithm) is a very slowly growing function indeed: the flogarithm of a thousand is 4, the flogarithm of a million, a thousand times greater, is 7, and the flogarithm of a billion is still only 10.
 
 Another way to think of logarithms (which may be more familiar to you from high school math) is as inverses to exponential functions. The base-10 logarithm, commonly written _log N_, is the inverse to the function 10<sup><em>x</em></sup>. Graphically, this helps to explain the shape of the log graph; it's just a reflection of an exponential graph. This relationship between logarithms and exponentials also explains the slow growth of the logarithm: as _x_ grows, exponential functions produce large changes in output for small changes in input, while logs require large changes in input for small changes in output.
 
-But why use words to explain the relationship, when graphs will do the job even better? Check [this one](https://www.desmos.com/calculator/qa1sbhk6if) out. 
+But why use words to explain the relationship, when graphs will do the job even better? Check [this one](https://www.desmos.com/calculator/qa1sbhk6if) out.
 
 If all else fails, just remember that a log is an exponent. The log base _b_ of some value _x_ (written log<sub><em>b</em></sub>(<em>x</em>)) is the exponent that satisfies the equality <em>b</em><sup>log<sub><em>b</em></sub>(<em>x</em>)</sup> = <em>x</em>. For example, log<sub>3</sub>(81) = 4, since 4 is the exponent in the equation 3<sup>4</sup> = 81.
 
@@ -211,9 +217,11 @@ Factorials are a little more straightforward. The factorial of a positive intege
 
 # Resources
 
+### Matt Garland
+
 * [Matt Garland's YouTube channel](https://www.youtube.com/channel/UCXKj1IJVDEHHHDOt49FhOOA) focused on simple visualizations of various CS concepts.
 
-* (Matt Garland explains Big O)[https://www.youtube.com/watch?v=nMQyBh2FuaA]
+* [Matt Garland explains Big O](https://www.youtube.com/watch?v=nMQyBh2FuaA)
 
 ### MIT Open Courseware
 
