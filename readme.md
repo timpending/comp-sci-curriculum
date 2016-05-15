@@ -1,6 +1,6 @@
 # Computer Science Curriculum
 
-Computer Science is important because it's better to understand something based on [first, basic principles](https://www.youtube.com/watch?v=L-s_3b5fRd8&t=22m38s). Before you dive in, you should know a few things.
+Computer Science fundamentals are important because it's better to understand something based on [first, basic principles](https://www.youtube.com/watch?v=L-s_3b5fRd8&t=22m38s). Before you dive in, you should know a few things:
 
 1. These are fascinating topics that I really hope you enjoy learning about. It's hard, but totally worth it!
 2. Most of this will be useful in the job interview process.
