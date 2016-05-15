@@ -25,11 +25,11 @@ Finally, it's appropriate to take 10 minutes to explore the history of computer 
 
 #### Objectives
 
-* Define and describe the purpose of Heap, Stack, Threads, Bits, Bytes, and Garbage Collection.
+* Define and describe the purpose of Heap, Stack, Threads, Bits, Bytes, and Garbage Collection
 * Represent "static" objects, arrays, functions, and variables in diagrams
 * Explain the difference between mutable values and immutable values
 * Interpret unsigned binary integers
-* Describe UTF-8 and ASCII including the differences between the two
+* Describe UTF-8 and ASCII, including the differences between the two
 
 #### Lessons
 
