@@ -10,7 +10,7 @@ By the end of this lesson you should be able to:
 
 ## Set the stage
 
-As you get into more complex JavaScript concepts, it's helpful to have a working mental model of how objects in the heap (in RAM) relate to each other.  Once you learn these diagrams, you can use them in service of understanding new concepts in JavaScript, such as OOP, Angular scopes, prototypal inheritance and more.
+As you get into more complex JavaScript concepts, it's helpful to have a working mental model of how objects in the heap (in RAM) relate to each other.  Once you learn these diagrams, you can use them to help understand new concepts in JavaScript - such as OOP, Angular scopes, prototypal inheritance, and more.
 
 > NOTE!  This is not the type of thing you would do on a job.  These diagrams are for learning purposes only, and once you internalize them, you should no longer need to draw out code.
 
@@ -39,11 +39,11 @@ For values, follow these rules:
 
 In JavaScript, arrays are just objects with specialized behavior.  Don't believe me?  Run this code:
 
-```js
+```javascript
 typeof [1,2,3]
 ```
 
-Which means that representing arrays is very simple:
+Which means that representing an array is very simple:
 
 ![](images/ram-diagrams/ram-diagrams.002.png)
 
@@ -63,12 +63,20 @@ So like arrays, you can easily represent functions like tables.  In this case, y
 
 Let's say you have a program that looks like this:
 
-```js
+```javascript
 var a = "hello"
 var b = new Date()
 ```
 
-What you are doing here is establishing a relationship between two things:  the _identifiers_ (aka variable names) like `a` and `b`, and the _values_ (like `"hello"`).  Sound familiar?  Yup - this looks just like an object!
+What you are doing here is establishing a relationship between two things:
+
+- the _identifiers_ (variable names) - like `a` and `b`
+
+and
+
+- the _values_ - like `"hello"`.
+
+Sound familiar?  Yup - this looks just like an object!
 
 ![](images/ram-diagrams/ram-diagrams.003.png)
 
@@ -79,7 +87,7 @@ But since variables aren't _quite_ as simple as objects, and you can't reference
 
 > **Question:** Whoa... wait a minute.  Scope is pretty hard.  You have your scope, and parent scopes, and `this`... and scope changes whenever you are in a function.  This seems too simplistic and potentially harmful.
 
-> **Answer:** Yes - with all of these representations, there's a risk of oversimplifying in some cases. In general, as you are learning, you'll likely only care about a single scope at a time (like, diagramming the result of a function, or the code inside a function with a few variables...).  Again - these are _not_ accurate representations of how things are _actually_ stored in the JavaScript interpreters - they are a close representation, a learning tool and a way to help you make sense of the world - at the point where they make it worse, stop using them :)
+> **Answer:** Yes - with all of these representations, there's a risk of oversimplifying in some cases. In general, as you are learning, you'll likely only care about a single scope at a time (like, diagramming the result of a function, or the code inside a function with a few variables...).  Again - these are _not_ accurate representations of how things are _actually_ stored in the JavaScript interpreters - they are a close representation, a learning tool, and a way to help you make sense of the world - at the point where they make it worse, stop using them :)
 
 > As you get into closures and scope chains, this representation will scale nicely.  So yes - scope is a complex subject, but these simple diagrams can take you pretty far.
 
