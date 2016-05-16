@@ -79,10 +79,10 @@ Before worrying about implementing a quicksort with the best possible space comp
 
 ```js
 function quickSort(arr) {
-  1. If the length of the array is less than 2, it is already sorted, so return it.
+  /* 1. If the length of the array is less than 2, it is already sorted, so return it.
   2. Otherwise, create two empty arrays (one for the left and one for the right), and set the first value in arr equal to the pivot.
   3. Compare every element in the array to the pivot. If the element is less than the pivot, push it into the left array. Otherwise, push it into the right array.
-  4. Recrusively call quickSort on the left array and the right array, then concatenate these arrays together with the pivot value in between them, and return this larger array.
+  4. Recrusively call quickSort on the left array and the right array, then concatenate these arrays together with the pivot value in between them, and return this larger array. */
 }
 ```
 
@@ -96,16 +96,16 @@ This will be easier to understand with some more pseudo code:
 // left and right indicate the left and rightmost indices in the sub-array that you're partitioning.
 
 function partition(arr, left, right) {
-  1. Set the pivot value to be the value at the left index, and set a varaible called partitionIndex equal to left. The partitionIndex will help us keep track of where to perform our swaps so that we wind up with values correctly placed on either side of the pivot.
+  /* 1. Set the pivot value to be the value at the left index, and set a varaible called partitionIndex equal to left. The partitionIndex will help us keep track of where to perform our swaps so that we wind up with values correctly placed on either side of the pivot.
   2. For every index greater than left and less than right + 1, compare the array value to the pivot value.
   3. If the array value at the given index is less than the pivot value, increment the partition index and swap the array value with the value at the partition index.
   4. At the end, swap the pivot value with the value at the partition index (this ensures that the pivot ends up in between values less than it and values greater than it).
-  5. Return the partition index.
+  5. Return the partition index. */
 }
 
 function quickSort(arr, left=0, right=arr.length - 1) {
-  1. If left is less than right, declare a variable called partitionIndex which is equal to the result of a call to partition, passing in arr, left, and right. After the call to partition, perform a quicksort to the two subarrays to the left and right of the partitionIndex. 
-  2. Return arr.
+  /* 1. If left is less than right, declare a variable called partitionIndex which is equal to the result of a call to partition, passing in arr, left, and right. After the call to partition, perform a quicksort to the two subarrays to the left and right of the partitionIndex. 
+  2. Return arr. */
 }
 ```
 
