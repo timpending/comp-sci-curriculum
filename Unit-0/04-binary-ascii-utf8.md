@@ -189,6 +189,27 @@ We now take this sum and multiply the total binary amounts by their respective b
 
 Try subtraction! It works too!
 
+## Exercises
+
+### Convert
+- 10101010
+- 1100110
+- 11110010
+
+### Addition
+- 11111110 + 110011
+- 100011 + 11111
+- 11 + 110
+
+### Subtraction
+- 11000111 - 10000111
+- 1110 - 11
+- 10001 - 100
+
+### Bonus
+- What's the largest binary number you can write with 5 bits? (What about _n_ bits?)
+- Try multiplication/divison (*hint:* It's similar to multiplying decimals)
+
 ## Resources
 
 - http://www.garlikov.com/Soc_Meth.html
