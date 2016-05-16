@@ -22,7 +22,7 @@ Here's a step-by-step description of merge sort:
 1. If your array has a length less than 2, congratulations! It's already sorted.
 2. Otherwise, cut your array in half, and consider the two sub-arrays separately.
 3. Sort each of your smaller subarrays using merge sort.
-4. Merge your two subarrays together.
+4. Merge your two subarrays together, and return the merged array.
 
 ![merge sort](../Unit-2/sort-gifs/mergesort.gif)
 
