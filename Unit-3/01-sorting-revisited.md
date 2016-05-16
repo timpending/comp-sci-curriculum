@@ -59,119 +59,75 @@ Vieiwing the image above as a tree, its height is roughly equal to log<sub>2</su
 
 Because merge sort requires the use of a merge function which takes two arrays and creates a new array that's (roughly) twice as large, the space complexity of merge sort is O(n).
 
-## Quick Sort
+## Quicksort
 
-Watch [Alex explain quick sort](https://www.youtube.com/watch?v=XE4VP_8Y0BU&feature=iv&src_vid=M5c_RFKVkko&annotation_id=annotation_155416) on Computerphile.
+Quicksort is probably the least straightforward of all the sorting algorithms we'll consider here. Like merge sort, the time complexity for quicksort is typically O(n log(n)) (though in the worst case, it can be O(n<sup>2</sup>)). However, when sorting an array in place using quicksort, the space complexity is better than merge sort: O(log(n)) rather than O(n).
 
-> Quicksort is a divide and conquer algorithm in the style of merge sort. The basic idea is to find a “pivot” item in the array to compare all other items against, then shift items such that all of the items before the pivot are less than the pivot value and all the items after the pivot are greater than the pivot value. After that, recursively perform the same operation on the items before and after the pivot.
+Before diving into the algorithm, you whould watch [this video from Computerphile](https://www.youtube.com/watch?v=XE4VP_8Y0BU), which does a great job of explaining how quicksort works.
 
-There are two basic operations in the algorithm, swapping items in place and partitioning a section of the array. The basic steps to **partition** an array are:
+Here's the gist of how quicksort works:
 
-**Pseudo code:**
+1. Take an element in the array and refer to it as the "pivot." For simplicity, we'll take the first element in the array to be the pivot. (As you'll see, this is a bad choice if the array is already sorted. It makes the algorithm a little easier to reason about though, so we'll take the tradeoff.)
+2. Compare every other element to the pivot. If it's less than the pivot value, move it to the left of the pivot. If it's greater, move it to the right. Don't worry about where on the left or right you're putting these values; the only thing that matters is comparisons to the pivot.
+3. Once you're done, the pivot will be in the right place, and you can then recursively repeat this process with the left and right halves of the array.
 
-1. Find a “pivot” item in the array. This item is the basis for comparison for a single round.
-1. Start a pointer (the left pointer) at the first item in the array.
-1. Start a pointer (the right pointer) at the last item in the array.
-1. While the value at the left pointer in the array is less than the pivot value, move the left pointer to the right (add 1). Continue until the value at the left pointer is greater than or equal to the pivot value.
-1. While the value at the right pointer in the array is greater than the pivot value, move the right pointer to the left (subtract 1). Continue until the value at the right pointer is less than or equal to the pivot value.
-1. If the left pointer is less than or equal to the right pointer, then swap the values at these locations in the array.
-1. Move the left pointer to the right by one and the right pointer to the left by one.
-1. If the left pointer and right pointer don’t meet, go to step 1.
+![quicksort](../Unit-2/sort-gifs/quicksort.gif)
 
-The **swap** function is very easy to implement:
+(Note: for arrays with unique values, you can think of this process as generating a binary search tree. The root node is the first pivot, and every subsequent node is a subsequently chosen pivot.)
+
+Before worrying about implementing a quicksort with the best possible space complexity, let's write a quicksort that just gets the job done with O(n) space complexity. Here's some pseudo code:
 
 ```js
-function swap(arr, a, b) {
-    var temp = arr[a];
-    arr[a] = arr[b];
-    arr[b] = temp;
+function quickSort(arr) {
+  /* 1. If the length of the array is less than 2, it is already sorted, so return it.
+  2. Otherwise, create two empty arrays (one for the left and one for the right), and set the first value in arr equal to the pivot.
+  3. Compare every element in the array to the pivot. If the element is less than the pivot, push it into the left array. Otherwise, push it into the right array.
+  4. Recrusively call quickSort on the left array and the right array, then concatenate these arrays together with the pivot value in between them, and return this larger array. */
 }
 ```
 
-Here is one way to **partition** the array:
+The downside with the above approach is that when we pass an array into `quickSort`, we're getting a new array back, which requires more memory. If space complexity is important (for example, if you're trying to sort an array with millions of elements), then it might be better to try to implement quicksort on an array _in place_.
+
+This approach is a bit more complicated, and is typically done with the addition of a helper function called `partition`, which handles arranging the values in a given section of an array so that they are moved to the either side of a given pivot based on their values.
+
+This will be easier to understand with some more pseudo code:
 
 ```js
-function partition(items, left, right) {
-    // find and assign pivot by halving sum of right and left index
-    var pivot = items[Math.floor((right + left) / 2)],
-        i     = left,
-        j     = right;
-    // loop until the pointers pass one another
-    while (i <= j) {
-        // increment i while item[i] is less than pivot
-        while (items[i] < pivot) {
-            i++;
-        }
-        // decrement j while item[j] is more than pivot
-        while (items[j] > pivot) {
-            j--;
-        }
-        // swap i and j when i is less than or equal to j
-        // increment and decrement i and j, respectively
-        if (i <= j) {
-            swap(items, i, j);
-            i++;
-            j--;
-        }
-    }
-    // return i to be used as index for left or right pointers in recursive calls of quicksort
-    return i;
+// left and right indicate the left and rightmost indices in the sub-array that you're partitioning.
+
+function partition(arr, left, right) {
+  /* 1. Set the pivot value to be the value at the left index, and set a varaible called partitionIndex equal to left. The partitionIndex will help us keep track of where to perform our swaps so that we wind up with values correctly placed on either side of the pivot.
+  2. For every index greater than left and less than right + 1, compare the array value to the pivot value.
+  3. If the array value at the given index is less than the pivot value, increment the partition index and swap the array value with the value at the partition index.
+  4. At the end, swap the pivot value with the value at the partition index (this ensures that the pivot ends up in between values less than it and values greater than it).
+  5. Return the partition index. */
+}
+
+function quickSort(arr, left=0, right=arr.length - 1) {
+  /* 1. If left is less than right, declare a variable called partitionIndex which is equal to the result of a call to partition, passing in arr, left, and right. After the call to partition, perform a quicksort to the two subarrays to the left and right of the partitionIndex. 
+  2. Return arr. */
 }
 ```
 
-And finally, here's the implementation for quick sort, which uses both the partition and swap functions:
+Hopefully this should be enough to get you on your way to implementing quicksort with O(log(n)) space complexity. If you're still stuck, consult some of the references below.
 
-```js
-function quickSort(items, left, right) {
-    // declare index to be used later when each partition returns 'i'
-    var index;
-    // if statement to handle the base case (any array smaller
-    // than length of 1 is returned
-    if (items.length > 1) {
-        // if no left or right is entered, set them to first and last indeces in array
-        left = typeof left !== "number" ? 0 : left;
-        right = typeof right !== "number" ? items.length - 1 : right;
-        // set index to return value of partition function
-        index = partition(items, left, right);
-        // compare current left value to index - 1
-        // if left is smaller, then there are still items to be sorted on
-        // the left side of the array, so quicksort is called recursively
-        if (left < index - 1) {
-            quickSort(items, left, index - 1);
-        }
-        // compare current right value to index
-        // if index is smaller than right, then there are still items
-        // to be sorted on the right side of the array, so quicksort
-        // is called recursively
-        if (index < right) {
-            quickSort(items, index, right);
-        }
+## What about `Array.prototype.sort`?
 
-    }
-    // all recursive calls have finished so the sorted array is returned
-    return items;
-}
-```
+As you may know, Javascript (along with most other languages) has a built-in sort method on arrays. This raises a question: what sorting method is being used under the hood?
 
-## Picking a Sorting Algorithm
+Well, it depends. As of 2012, according to Nicholas C. Zakas (reference below):
 
-With all of the sorting algorithms to choose from – and we've only named a few – which one is **best**? Well, it depends. This largely depends on the type of data we're sorting, how large the input is, and how much performance and speed matter to us.
-
-You don't have a way to measure these sorting algorithms until the Big-O Notation lesson in this unit. Until then, consider watching [15 Sorting Algorithms in 6 Minutes](https://www.youtube.com/watch?v=kPRA0W1kECg) to see how some of them compare visually.
-
-### Bonus question
-
-Most programming languages have a sorting mechanism built in. What sorting algorithm does your language of choice use?
+> Quicksort is generally considered to be efficient and fast and so is used by V8 as the implementation for Array.prototype.sort() on arrays with more than 23 items. For less than 23 items, V8 uses insertion sort. Merge sort is a competitor of quicksort as it is also efficient and fast but has the added benefit of being stable. This is why Mozilla and Safari use it for their implementation of Array.prototype.sort().
 
 # Exercises:
 
-Once you're comfortable with the general idea of sorting algorithms, the best way to solidify your understanding is to write one out in code. Pick from one of these (or do both!) to practice writing sorting algorithms.
-
-- [Implement merge sort](https://github.com/gSchool/js_merge_sort)
-- Implement quick sort 
+Complete Part 2 of the [JS Sorting Algorithms](https://github.com/gSchool/js_sorting_algorithms) assignment.
 
 ## Resources: 
 
 * [Merge Sort in JavaScript](http://www.nczonline.net/blog/2012/10/02/computer-science-and-javascript-merge-sort/)
 * [Merge Sort Wikipedia](https://en.wikipedia.org/wiki/Merge_sort)
 * [Quick Sort in JavaScript](http://www.nczonline.net/blog/2012/11/27/computer-science-in-javascript-quicksort/)
+* [Quicksort in Javascript](https://en.wikibooks.org/wiki/Algorithm_Implementation/Sorting/Quicksort#JavaScript)
+* [JS Front-end Interview Questions: Quicksort](http://khan4019.github.io/front-end-Interview-Questions/sort.html#quickSort
+)
