@@ -95,6 +95,10 @@ Finally, it's appropriate to take 10 minutes to explore the history of computer 
 * [Searching Algorithms](Unit-2/05-searching-algorithms.md)
 * [Trees](Unit-2/06-trees.md)
 
+#### Additional Resources
+
+* [Data structures in JavaScript](http://blog.benoitvallon.com/data-structures-in-javascript/data-structures-in-javascript/)
+
 
 ## Unit 3: Data Structures +  Algorithms Part 2
 
@@ -116,3 +120,7 @@ Finally, it's appropriate to take 10 minutes to explore the history of computer 
 * [Hash Tables](Unit-3/02-hash-tables.md)
 * [Tries](Unit-3/03-trie.md)
 * [Graphs](Unit-3/04-graphs.md)
+
+#### Additional Resources
+
+* [Data structures in JavaScript](http://blog.benoitvallon.com/data-structures-in-javascript/data-structures-in-javascript/)
