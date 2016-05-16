@@ -1,38 +1,88 @@
-#Recursion!
+# Recursion
 
-####re·cur·sive -riˈkərsiv
-adjective
-*See definition of recursive*
+## Background
 
-[CMU Recursion Slides](http://www.cs.cmu.edu/~15110-f12/Unit05PtA-handout.pdf)
+[Recursion](https://en.wikipedia.org/wiki/Recursion_(computer_science)) is a technique where a method can call itself. Recursion can be used to traverse tree structures. For example, take the following tree, where each letter represents a node in the tree:
 
-## ALWAYS remember... TRUST THE RECURSION!
+```
+      A
+  ____|____
+  |       |
+  B       C
+__|__   __|__
+|   |   |   |
+D   E   F   G
+            |
+            H
+```
 
-All we need are:
+In this tree, we can say that-
+
+* `A` is the "root" node
+* `A` has two child nodes: `[B, C]`
+* `B` has two child nodes: `[D, E]`
+* `C` has two child nodes: `[F, G]`
+* `G` has one child node:  `[H]`
+
+Let's say you wanted to go over the entire tree and print the letters out... you could write (pseudo) code like this:
+
+```
+print the root node's letter
+for each child node in the root node's children
+  print the child node's letter (B, C)
+  for each child in the child node's children
+    print the granchild's letter (D,E,F,G)
+    for each child in the grandchild's children
+      print the letter (H)
+```
+
+You can see that this only works if the tree has 4 levels.  But what if it had 8 levels? Or 100?  Basically that code is doing the same thing, but from a different starting point:
+
+1. Start with `A`, print `A`'s letter
+1. Go over all of `A`'s children and repeat step 1, but start with `B`, then with `C`
+
+We could write that in JavaScript like so:
+
+```javascript
+function printLetters(node) {
+  console.log(node.name);
+  node.forEach(function(childNode){
+    printLetters(childNode)
+  }
+}
+```
+
+Make sense?
+
+> Check out the [CMU Recursion Slides](http://www.cs.cmu.edu/~15110-f12/Unit05PtA-handout.pdf) for more.
+
+## Quick Start
+
+For recursion we need:
 
 1. A base case(s)
-2. Recursive step
+1. Recursive step
 
-For recursion we need both a base case and a recursive step.  The recursive step ensures that we progress.  The base case ensures that our recursion eventually exits.  Also we usually want to pass some data/information around, we do this with function returns.
+The recursive step ensures that we progress.  The base case ensures that our recursion eventually exits, preventing an infite loop.  Also we usually want to pass some data/information around - we do this with function returns.
 
-## The Quick start to Recursion
+### Steps
 
 1. Pretend you are at the solution
-	* This can be a node you are searching for
-	* The end of a recursive data structure (i.e. leaves)
-	* etc.
-2. How do you know you found the solution (what's your base case)
-3. Now that you have you answer, how do you get this answer back to the top
-4. Since you have solved the problem, assuming you are at the solution...
-5. How do you get to the solution
-	* Easier to think one step at a time
-	* How do I go one step further
-	* If you know how to get from one step to the next, and know when to stop...
-6. $$$
+  * For example:
+    * This can be a node you are searching for
+    * The end of a recursive data structure
+1. How do you know you found the solution (what's your base case)
+1. Now that you have you answer, how do you get this answer back to the top
+1. Since you have solved the problem, assuming you are at the solution...
+1. How do you get to the solution
+  * Easier to think one step at a time
+  * How do I go one step further
+  * If you know how to get from one step to the next, and know when to stop...
+1. $$$
 
-[Sparknotes on Recursion](http://www.sparknotes.com/cs/recursion/whatisrecursion/section1.rhtml)
+> [Sparknotes on Recursion](http://www.sparknotes.com/cs/recursion/whatisrecursion/section1.rhtml)
 
-##Recursive Problem Set
+## Recursive Problem Set
 
 Write both an iterative and recursive solution to each problem:
 
@@ -44,6 +94,7 @@ Write both an iterative and recursive solution to each problem:
 [https://github.com/gSchool/js-hof-filter-map-reduce](https://github.com/gSchool/js-hof-filter-map-reduce)
 
 #### Bonus challenges
+
 1. Convert Roman Numerals to Integers
 
 ## Recursion Write Up
@@ -52,5 +103,4 @@ Write both an iterative and recursive solution to each problem:
 * What are the limitations of using recursive solutions?
 * What types of problems are more suited for simple loops than recursion?
 * What is meant by "recursive depth?"
-* What is a "stack overflow" (the concept, not the website)?
-* Why is that relevant to a recursive problem?
+* What is a "stack overflow" (the concept, not the website)? And why is that relevant to a recursive problem?
