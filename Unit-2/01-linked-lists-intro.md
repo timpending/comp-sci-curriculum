@@ -1,26 +1,26 @@
 # Linked Lists
 
-A linked list is a data structure that helps keep an order list of data.  The linked list can be thought of as similar to other ordered data structures like arrays.  The key difference is how an array is stored verses a linked list.
+A [linked list](https://en.wikipedia.org/wiki/Linked_list) is a data structure that helps keep an ordered list of data.  The linked list can be thought of as similar to other ordered data structures like arrays.  The key difference is how an array is stored verses a linked list.
 
 ## Objectives
 
 By the end of this lesson you should be able to:
 
-1. Implement a singly linked list using Javascript
-2. Write and describe basic algorithms associated with manipulating singly linked lists
-3. Reverse a singly linked list in place iteratively and recursively
+1. Implement a singly linked list using JavaScript
+1. Write and describe basic algorithms associated with manipulating singly linked lists
+1. Reverse a singly linked list in place iteratively and recursively
 
 ## Data Structures And Memory
 
-Modern programming languages hide a lot of the complexity of dealing with a computer.  In languages like javascript and ruby we never have to worry about memory allocation, but it is important to know what is going on behind the scenes when you use it.
+Modern programming languages hide a lot of the complexity of dealing with a computer.  In languages like JavaScript and Ruby we never have to worry about memory allocation, but it is important to know what is going on behind the scenes when you use it.
 
-**Arrays**
+### Arrays
 
-The javascript array appears to hold an infinite amount of data simply by using the `push` method.  However, under the hood, there is a lot more going on.  When you first create an array, javascript allocates a certain amount of memory.
+The JavaScript array appears to hold an infinite amount of data simply by using the `push` method.  However, under the hood, there is a lot more going on.  When you first create an array, JavaScript allocates a certain amount of memory.
 
 ![](http://web.cs.ucla.edu/classes/winter12/cs111/scribe/1c/img4.jpg)
 
-If you continue to push data, the allocated memory will eventually run out!  Once the memory runs out, javascript is still able to make the array larger, but the operation to make the array larger is O(n).  The steps are as follows:
+If you continue to push data, the allocated memory will eventually run out!  Once the memory runs out, JavaScript is still able to make the array larger, but the operation to make the array larger is [O(n)](https://en.wikipedia.org/wiki/Time_complexity#Linear_time).  The steps are as follows:
 
 * Allocate more memory so we can fit the new item we want to push.
 * If the array used to be of size z, an implementation might allocate 2 * z sized memory to leave some room to grow.
@@ -35,11 +35,11 @@ If the runtime of pushing is important to your program, you may want to use a di
 
 ###Singly Linked List
 
-A singly linked list is stored in memory using references to other memory locations.  In drawing below, the list looks as if it's all in a line, but in fact, in memory, the list is scattered all over the place.  The first object could be at a very high memory address and the second object could be at a very low memory address.  The only thing that keeps the list together is the next pointers.  The next pointers are references to where the next element in the linked list list located.  
+A singly linked list is stored in memory using references to other memory locations.  In the drawing below, the list looks as if it's all in a line; but, in fact, in memory, the list is scattered all over the place.  The first object could be at a very high memory address and the second object could be at a very low memory address.  The only thing that keeps the list together is the next pointers.  The next pointers are references to where the next element in the linked list list is located.
 
 ![](http://www.cs.usfca.edu/~srollins/courses/cs112-f07/web/notes/linkedlists/ll2.gif)
 
-A nice thing about the singly linked list is that inserting at the end of the list is always O(1).  Why is appending to a singly linked list O(1)? Because a variable, called the tail, is kept that points to the end of the list.  Whenever you need to add or remove an item from the end, you simply have to update the tail.
+A nice thing about the singly linked list is that inserting at the end of the list is always [O(1)](https://en.wikipedia.org/wiki/Time_complexity#Constant_time).  Why is appending to a singly linked list O(1)? Because a variable, called the tail, is kept that points to the end of the list.  Whenever you need to add or remove an item from the end, you simply have to update the tail.
 
 **EXERCISE**
 
@@ -49,11 +49,11 @@ Look at the implementation of a [singly linked list in the linked lists repo](ht
 
 Look at the implementation of `pop` in the singly linked list.  What is the runtime of `pop`?
 
-###Doubly Linked Lists
+### Doubly Linked Lists
 
 ![](http://www.geeksforgeeks.org/wp-content/uploads/DLL3.jpg)
 
-A doubly linked list is a list where each node has two pointers.  A next pointer and a previous pointer.  Keeping track of next and previous has some advantages.  For example, the `pop` method is now much easier.  Since we have access to the element before, the operations is O(1).  Instead of O(n) with a singly linked list.
+A [doubly linked list](https://en.wikipedia.org/wiki/Doubly_linked_list) is a list where each node has two pointers - a next pointer and a previous pointer.  Keeping track of next and previous has some advantages.  For example, the `pop` method is now much easier.  Since we have access to the element before, the operations is [O(1)](https://en.wikipedia.org/wiki/Time_complexity#Constant_time).  Instead of O(n) with a singly linked list.
 
 Here is an implementation of the push method for a doubly linked list (assuming a constructor function for Nodes):
 

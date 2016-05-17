@@ -96,6 +96,7 @@ Write both an iterative and recursive solution to each problem:
 #### Bonus challenges
 
 1. Convert Roman Numerals to Integers
+1. [Recursion exercises](https://roman01la.github.io/recursion-exercises/)
 
 ## Recursion Write Up
 
