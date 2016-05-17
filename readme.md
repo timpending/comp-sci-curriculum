@@ -55,7 +55,7 @@ Finally, it's appropriate to take 10 minutes to explore the history of computer 
 
 #### Lessons
 
-* [Intro to Data Structures and Algorithms](Unit-1/01-intro-to-data-structures-and-algorithms.md)
+* [Intro to Algorithms](Unit-1/01-intro-to-algorithms.md)
 * [Big O Notation](Unit-1/02-big-o-notation.md)
 * [Pointers](Unit-1/03-pointers.md)
 * [Recursion](Unit-1/04-recursion.md)
