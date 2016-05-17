@@ -98,3 +98,4 @@ Once you're comfortable with the general idea of sorting algorithms, the best wa
 * [Bubble Sort in JavaScript](http://www.nczonline.net/blog/2009/05/26/computer-science-in-javascript-bubble-sort/)
 * [Selection Sort in JavaScript](http://www.nczonline.net/blog/2009/09/08/computer-science-in-javascript-selection-sort/)
 * [Insertion Sort in JavaScript](http://www.nczonline.net/blog/2012/09/17/computer-science-in-javascript-insertion-sort/)
+* [Visual Sorting](http://visualgo.net/sorting)

@@ -16,7 +16,7 @@ For binary search, the array should be arranged in ascending or descending order
 
 Binary search runs on average at [O(log n)](https://en.wikipedia.org/wiki/Time_complexity#Logarithmic_time) -> THIS IS [FAST](http://stackoverflow.com/a/2307314/1799408)!
 
-## Resources:
+## Exercise
 
 [https://github.com/gSchool/searching-algorithms](https://github.com/gSchool/searching-algorithms)
 
