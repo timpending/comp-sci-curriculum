@@ -48,3 +48,5 @@ The [heap](https://en.wikipedia.org/wiki/Heap_(data_structure)) is memory set as
 ![stack and heap](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/116/stacknheap.png)
 
 > Read [more](http://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap) on StackOverflow.
+>
+> Read about [whether Javascript allocates memory in the heap or the stack for your variable](http://stackoverflow.com/questions/5326300/garbage-collection-with-node-js/5328761#5328761)
