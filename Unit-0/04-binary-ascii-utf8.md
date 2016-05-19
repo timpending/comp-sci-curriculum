@@ -12,7 +12,7 @@ Now you should get the following joke:
 
 Another example would be `101` = 1 * 2^2 + 0 * 2^1 + 1 * 2^0 = 5 (base 10).
 
-The chart below shows the binary value of 77, `01000111`:
+The chart below shows the binary value of 71, `01000111`:
 
 <table>
 <tr>
