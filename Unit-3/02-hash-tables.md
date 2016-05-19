@@ -1,6 +1,6 @@
 # Hash Tables
 
-A hash table is a data structure that maps a set of keys to a set of values.  A hash table is often called by many different names including:
+A hash table is a data structure that maps a set of keys to a set of values. A hash table is often called by many different names including:
 
 * Hash Table
 * Hash
@@ -9,7 +9,7 @@ A hash table is a data structure that maps a set of keys to a set of values.  A 
 * Table
 * Dictionary
 
-In javascript, the closest data structure to a hash table is the object.  In the following example notice how an object maps keys to values:
+In JavaScript, the closest data structure to a hash table is the object. In the following example notice how an object maps keys to values:
 
 ```
 myObj = {};
@@ -81,11 +81,25 @@ A collision occurs in the hash table when two keys map to the same index.  The h
 
 __Chaining__
 
-Chaining is way to resolve collisions in a hash table. Instead of starting with an empty array, each array element contains a data structure to store collisions.  A common data structure to use is a linked list, but others can be used such a binary search tree or even another hash table.  Whenever an element is inserted, both the key and the value are inserted into the data structure as that index (linked list for example).
+Chaining is way to resolve collisions in a hash table. Instead of starting with an empty array, each array element contains a data structure to store collisions.  A common data structure to use is a linked list, but others can be used such a binary search tree or even another hash table.  Whenever an element is inserted, both the key and the value are inserted into the data structure as that index.
+
+In the below image, the table is categorizing the values by the last name.
+
+When there's a collision (e.g. two last names which start with the same letter), an _additional entry_ in the existing data structure is added that keeps track of the order. In the below example, Wilson follows Williams alphabetically. When we attempt to find Wilson, we will go to where __"W"__ is categorized and run through the list until we reach the end or find the entry.
+
+![](http://www.algolist.net/img/hash-table-chaining.png)
+
+For an example, take a look [at this description of chaining](http://www.algolist.net/Data_structures/Hash_table/Chaining).
 
 __Linear Probing__
 
-Another category of solving collision problems is probing.  Linear probing is one such scheme.  Rather than solve a collision with an extra data structure, the scheme tries to put the key and value in a different spot in the array.  With linear probing, if there is a collision at index i, the algorithm tries to put the key and value at index i + 1, then index i + 2, etc. Until it finds an open slot.  To find out of a key is in the hash, the algorithm must hash to an index.  If the key and value exists at that index, then it is found.  If the key and value do no exist at that index, then continue looking linearly through the array until the key and value are found, or an empty space is found in the array.  If there is an empty space, you know the key and value are not in the array.
+Another category of solving collision problems is probing.  Linear probing is one such scheme.  Rather than solve a collision with an extra data structure, the scheme tries to put the key and value in a different spot in the array.  With linear probing, if there is a collision at index i, the algorithm tries to put the key and value at index i + 1, then index i + 2, etc. Until it finds an open slot.  To find out of a key is in the hash, the algorithm must hash to an index.  If the key and value exists at that index, then it is found.  If the key and value do not exist at that index, then continue looking linearly through the array until the key and value are found, or an empty space is found in the array.  If there is an empty space, you know the key and value are not in the array.
+
+In the example below, John Smith and Sandra Dee have collided at 873. In order to resolve this, Sandra Dee is added right next to John Smith. In the event we're trying to find Sandra Dee (at 873), we'd go to that index and see that she is not there. We'd then continue until we found the next empty space (i.e. she's not there) or we'd find her.
+
+![](https://upload.wikimedia.org/wikipedia/commons/9/90/HASHTB12.svg)
+
+For a further description, [the article on Wikipedia](https://en.wikipedia.org/wiki/Linear_probing) is helpful.
 
 ## Big O Runtime of Hash Tables
 
