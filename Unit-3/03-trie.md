@@ -1,8 +1,14 @@
 ### Trie
 
-Trees can also have nodes with text in them. In computer science, a trie, also called digital tree and sometimes radix tree or prefix tree (as they can be searched by prefixes), is an ordered tree data structure that is used to store strings. Unlike a binary search tree, no node in the tree stores the key associated with that node; instead, its position in the tree defines the key with which it is associated. All the descendants of a node have a common prefix of the string associated with that node, and the root is associated with the empty string
+A trie is an ordered tree data structure that is used to store strings. It can also be called a digital tree, radix tree, or prefix tree (as they can be searched by prefixes).
 
-![Trie](http://www.cs.duke.edu/courses/fall12/cps100/Recitations/images/trie.jpg)
+You can think of a trie as a tree-like structure for alphabetizing strings. In the example below, the root represents an empty string. As we head to the left, words beginning with a lowercase "t" are displayed. At this point our prefix is "t".
+
+As we traverse further down the tree, each node's prefix tells us what kind of words will follow as children. Consider where you'd place the following words and what the paths the them would be: _Aruba, arguable, initialize, innards, isle, tail, tenant, top._
+
+![](https://upload.wikimedia.org/wikipedia/commons/b/be/Trie_example.svg)
+
+For more information, the [Wikipedia article](https://en.wikipedia.org/wiki/Trie) is pretty good.
 
 Tries are exceptionally powerful and used in dictionary lookups, such as one found on a mobile telephone or for autocompletion and spell-checking.
 
