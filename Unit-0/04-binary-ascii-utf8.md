@@ -2,22 +2,22 @@
 
 Let's learn to count like computers.
 
- Computers only use the numbers zero and one. Everything that you see or hear on the computer, every interaction, click, scroll and computation is stored using just those two numbers! The zero and one, as it turns out, map very well to true and false, to on and off, to electrical current and no electrical current.
+Computers only use the numbers zero and one. Everything that you see or hear on the computer, every interaction, click, scroll and computation is stored using just those two numbers! The zero and one, as it turns out, map very well to true and false, to on and off, to electrical current and no electrical current.
 
 
- Numeric values can be represented in any base, though we are most familiar with decimal (using digits 0-9 to represent numbers). Binary represents numeric values with only zero and one.  
+Numeric values can be represented in any base, though we are most familiar with decimal (using digits 0-9 to represent numbers). Binary represents numeric values with only zero and one.  
 
- If you remember back to grade school a number like `116` was taught as follows:
+If you remember back to grade school a number like `116` was taught as follows:
 
- <table>
-   <tr>
-     <td>Position</td>
-     <td>ten thousands</td>
-     <td>thousands</td>
-     <td>hundreds</td>
-     <td>tens</td>
-     <td>ones</td>
-   </tr>
+<table>
+  <tr>
+    <td>Position</td>
+    <td>ten thousands</td>
+    <td>thousands</td>
+    <td>hundreds</td>
+    <td>tens</td>
+    <td>ones</td>
+  </tr>
   <tr>
     <td>Value</td>
     <td></td>
