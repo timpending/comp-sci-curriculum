@@ -58,7 +58,8 @@ Well, what they didn't explain to you at the time is that this is teaching you d
 This shows that each "place" in binary represents exactly twice as much value as the preceding place. In decimal each place represents ten times as much value as the preceding place.
 
 #### A small binary example:
-The binary value `10`, translates to 2 in decimal ([base 10](https://en.wikipedia.org/wiki/Decimal) is how we think about numbers normally).  `10` represents 2 because the left most value is 1 * 2^1 and the 0 is equivalent to 0 * 2^0. In other words: 10 (binary) = 1 * 2¹ + 0 * 2⁰ = 2 (base 10).
+The binary value `10`, translates to 2 in decimal ([base 10](https://en.wikipedia.org/wiki/Decimal) is how we think about numbers normally).  `10` represents 2 because the left most value is:
+ 1 * 2¹ and the 0 is equivalent to 0 * 2⁰. In other words: 10 (binary) = 1 * 2¹ + 0 * 2⁰ = 2 (base 10).
 
 Now you should get the following joke:
 
@@ -71,14 +72,14 @@ The chart below shows the binary value of 71, `01000111`:
 <table>
 <tr>
   <td>Position</td>
-  <td>2^7</td>
-  <td>2^6</td>
-  <td>2^5</td>
-  <td>2^4</td>
-  <td>2^3</td>
-  <td>2^2</td>
-  <td>2^1</td>
-  <td>2^0</td>
+  <td>2⁷</td>
+  <td>2⁶</td>
+  <td>2⁵</td>
+  <td>2⁴</td>
+  <td>2³</td>
+  <td>2²</td>
+  <td>2¹</td>
+  <td>2⁰</td>
 </tr>
 <tr>
   <td>Amount</td>
@@ -263,6 +264,7 @@ Try subtraction! It works too!
 ### Bonus
 - What's the largest binary number you can write with 5 bits? (What about _n_ bits?)
 - Try multiplication/divison (*hint:* It's similar to multiplying decimals)
+- build a javascript function that takes 2 arguments, a number and a base (binary, decimal, etc), and returns a binary representation of that number. (But no cheating! Do not use parseInt(), toString(), or any other function that solves the conversion for you).
 
 ## Resources
 
