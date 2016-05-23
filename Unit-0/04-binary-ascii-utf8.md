@@ -60,7 +60,7 @@ This shows that each "place" in binary represents exactly twice as much value as
 #### A small binary example:
 The binary value `10`, translates to 2 in decimal ([base 10](https://en.wikipedia.org/wiki/Decimal) is how we think about numbers normally).  `10` represents 2 because the left most value is:
  1 * 2¹ and the 0 is equivalent to 0 * 2⁰. In other words: 10 (binary) = 1 * 2¹ + 0 * 2⁰ = 2 (base 10).
-
+  
 Now you should get the following joke:
 
 > There are 10 types of people in the world, those who understand binary and those who don't.
