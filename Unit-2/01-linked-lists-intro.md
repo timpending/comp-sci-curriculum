@@ -98,8 +98,8 @@ DoublyLinkedList.prototype.pop = function() {
 
   this.length--;
 
-    return returnValue;
-  }
+  return returnValue;
+}
 ```
 
 Notice that both `push` and `pop` are now constant time operations.
