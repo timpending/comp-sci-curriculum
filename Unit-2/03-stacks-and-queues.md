@@ -49,5 +49,4 @@ And remember, the regular Array structure in Javascript is a Stack (first in, la
 
 ## Exercises
 
-* [Data Structures in JS](https://github.com/gSchool/data-structures-js)
 * If you've implemented linked lists already, modify them to create implementations for stacks and queues.
