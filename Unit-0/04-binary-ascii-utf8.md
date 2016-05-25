@@ -2,29 +2,84 @@
 
 Let's learn to count like computers.
 
-Computers only use the numbers zero and one. Everything that you see or hear on the computer, every interaction, click, scroll and computation is stored using just those two numbers!
+Computers only use the numbers zero and one. Everything that you see or hear on the computer, every interaction, click, scroll and computation is stored using just those two numbers! The zero and one, as it turns out, map very well to true and false, to on and off, to electrical current and no electrical current.
 
-Numeric values can be represented in binary.  The binary value `10`, is 2 in base 10 ([base 10](https://en.wikipedia.org/wiki/Decimal) is how we think about numbers normally).  `10` represents 2 because the left most value is 1 * 2^1 and the 0 is equivalent to 0 * 2^0. In other words: 10 (binary) = 1 * 2^1 + 0 * 2^0 = 2 (base 10).
+
+Numeric values can be represented in any base, though we are most familiar with decimal (using digits 0-9 to represent numbers). Binary represents numeric values with only zero and one.  
+
+If you remember back to grade school a number like `116` was taught as follows:
+
+<table>
+  <tr>
+    <td>Position</td>
+    <td>ten thousands</td>
+    <td>thousands</td>
+    <td>hundreds</td>
+    <td>tens</td>
+    <td>ones</td>
+  </tr>
+  <tr>
+    <td>Value</td>
+    <td></td>
+    <td></td>
+    <td>1</td>
+    <td>1</td>
+    <td>6</td>
+  </tr>
+</table>
+
+Well, what they didn't explain to you at the time is that this is teaching you decimal representations of numbers. The binary representation of this number looks like this:
+
+<table>
+  <tr>
+    <td>Position</td>
+    <td>one twenty-eights</td>
+    <td>sixty-fours</td>
+    <td>thirty-twos</td>
+    <td>sixteens</td>
+    <td>eights</td>
+    <td>fours</td>
+    <td>twos</td>
+    <td>ones</td>
+  </tr>
+  <tr>
+    <td>Value</td>
+    <td></td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+</table>
+
+This shows that each "place" in binary represents exactly twice as much value as the preceding place. In decimal each place represents ten times as much value as the preceding place.
+
+#### A small binary example:
+The binary value `10`, translates to 2 in decimal ([base 10](https://en.wikipedia.org/wiki/Decimal) is how we think about numbers normally).  `10` represents 2 because the left most value is:
+ 1 * 2¹ and the 0 is equivalent to 0 * 2⁰. In other words: 10 (binary) = 1 * 2¹ + 0 * 2⁰ = 2 (base 10).
 
 Now you should get the following joke:
 
 > There are 10 types of people in the world, those who understand binary and those who don't.
 
-Another example would be `101` = 1 * 2^2 + 0 * 2^1 + 1 * 2^0 = 5 (base 10).
+Another example would be `101` = 1 * 2² + 0 * 2¹ + 1 * 2⁰ = 5 (base 10).
 
-The chart below shows the binary value of 77, `01000111`:
+The chart below shows the binary value of 71, `01000111`:
 
 <table>
 <tr>
   <td>Position</td>
-  <td>2^7</td>
-  <td>2^6</td>
-  <td>2^5</td>
-  <td>2^4</td>
-  <td>2^3</td>
-  <td>2^2</td>
-  <td>2^1</td>
-  <td>2^0</td>
+  <td>2⁷</td>
+  <td>2⁶</td>
+  <td>2⁵</td>
+  <td>2⁴</td>
+  <td>2³</td>
+  <td>2²</td>
+  <td>2¹</td>
+  <td>2⁰</td>
 </tr>
 <tr>
   <td>Amount</td>
@@ -209,6 +264,7 @@ Try subtraction! It works too!
 ### Bonus
 - What's the largest binary number you can write with 5 bits? (What about _n_ bits?)
 - Try multiplication/divison (*hint:* It's similar to multiplying decimals)
+- build a javascript function that takes 2 arguments, a number and a base (binary, decimal, etc), and returns a binary representation of that number. (But no cheating! Do not use parseInt(), toString(), or any other function that solves the conversion for you).
 
 ## Resources
 
