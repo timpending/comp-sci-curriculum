@@ -129,6 +129,8 @@ Finally, it's appropriate to take 10 minutes to explore the history of computer 
 
 ## Bonus: When to use what data structure
 
-![](http://i.stack.imgur.com/HNMy4.png)
+[Blog: Choosing the right data structures](http://careerdrill.com/blog/coding-interview/choosing-the-right-data-structure-to-solve-problems/)
 
-[Choosing the right data structures](http://careerdrill.com/blog/coding-interview/choosing-the-right-data-structure-to-solve-problems/)
+#### Flow Chart
+
+![](http://i.stack.imgur.com/HNMy4.png)
