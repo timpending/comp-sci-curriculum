@@ -125,3 +125,10 @@ Finally, it's appropriate to take 10 minutes to explore the history of computer 
 #### Additional Resources
 
 * [Data structures in JavaScript](http://blog.benoitvallon.com/data-structures-in-javascript/data-structures-in-javascript/)
+
+
+## Bonus: When to use what data structure
+
+![](http://i.stack.imgur.com/HNMy4.png)
+
+[Choosing the right data structures](http://careerdrill.com/blog/coding-interview/choosing-the-right-data-structure-to-solve-problems/)
