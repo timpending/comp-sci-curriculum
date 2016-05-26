@@ -20,10 +20,11 @@ Here's how [bubble sort](https://en.wikipedia.org/wiki/Bubble_sort) works...
 
 **Pseudo code**
 
-1. For each element in the list, look at the element to the left.
+ **Pseudo code**		  **Pseudo code**
+  		  
+1. For each element in the list, look at the element to the right.
 2. If the value on the left is greater than the value on the right, swap the two values.
-3. 3. Keep swapping the element until you're at the beginning of the array.
-3. If the value on the left is NOT greater than the value on the right, move on to the next element.
+3. Keep swapping until you're at the end of the array. Then move onto the next element in the array and repeat.
 
 Bubble sort can be implemented using nested loops or recursion.
 
@@ -67,9 +68,10 @@ Since selection sort is so similar to bubble sort, you can probably guess what t
 
 **Pseudo code**
 
-1. Compare the second element in the array to the first. If the second is less than the first, swap them.
-2. Take the third element in the array, and compare it to the previous elements, inserting before the first element if it's greater than (or inserting it at the front, if it's smaller than everything to the left of it).
-3. Repeat step 2 for every subsequent element in the array.
+1. For each element in the list, look at the element to the left.
+2. If the elements value is less than the value on the left, swap the two values.
+3. Keep swapping the element until you're at the beginning of the array.
+3. Else, move on to the next element.
 
 ![selection sort](./sort-gifs/insertionsort.gif)
 
