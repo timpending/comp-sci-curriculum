@@ -1,37 +1,54 @@
 # Graphs
 
-Also a non-linear data structure, a hierarchical structure!
+> A graph data structure consists of a finite (and possibly mutable) set of vertices or nodes or points, together with a set of unordered pairs of these vertices for an undirected graph or a set of ordered pairs for a directed graph.
 
-A graph is a collection of objects we call nodes or vertices connect to each other through a set of edges. In a tree there are rules dictating edges, in a graph we have none! In a tree, all nodes must be accessible from the root. So in short, a tree is just a type of graph.
+<img height="100" src="http://web.cecs.pdx.edu/~sheard/course/Cs163/Graphics/graph1.png">
 
-In a graph there are no rules. It has a set of nodes and edges. So if you think about it some more, a tree is a special kind of graph!
+[Wikipedia: Graph ADT](https://en.wikipedia.org/wiki/Graph_(abstract_data_type))
 
-##### If you want to get more into the math....
+A graph is a non-linear, hierarchical structure.
 
-Graph = A graph G is an ordered pair of a set V or vertices and a set of E edges G = (V , E). V is the first object and E is the second
+A tree is a special type of graph with rules dictating edges, (e.g. a node can only have 1 incoming edge, and n outgoing edges, 2 outgoing edges in a binary tree) in a graph there are no restrictions on the number of incoming/outgoing edges.
 
-(V, E) is not equal to (E, V) if E is not equal to V
+Also in a tree, all nodes must be accessible from the root, this is not the case with graphs.
 
-{V, E} is an unordered pair
+### This ain't your ancestors' graph!
 
-Nodes can be named V1….Vn
+* Not related to charts, bar graphs, etc.
+* Used to define nodes with connecting edges.
+* Sometimes referred to as a web outside of Computer Science.
 
-V = {V1, V2…..Vn}
+### Used to solve a huge swath of problems:
+  * Accessible Data Storage (Binary Tree)
+  * Trees (DOM, XML, etc.)
+  * Path Finding
+  * Linguistics
+  * Flow Control
+  * Search Engine Ranking
+  * Abstract Syntax Trees (Lexing, JS, etc.)
+  * Neural Network
+  * Bayesian Network
+  * etc.
 
-##### moving on...
+### Nodes and Edges
+  * Values
+  * Weights
+  * Directed / Undirected
+  * Cyclic / Acyclic
 
-There are lots of different types of graphs, but here are a few examples.
 
-- Undirected Graph
+## Types of Graphs
+
+### Undirected Graph
 
 ![](http://www.xatlantis.ch/examples/graphics/graph1_example.png)
 
 
-- Directed Graph
+### Directed Graph
 
 ![directed graph](http://upload.wikimedia.org/wikipedia/commons/a/a0/CPT-Graphs-directed-weighted-ex2.svg)
 
-- Directed Acyclic Graph (DAG)
+### Directed Acyclic Graph (DAG)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/4/4b/Directed_acyclic_graph.svg)
 
@@ -66,6 +83,26 @@ Some more examples of weighted vs unweighted and directed vs undirected graphs:
 - World Wide Web - Unweighted, Directed graph
 - Intracity - Weighted, Directed graph
 
+More examples:
+  * DOM
+  * Binary Tree
+  * Linear Linked List
+  * Finite State Machine ([regexper](http://regexper.com/))
+  * Road System
+  * Organization Charts
+
+## Complexity Analysis
+
+* `V` = Vertices, `E` = Edges
+* Time complexity changes based on the backing storage type. We're going to assume an Adjacency List.
+* Add Vertex: `O(1)`
+* Add Edge: `O(1)`
+* Remove Vertex: `O(E)`
+* Delete Edge: `O(E)`
+* Query if Nodes are adjacent: `O(V)`
+* Shortest Path: `O(E+VlogV)` (Dijkstra's)
+* Min Span Tree: `O(V`<sup>`2`</sup>`)` (Prim's) 
+  
 ### Graph Exercises
 
 #### Graphs in JavaScript
