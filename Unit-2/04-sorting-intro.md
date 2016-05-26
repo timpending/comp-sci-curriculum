@@ -20,9 +20,10 @@ Here's how [bubble sort](https://en.wikipedia.org/wiki/Bubble_sort) works...
 
 **Pseudo code**
 
-1. For each element in the list, look at the element to the right.
+1. For each element in the list, look at the element to the left.
 2. If the value on the left is greater than the value on the right, swap the two values.
-3. Keep swapping until you're at the end of the array. Then move onto the next element in the array and repeat.
+3. 3. Keep swapping the element until you're at the beginning of the array.
+3. If the value on the left is NOT greater than the value on the right, move on to the next element.
 
 Bubble sort can be implemented using nested loops or recursion.
 
