@@ -31,10 +31,21 @@ Also in a tree, all nodes must be accessible from the root, this is not the case
   * etc.
 
 ### Nodes and Edges
-  * Values - the nodes in a graph have a value
-  * Weights - the edges in between nodes _can_ have a weight
-  * Directed / Undirected - edges can have an orientation or not (incoming/outgoing)
-  * Cyclic / Acyclic - a graph with "cycles" is cyclic, a graph without cycles is acyclic. A cycle is loop, i.e. a node can find a path back to itself
+
+##### Values
+The nodes in a graph have a value.
+
+##### Weights
+The edges in between nodes _can_ have a weight
+
+##### Directed/Undirected
+Edges can have an orientation or not (incoming/outgoing)
+
+##### Cyclic / Acyclic
+
+A cycle in a directed graph is when a node can find a path back to itself (i.e. a loop)
+
+A graph with a cycle is cyclic, a graph without cycles is acyclic.
 
 ## Types of Graphs
 
@@ -86,7 +97,7 @@ In an unweighted graph all edges are equal (no weight assigned).
 - World Wide Web - Unweighted, Directed graph
 - Intracity - Weighted, Directed graph
 
-## Complexity Analysis
+## [Common Operations](https://en.wikipedia.org/wiki/Graph_(abstract_data_type)#Operations) and Complexity Analysis
 
 * `V` = Vertices, `E` = Edges
 * Time complexity changes based on the backing storage type. We're going to assume an Adjacency List.
