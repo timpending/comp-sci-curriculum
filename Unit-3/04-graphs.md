@@ -41,14 +41,20 @@ Also in a tree, all nodes must be accessible from the root, this is not the case
 
 ### Undirected Graph
 
+An undirected graph is a graph in which edges have no orientation.
+
 ![](http://www.xatlantis.ch/examples/graphics/graph1_example.png)
 
 
 ### Directed Graph
 
+A directed graph or digraph is a graph in which edges have orientations. 
+
 ![directed graph](http://upload.wikimedia.org/wikipedia/commons/a/a0/CPT-Graphs-directed-weighted-ex2.svg)
 
 ### Directed Acyclic Graph (DAG)
+
+A finite directed graph with no directed cycles.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/4/4b/Directed_acyclic_graph.svg)
 
@@ -59,37 +65,27 @@ If you're interested in learning more about graphs, check out [this](https://www
 
 A social network is an undirected graph -> The Facebook graph API!
 
-* Let's think some more about that? How do you suggest friends? Suggest friends of friends who are not connected (nodes that are not linked).
+Let's think some more about that:
+* How do you suggest friends?
+ * Suggest friends of friends who are not connected (nodes that are not linked).
 
-How about some more examples?
+More examples:
 
-- Interlinked Web Pages - A directed graph! A webpage is a URL, if the page contains a link to another, it has
+* Interlinked Web Pages - A directed graph! A webpage is a URL, if the page contains a link to another, it has
+* Web Crawling - browse pages to collect + store data. Web crawling = Graph Traversal (act of visiting all nodes in a graph).  
+* Graphs are the fundamental data structure for technologies like GPS/Maps how do you pick the best route from one city to another?
 
-- Web Crawling - browse pages to collect + store data. Web crawling = Graph Traversal (act of visiting all nodes in a graph).  
+## Weighted vs. Unweighted Graphs
 
--  Graphs are the fundamental data structure for technologies like GPS/Maps how do you pick the best route from one city to another?
+A weighted graph is a graph in which a number (the weight) is assigned to each edge. Such weights might represent for example costs, lengths or capacities, depending on the problem at hand. Some authors call such a graph a network.
 
-Weighted vs. Unweighted Graphs
-Some connections are more weighted
-roads between cities (are of different lengths)
-label edges with weights
+In an unweighted graph all edges are equal (no weight assigned).
 
-Unweighted - weighted where weight is the same (all 1)
-
-Some more examples of weighted vs unweighted and directed vs undirected graphs:
-
+#### Some Examples:
 - Intercity Network - Weighted, Undirected graph
 - Social Network - Unweighted, Undirected graph
 - World Wide Web - Unweighted, Directed graph
 - Intracity - Weighted, Directed graph
-
-More examples:
-  * DOM
-  * Binary Tree
-  * Linear Linked List
-  * Finite State Machine ([regexper](http://regexper.com/))
-  * Road System
-  * Organization Charts
 
 ## Complexity Analysis
 
@@ -102,7 +98,14 @@ More examples:
 * Query if Nodes are adjacent: `O(V)`
 * Shortest Path: `O(E+VlogV)` (Dijkstra's)
 * Min Span Tree: `O(V`<sup>`2`</sup>`)` (Prim's) 
-  
+
+## More examples:
+  * Binary Tree
+  * Linear Linked List
+  * Finite State Machine ([regexper](http://regexper.com/))
+  * Road System
+  * Organization Charts
+
 ### Graph Exercises
 
 #### Graphs in JavaScript
