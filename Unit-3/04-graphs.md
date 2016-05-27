@@ -31,11 +31,10 @@ Also in a tree, all nodes must be accessible from the root, this is not the case
   * etc.
 
 ### Nodes and Edges
-  * Values
-  * Weights
-  * Directed / Undirected
-  * Cyclic / Acyclic
-
+  * Values - the nodes in a graph have a value
+  * Weights - the edges in between nodes _can_ have a weight
+  * Directed / Undirected - edges can have an orientation or not (incoming/outgoing)
+  * Cyclic / Acyclic - a graph with "cycles" is cyclic, a graph without cycles is acyclic. A cycle is loop, i.e. a node can find a path back to itself
 
 ## Types of Graphs
 
