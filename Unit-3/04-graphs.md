@@ -21,8 +21,6 @@ So far we've talked about ***linear data structures***:
 
 In all these structures, data is arranged in a sequential manner.
 
-<img src="http://staff.bmcsd.org/jcheney/images/expo%20black.png" style="height:50px !important;width:auto !important;background: transparent !important;border: none !important"/>
-
 ---
 
 ### Non-linear Data Structures Recap
@@ -38,8 +36,6 @@ A tree is a hierarchical structure.
 ---
 
 # What are the properties of a tree?
-
-<img src="http://staff.bmcsd.org/jcheney/images/expo%20black.png" style="height:50px !important;width:auto !important;background: transparent !important;border: none !important"/>
 
 ---
 
@@ -117,8 +113,6 @@ Unordered pair, written with curly braces, also known as a set:
 
 <img height="175" src="http://i.imgur.com/8lvkfF9.png" style="background: white !important">
 
-<img src="http://staff.bmcsd.org/jcheney/images/expo%20black.png" style="height:50px !important;width:auto !important;background: transparent !important;border: none !important"/>
-
 * Label the vertices in the graph from v1 to v6
 * Write the set notation for the vertices in the graph
 
@@ -156,8 +150,6 @@ If we were to label the vertex with 1 as v1 and the vertex 2 as v2, the edge wou
 
 <img height="175" src="http://i.imgur.com/8lvkfF9.png" style="background: white !important">
 
-<img src="http://staff.bmcsd.org/jcheney/images/expo%20black.png" style="height:50px !important;width:auto !important;background: transparent !important;border: none !important"/>
-
 * List all edges in the graph
 
 ---
@@ -177,8 +169,6 @@ If we were to label the vertex with 1 as v1 and the vertex 2 as v2, the edge wou
 ## Directed Edges
 
 <img height="175" src="http://i.imgur.com/aIgNHkF.png" style="background: white !important">
-
-<img src="http://staff.bmcsd.org/jcheney/images/expo%20black.png" style="height:50px !important;width:auto !important;background: transparent !important;border: none !important"/>
 
 * List all edges in the graph
 
