@@ -70,32 +70,17 @@ A finite directed graph with no directed cycles.
 
 If you're interested in learning more about graphs, check out [this](https://www.youtube.com/watch?v=gXgEDyodOJU&list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P&index=38) video
 
-
-### Where do we see graphs in the real world?
-
-A social network is an undirected graph -> The Facebook graph API!
-
-Let's think some more about that:
-* How do you suggest friends?
- * Suggest friends of friends who are not connected (nodes that are not linked).
-
-More examples:
-
-* Interlinked Web Pages - A directed graph! A webpage is a URL, if the page contains a link to another, it has
-* Web Crawling - browse pages to collect + store data. Web crawling = Graph Traversal (act of visiting all nodes in a graph).  
-* Graphs are the fundamental data structure for technologies like GPS/Maps how do you pick the best route from one city to another?
-
 ## Weighted vs. Unweighted Graphs
 
 A weighted graph is a graph in which a number (the weight) is assigned to each edge. Such weights might represent for example costs, lengths or capacities, depending on the problem at hand. Some authors call such a graph a network.
 
 In an unweighted graph all edges are equal (no weight assigned).
 
-#### Some Examples:
-- Intercity Network - Weighted, Undirected graph
-- Social Network - Unweighted, Undirected graph
-- World Wide Web - Unweighted, Directed graph
-- Intracity - Weighted, Directed graph
+### Real world examples:
+* Intercity Network - Weighted, Undirected graph
+* Social Network - Unweighted, Undirected graph
+* World Wide Web - Unweighted, Directed graph
+* Intracity - Weighted, Directed graph
 
 ## [Common Operations](https://en.wikipedia.org/wiki/Graph_(abstract_data_type)#Operations) and Complexity Analysis
 
@@ -109,7 +94,19 @@ In an unweighted graph all edges are equal (no weight assigned).
 * Shortest Path: `O(E+VlogV)` (Dijkstra's)
 * Min Span Tree: `O(V`<sup>`2`</sup>`)` (Prim's) 
 
-## More examples:
+### Where do we see graphs in the real world?
+
+A social network is an undirected graph -> The Facebook graph API!
+
+Let's think some more about that:
+* How do you suggest friends?
+ * Suggest friends of friends who are not connected (nodes that are not linked).
+
+More Examples:
+* Web crawling = Graph Traversal (act of visiting all nodes in a graph, i.e. visit all links on a page).
+* GPS/Maps - Route planning (Graph traversal minimum path distance)
+
+## Also:
   * Binary Tree
   * Linear Linked List
   * Finite State Machine ([regexper](http://regexper.com/))
