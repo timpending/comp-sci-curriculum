@@ -369,6 +369,8 @@ A disconnected graph is a graph made out of two or more sub-graphs, without a pa
 
 ## Representing a graph in memory
 
+[visualgo](http://visualgo.net/graphds)
+
 ---
 
 # Adjacency Matrix
@@ -487,6 +489,14 @@ Depending on the representation, these operations have different complexities
 ---
 
 ## What are 2 ways to store a graph in memory?
+
+---
+
+# Objectives
+
+* Define and describe the relationships depicted in a Graph
+* Articulate real world examples of graphs
+* Define and describe ways to store a graph in memory
 
 ---
 
