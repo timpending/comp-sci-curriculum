@@ -22,4 +22,5 @@ Binary search runs on average at [O(log n)](https://en.wikipedia.org/wiki/Time_c
 
 ### Other links
 
-[Visualization](https://www.cs.usfca.edu/~galles/visualization/DFS.html)
+- [Visualization](https://www.cs.usfca.edu/~galles/visualization/DFS.html)
+- [More Visualization](https://www.cs.usfca.edu/~galles/visualization/DFS.html)
