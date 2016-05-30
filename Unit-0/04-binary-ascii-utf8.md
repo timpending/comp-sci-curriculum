@@ -410,6 +410,7 @@ Implement `xxd` in Node!!  Write an app that reads in a file and prints output t
 Here are some things you'd want to know:
 
 - The new `for...of` loop iterates through code points
+
   ```js
   const input = "😋😌😜"
   for(const c of input) {
@@ -417,10 +418,13 @@ Here are some things you'd want to know:
   }
   // will print 3 times
   ```
+
 - To get the hexadecimal representation of the character position, use:
+
   ```js
   someNumber.toString(16)
   ```
+
 - Make sure to pad your binary strings and hexadecimal strings into octets (8 characters) and don't use [leftpad](http://qz.com/646467/how-one-programmer-broke-the-internet-by-deleting-a-tiny-piece-of-code/) - write it yourself 🤔
 
 ## More resources

@@ -50,6 +50,8 @@ function testPerformance(callback, arr) {
 }
 ```
 
+NOTE: `performance` is not available in Node, so if you are using Node use https://nodejs.org/api/process.html#process_process_hrtime
+
 **Exercise** Create an array of length 1,000,000, where each entry is the number 2. Then test the performance of `square` on this array, using `testPerformance`.
 
 If you run `testPerformance` many times on the same arguments, you should see different outputs. As you saw in the CS50 video, the time it takes to run a certain block of code is highly variable not just across machines, but also for a given machine.
