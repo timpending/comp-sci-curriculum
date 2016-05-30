@@ -43,7 +43,7 @@ You can see that this only works if the tree has 4 levels.  But what if it had 8
 
 We could write that in JavaScript like so:
 
-```javascript
+```js
 function printLetters(node) {
   console.log(node.name);
   node.forEach(function(childNode){
@@ -63,9 +63,9 @@ For recursion we need:
 1. A base case(s)
 1. Recursive step
 
-The recursive step ensures that we progress.  The base case ensures that our recursion eventually exits, preventing an infite loop.  Also we usually want to pass some data/information around - we do this with function returns.
+The recursive step ensures that we progress.  The base case ensures that our recursion eventually exits, preventing an infinite loop.  Also we usually want to pass some data/information around - we do this with function returns.
 
-### Steps
+### Approach #1 - Start at the bottom
 
 1. Pretend you are at the solution
   * For example:
@@ -82,14 +82,49 @@ The recursive step ensures that we progress.  The base case ensures that our rec
 
 > [Sparknotes on Recursion](http://www.sparknotes.com/cs/recursion/whatisrecursion/section1.rhtml)
 
+### Approach #2 - Identify sub-problems
+
+Often times recursive problems require you to split a big problem into smaller problems.  For example, let's say you were trying to write a recursive function that would find the first element of an array greater than a specific number.  The `for` loop would look like this:
+
+```js
+function firstGt(array, number) {
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] > number) {
+      return array[i]
+    }
+  }
+}
+```
+
+Here, you could split this into two sub-problems:
+
+- Problem #1 is to take the first element of the array and see if it's bigger.  
+- Problem #2 is to take the rest of the array (all _except_ the first element), and repeat Step #1.
+
+```js
+function firstGt(array, number) {
+  if (array[0] > number) {
+    return array[0]
+  } else {
+    return firstGt(array.slice(1), number)
+  }
+}
+```
+
 ## Recursive Problem Set
+
+Make all of the tests pass in Unit-1/Exercises.
+
+### Further challenges
 
 Write both an iterative and recursive solution to each problem:
 
 1. Define a recursive function that takes an argument n and prints the lyrics to 99 bottles of beer on the wall, starting with that number `n`
 2. Define a recursive function that takes an argument n and returns the fibonacci value of that position. The fibonacci sequence is 0, 1, 1, 2, 3, 5, 8, 13, 21... So fib(5) should return 5 and fib(6) should return 8.
 3. Define a recursive function that returns true if a string is a palindrome and false otherwise.
-4.  Get the JSON data from this Reddit post using an http gem: `http://www.reddit.com/r/aww/comments/zzg3k/my_local_humane_society_posts_pictures_of_new/.json`.  Write code to print out the text of each comment in your terminal.  Write code that counts the number of comments, as well.
+4.  Get the JSON data from this Reddit post using an http request: `http://www.reddit.com/r/aww/comments/zzg3k/my_local_humane_society_posts_pictures_of_new/.json`.  Write code to print out the text of each comment in your terminal.  Write code that counts the number of comments, as well.
+
+For further practice, also do:
 
 [https://github.com/gSchool/js-hof-filter-map-reduce](https://github.com/gSchool/js-hof-filter-map-reduce)
 
