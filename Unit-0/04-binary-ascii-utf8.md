@@ -4,7 +4,6 @@ Let's learn to count like computers.
 
 Computers only use the numbers zero and one. Everything that you see or hear on the computer, every interaction, click, scroll and computation is stored using just those two numbers! The zero and one, as it turns out, map very well to true and false, to on and off, to electrical current and no electrical current.
 
-
 Numeric values can be represented in any base, though we are most familiar with decimal (using digits 0-9 to represent numbers). Binary represents numeric values with only zero and one.  
 
 If you remember back to grade school a number like `116` was taught as follows:
@@ -298,7 +297,9 @@ Take 10 minutes (or watch it at double speed and take 5 minutes) to watch the [T
 
 **Nice history lesson, but why do I care about this?**
 
-Believe it or not, we use this quite a bit. For example, this is exactly what the `charCodeAt()` methods does in JavaScript! Try typing `"A".charCodeAt(0);` in the chrome console and see what you get? Then look up the value in an ASCII table and you will see it corresponds to `01000001`. You can use `charCodeAt()` to do manipulation with letters and strings which is very useful!
+Believe it or not, we use this quite a bit. For example, this is exactly what the `codePointAt()` and `charCodeAt()` methods do in JavaScript! Try typing `"A".codePointAt(0);` in the chrome console and see what you get? Then look up the value in an ASCII table and you will see it corresponds to `01000001`. You can use `codePointAt()` to do manipulation with letters and strings which is very useful!
+
+NOTE: `charCodeAt` is the old version of `codePointAt`, and doesn't work correctly with UTF8 characters, like emojis.
 
 ## UTF
 
@@ -309,3 +310,119 @@ UTF-8 has become the dominant character encoding for the World Wide Web, account
 Here is what a UTF table looks like - [http://www.utf8-chartable.de/](http://www.utf8-chartable.de/)
 
 > For more, watch the [Tom Scott Video on UTF8](https://www.youtube.com/watch?v=qBex3IDaUbU&index=2&list=PLzH6n4zXuckqmf_xUcvU5caZVoctP2ehL).
+
+## Seeing Binary in Terminal
+
+Want to see the actual binary that the computer sees?  There are a few ways to do it:
+
+**Using `xxd`**
+
+A program ships with Macs called `xxd`.  Here's how to see the binary for "Hello, world" using `xxd` in Terminal:
+
+```
+echo "Hello, world" | xxd -b
+```
+
+You'll see this:
+
+```
+0000000: 01001000 01100101 01101100 01101100 01101111 00101100  Hello,
+0000006: 00100000 01110111 01101111 01110010 01101100 01100100   world
+000000c: 00001010                                               .
+```
+
+What's going on there?
+
+- The first column is a hexidecimal representation of the position of the string
+- The middle columns are the binary representations of each character (`01001000` => "H", `01100101` => "e" etc...)
+- The last column shows the characters themselves in a human-readable format
+
+How does it go from `01001000` to "H"?  
+
+- Take a minute to calculate the base-10 version of `01001000`
+- Now look that value up in the ASCII table above
+- You should see that it's a capital "H"
+
+### Seeing binary in JavaScript
+
+Want to see the binary representation of a String in JavaScript?
+
+**binary ⟼ decimal**
+
+If you have a binary string such as `01001000`, JavaScript can convert that to a decimal like so:
+
+```js
+parseInt('01001000', 2) // => 72
+```
+
+**decimal ⟼ binary**
+
+If you have a decimal, and you want to see what it is in binary, use `toString` with a base:
+
+```js
+(45).toString(2) // => '101101'
+```
+
+**binary ⟼ string**
+
+If you have a binary string and want to see what UTF8 characters it represents you need to:
+
+- convert it to a decimal (the code point)
+- get the string at that code point
+
+```js
+String.fromCodePoint(parseInt('11111010010111110', 2))
+```
+
+**string ⟼ binary**
+
+If you have a string and want to see what it's representation is in binary you need to:
+
+- get the string's codePoint
+- convert the codePoint to binary
+
+```js
+"💾".codePointAt().toString(2) // => '11111010010111110'
+```
+
+For more information see:
+
+http://xahlee.info/js/js_unicode_code_point.html
+
+## Seeing UTF-8 in action
+
+Want to see the binary behind an emoji in the Terminal??
+
+```
+echo 😀 | xxd -b
+```
+
+Want to see the binary behind an emoji in JavaScript??
+
+```js
+"😀".codePointAt().toString(2)
+```
+
+## Stretch
+
+Implement `xxd` in Node!!  Write an app that reads in a file and prints output that matches `xxd`'s output.
+
+Here are some things you'd want to know:
+
+- The new `for...of` loop iterates through code points
+  ```js
+  const input = "😋😌😜"
+  for(const c of input) {
+    console.log(c.codePointAt().toString(2));
+  }
+  // will print 3 times
+  ```
+- To get the hexadecimal representation of the character position, use:
+  ```js
+  someNumber.toString(16)
+  ```
+- Make sure to pad your binary strings and hexadecimal strings into octets (8 characters) and don't use [leftpad](http://qz.com/646467/how-one-programmer-broke-the-internet-by-deleting-a-tiny-piece-of-code/) - write it yourself 🤔
+
+## More resources
+
+- http://monsur.hossa.in/2012/07/20/utf-8-in-javascript.html
