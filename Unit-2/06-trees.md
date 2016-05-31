@@ -122,9 +122,10 @@ Make the `binary_tree.test.js` tests pass.  This assignment will require you to 
 - `DFSPostOrder`: traverses through the tree and returns an array of all of the values using Depth First Search Post-order - you can read more [here](https://en.wikipedia.org/wiki/Tree_traversal#Depth-first)
 - `size `: calculates how many nodes are in the tree (do this without adding a size property to your tree! Use a traversal method to calculate this!)
 
+# Depth and breadth search
+
+Make the tests in `bfs-dfs` all pass.
+
 ### Bonus
 
 `remove`: removes a node from a binary tree. Remember that this method must take into account if the node has any children and if the node is a leaf. [Here](https://www.youtube.com/watch?v=3TOl3Fv4394) is a great video that explains this process.
-
-
-- [depth-and-breadth-search](https://github.com/gSchool/depth-and-breadth-search)
