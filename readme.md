@@ -89,8 +89,7 @@ Finally, it's appropriate to take 10 minutes to explore the history of computer 
 #### Lessons
 
 * [Intro to Data Structures](Unit-2/01-intro-to-data-structures.md)
-* [Linked Lists](Unit-2/01-linked-lists-intro.md)
-* [Doubly Linked List](Unit-2/02-doubly-linked-list.md)
+* [Linked Lists](Unit-2/02-linked-lists-intro.md)
 * [Stacks and Queues](Unit-2/03-stacks-and-queues.md)
 * [Sorting Algorithms - Part 1](Unit-2/04-sorting-intro.md)
 * [Searching Algorithms](Unit-2/05-searching-algorithms.md)
