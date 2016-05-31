@@ -1,6 +1,6 @@
 # Binary
 
-Let's learn to count like computers.
+Let's learn to count like computers!
 
 Computers only use the numbers zero and one. Everything that you see or hear on the computer, every interaction, click, scroll and computation is stored using just those two numbers! The zero and one, as it turns out, map very well to true and false, to on and off, to electrical current and no electrical current.
 
@@ -243,32 +243,6 @@ We now take this sum and multiply the total binary amounts by their respective b
 
 Try subtraction! It works too!
 
-## Exercises
-
-### Convert
-- 10101010
-- 1100110
-- 11110010
-
-### Addition
-- 11111110 + 110011
-- 100011 + 11111
-- 11 + 110
-
-### Subtraction
-- 11000111 - 10000111
-- 1110 - 11
-- 10001 - 100
-
-### Bonus
-- What's the largest binary number you can write with 5 bits? (What about _n_ bits?)
-- Try multiplication/divison (*hint:* It's similar to multiplying decimals)
-- build a javascript function that takes 2 arguments, a number and a base (binary, decimal, etc), and returns a binary representation of that number. (But no cheating! Do not use parseInt(), toString(), or any other function that solves the conversion for you).
-
-## Resources
-
-- http://www.garlikov.com/Soc_Meth.html
-
 # Character Encoding
 
 ## ASCII
@@ -403,9 +377,35 @@ Want to see the binary behind an emoji in JavaScript??
 "😀".codePointAt().toString(2)
 ```
 
+## Exercise
+
+Practice some basic binary math:
+
+### Convert
+- 10101010
+- 1100110
+- 11110010
+
+### Addition
+- 11111110 + 110011
+- 100011 + 11111
+- 11 + 110
+
+### Subtraction
+- 11000111 - 10000111
+- 1110 - 11
+- 10001 - 100
+
+### Write a converter
+
+When you are ready, write a [binary-to-decimal converter](../Exercises/src/binary.js).
+
 ## Stretch
 
-Implement `xxd` in Node!!  Write an app that reads in a file and prints output that matches `xxd`'s output.
+- What's the largest binary number you can write with 5 bits? (What about _n_ bits?)
+- Try multiplication/divison (*hint:* It's similar to multiplying decimals)
+
+And if you _really_ want to stretch...  Implement `xxd` in Node!!  Write an app that reads in a file and prints output that matches `xxd`'s output.
 
 Here are some things you'd want to know:
 
@@ -430,3 +430,4 @@ Here are some things you'd want to know:
 ## More resources
 
 - http://monsur.hossa.in/2012/07/20/utf-8-in-javascript.html
+- http://www.garlikov.com/Soc_Meth.html
