@@ -176,9 +176,10 @@ describe("Looping and recursion", () => {
       for (var i = 0; i < 1000; i++) input.push(i)
 
       function benchmark(fn){
-        const start = new Date();
+        const start = process.hrtime();
         fn()
-        return new Date() - start;
+        const diff = process.hrtime(start);
+        return diff[0] * 1e9 + diff[1]; // return total number of nanoseconds
       }
 
       function runIndexOf(){
