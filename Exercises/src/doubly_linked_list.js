@@ -1,3 +1,5 @@
+'use strict'
+
 function Node(val, next, prev) {
   this.val = val;
 
@@ -152,7 +154,7 @@ DoublyLinkedList.prototype.forEach = function(callback) {
 DoublyLinkedList.prototype.remove = function(index) {
   if (index === 0) return this.shift();
   if (index === this.length - 1) return this.pop();
-  
+
   var node = this.__getNodeAt(index);
   if (node) {
     var prev = node.prev;

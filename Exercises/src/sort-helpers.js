@@ -1,3 +1,5 @@
+'use strict'
+
 function swap(arr, idx1, idx2) {
 
 }

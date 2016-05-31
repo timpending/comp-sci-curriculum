@@ -1,3 +1,5 @@
+'use strict'
+
 /*
 
 Write a function that takes in a string in binary

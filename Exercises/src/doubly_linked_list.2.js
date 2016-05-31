@@ -1,3 +1,5 @@
+'use strict'
+
 function Node(val, next, prev) {
 
 }

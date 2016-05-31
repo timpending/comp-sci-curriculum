@@ -1,3 +1,5 @@
+'use strict'
+
 var SinglyLinkedList = require("../src/singly_linked_list");
 var list;
 var expect = require("chai").expect

@@ -70,9 +70,10 @@ describe("binarySearch", () => {
 
   it("does not use loops", checkForLoops('binarySearch'))
 
-  it("runs faster than linearSearch (by a lot)", () => {
+  it("runs faster than linearSearch in the worst case", () => {
     const input = []
-    for (var i = 0; i < 1000; i++) input.push(i)
+    const max = 10000
+    for (var i = 0; i < max; i++) input.push(i)
 
     function benchmark(fn){
       const start = process.hrtime();
@@ -82,21 +83,21 @@ describe("binarySearch", () => {
     }
 
     function runLinearSearch(){
-      for (var i = 0; i < input.length; i++) {
-        lib.linearSearch(input, input[i])
+      for (var i = 0; i < max; i++) {
+        lib.linearSearch(input, max - 1)
       }
     }
 
     function runBinarySearch(){
       for (var i = 0; i < input.length; i++) {
-        lib.binarySearch(input, input[i])
+        lib.binarySearch(input, max - 1)
       }
     }
 
     const linearSearchSpeed = benchmark(runLinearSearch);
     const binarySearchSpeed = benchmark(runBinarySearch);
 
-    expect(linearSearchSpeed).to.be.gt(binarySearchSpeed * 100);
+    expect(linearSearchSpeed).to.be.gt(binarySearchSpeed * 1.5);
   })
 
 })

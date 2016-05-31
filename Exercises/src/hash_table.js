@@ -1,3 +1,5 @@
+'use strict'
+
 function HashTable(size, prime) {
   size = size || 59;
   prime = prime || 122611;
