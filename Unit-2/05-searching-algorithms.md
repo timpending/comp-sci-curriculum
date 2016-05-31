@@ -6,6 +6,10 @@
 
 Linear search runs on average at [O(n)](https://en.wikipedia.org/wiki/Time_complexity#Linear_time).
 
+In computer science, linear search or sequential search is a method for finding a particular value in a list that checks each element in sequence until the desired element is found or the list is exhausted.
+
+https://en.wikipedia.org/wiki/Linear_search
+
 ## Binary Search
 
 The key here is that we have a array of n element(s).
@@ -16,11 +20,15 @@ For binary search, the array should be arranged in ascending or descending order
 
 Binary search runs on average at [O(log n)](https://en.wikipedia.org/wiki/Time_complexity#Logarithmic_time) -> THIS IS [FAST](http://stackoverflow.com/a/2307314/1799408)!
 
+The binary search algorithm begins by comparing the target value to the value of the middle element of the sorted array. If the target value is equal to the middle element's value, then the position is returned and the search is finished. If the target value is less than the middle element's value, then the search continues on the lower half of the array; or if the target value is greater than the middle element's value, then the search continues on the upper half of the array. This process continues, eliminating half of the elements, and comparing the target value to the value of the middle element of the remaining elements - until the target value is either found (and its associated element position is returned), or until the entire array has been searched (and "not found" is returned).
+
+https://en.wikipedia.org/wiki/Binary_search_algorithm
+
 ## Exercise
 
-[https://github.com/gSchool/searching-algorithms](https://github.com/gSchool/searching-algorithms)
+Make the `search-algorithms` tests pass in the exercises directory.
 
-### Other links
+### Visualization
 
 - [Visualization](https://www.cs.usfca.edu/~galles/visualization/DFS.html)
-- [More Visualization](https://www.cs.usfca.edu/~galles/visualization/DFS.html)
+- http://www.sorting-algorithms.com/

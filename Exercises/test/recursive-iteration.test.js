@@ -156,49 +156,4 @@ describe("Looping and recursion", () => {
 
     it("does not use loops", checkForLoops('flatten'))
   })
-
-  describe("binarySearch", () => {
-    it("returns the index of the element in the array via binary search", () => {
-      expect(lib.binarySearch([], 'a')).to.deep.equal(-1)
-      expect(lib.binarySearch(['a'], 'a')).to.deep.equal(0)
-      expect(lib.binarySearch(['a','b'], 'b')).to.deep.equal(1)
-      expect(lib.binarySearch(['a','b','c'], 'a')).to.deep.equal(0)
-      expect(lib.binarySearch(['a','b','c'], 'b')).to.deep.equal(1)
-      expect(lib.binarySearch(['a','b','c'], 'c')).to.deep.equal(2)
-      expect(lib.binarySearch(['a','b','c'], '0')).to.deep.equal(-1)
-      expect(lib.binarySearch(['a','b','c'], 'd')).to.deep.equal(-1)
-    })
-
-    it("does not use loops", checkForLoops('binarySearch'))
-
-    it("runs faster than indexOf (by a lot)", () => {
-      const input = []
-      for (var i = 0; i < 1000; i++) input.push(i)
-
-      function benchmark(fn){
-        const start = process.hrtime();
-        fn()
-        const diff = process.hrtime(start);
-        return diff[0] * 1e9 + diff[1]; // return total number of nanoseconds
-      }
-
-      function runIndexOf(){
-        for (var i = 0; i < input.length; i++) {
-          lib.indexOf(input, input[i])
-        }
-      }
-
-      function runBinarySearch(){
-        for (var i = 0; i < input.length; i++) {
-          lib.binarySearch(input, input[i])
-        }
-      }
-
-      const indexOfSpeed = benchmark(runIndexOf);
-      const binarySearchSpeed = benchmark(runBinarySearch);
-
-      expect(indexOfSpeed).to.be.gt(binarySearchSpeed * 100);
-    })
-  })
-
 })
