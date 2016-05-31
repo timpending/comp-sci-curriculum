@@ -45,7 +45,7 @@ Once you've implemented this merge function, you can implement merge sort using 
 
 **Time Complexity**
 
-Determining the time complexity of merge sort requires some careful thought. From a high level, merge sort works by subdividing the original array into subarrays that are half as long, until the subarrays can't be divided any further and are therefore already sorted. 
+Determining the time complexity of merge sort requires some careful thought. From a high level, merge sort works by subdividing the original array into subarrays that are half as long, until the subarrays can't be divided any further and are therefore already sorted.
 
 Then comes the merging. At each level (1-element arrays to 2-element arrays, 2-element arrays to 4-element arrays, and so on), there are O(n) operations that need to be performed. And how many levels are there? Well, the number of levels equals the number of times you can divide n by 2 before you get a quotient that's less than or equal to 1. But this is just log<sub>2</sub>(n). Therefore, the time complexity is log(n) copies of O(n), a.k.a. O(n log(n))!
 
@@ -104,7 +104,7 @@ function partition(arr, left, right) {
 }
 
 function quickSort(arr, left=0, right=arr.length - 1) {
-  /* 1. If left is less than right, declare a variable called partitionIndex which is equal to the result of a call to partition, passing in arr, left, and right. After the call to partition, perform a quicksort to the two subarrays to the left and right of the partitionIndex. 
+  /* 1. If left is less than right, declare a variable called partitionIndex which is equal to the result of a call to partition, passing in arr, left, and right. After the call to partition, perform a quicksort to the two subarrays to the left and right of the partitionIndex.
   2. Return arr. */
 }
 ```
@@ -121,9 +121,17 @@ Well, it depends. As of 2012, according to Nicholas C. Zakas (reference below):
 
 # Exercises:
 
-Complete Part 2 of the [JS Sorting Algorithms](https://github.com/gSchool/js_sorting_algorithms) assignment.
+Complete the `sortingAlgorithmsSpecPart2.js` tests.
 
-## Resources: 
+## Stretch Goal: Merge Sort, Quicksort
+
+Try to implement two more advanced sorting algorithms: merge sort and quicksort.
+
+For merge sort, you'll find it helpful to implement a `merge` function which takes two sorted arrays and merges them into one sorted array.
+
+Your goal is to get the tests for `mergeSort`, `quickSort`, and `merge` to pass. Note: As in Part 1, don't use the same implementations for these searching algorithms!
+
+## Resources:
 
 * [Merge Sort in JavaScript](http://www.nczonline.net/blog/2012/10/02/computer-science-and-javascript-merge-sort/)
 * [Merge Sort Wikipedia](https://en.wikipedia.org/wiki/Merge_sort)

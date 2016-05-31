@@ -37,7 +37,7 @@ __Imagine An Infinitely Long Array__
 
 If an infinitely long array existed, and we have numbers as keys, we could just use this infinitely long array as our hash table. In the example above:
 
-```
+```js
 arr[1] = "value 1";
 arr[5001] = "value 2";
 ```
@@ -52,7 +52,7 @@ It is extremely wasteful because we have to create a very large array to hold al
 
 A hash function is a function that maps keys into a smaller space.  This way, a hash table can take any key as input, and the hash function is responsible for mapping it into a smaller array.  A basic hash function looks like the following
 
-```
+```js
 hash_key = (key * LARGE_PRIME) % smaller_array_size
 ```
 
@@ -60,13 +60,13 @@ The function takes an arbitrary key, multiplies it times a large number to give 
 
 For example, if the smaller array has a length of 59, and the large prime number we choose is 122611, then our has function is:
 
-```
+```js
 hash_key = (key * 122611) % 59
 ```
 
 Let's map the two keys from the infinite array example:
 
-```
+```js
 key = 1, hash_key = (1 * 122611) % 59 = 9
 key = 5001, hash_key = (5001 * 122611) % 59 = 51
 ```

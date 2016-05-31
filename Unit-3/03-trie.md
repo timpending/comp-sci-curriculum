@@ -12,7 +12,7 @@ For more information, the [Wikipedia article](https://en.wikipedia.org/wiki/Trie
 
 Tries are exceptionally powerful and used in dictionary lookups, such as one found on a mobile telephone or for autocompletion and spell-checking.
 
-You should trie to implement one [here](https://github.com/gSchool/trie-js)!
+You should trie to implement one by running `trie.test.js`!
 
 ### Other types of trees
 
