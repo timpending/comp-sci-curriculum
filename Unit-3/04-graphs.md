@@ -504,11 +504,21 @@ Depending on the representation, these operations have different complexities
 
 ### Graphs in JavaScript
 
-[https://github.com/gSchool/js_graph](https://github.com/gSchool/js_graph)
+Run the tests in `test/graph` and make them pass.
+
+You'll be updating `graph/graph.js` to:
+
+- Calculate the size of the graph
+- Calculate the number of edges in the graph
+- Calculate the total weight of all nodes in the graph
+- Given a value, find all neighbors of the node with the given value
+- Given two values, find a path between them (array of nodes)
+- Find all nodes in the graph that have no edges connecting them
 
 [https://github.com/gSchool/graph-js/tree/master](https://github.com/gSchool/graph-js/tree/master)
 
 ### Graphs in python
+
 [https://github.com/gSchool/graphs](https://github.com/gSchool/graphs)
 
 ---
