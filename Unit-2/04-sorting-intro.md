@@ -20,8 +20,6 @@ Here's how [bubble sort](https://en.wikipedia.org/wiki/Bubble_sort) works...
 
 **Pseudo code**
 
- **Pseudo code**		  **Pseudo code**
-  		  
 1. For each element in the list, look at the element to the right.
 2. If the value on the left is greater than the value on the right, swap the two values.
 3. Keep swapping until you're at the end of the array. Then move onto the next element in the array and repeat.
@@ -93,11 +91,30 @@ Most programming languages have a sorting mechanism built in. What sorting algor
 
 # Exercises:
 
-Once you're comfortable with the general idea of sorting algorithms, the best way to solidify your understanding is to write one out in code. Complete Part 1 in the following repo:
+Once you're comfortable with the general idea of sorting algorithms, the best way to solidify your understanding is to write one out in code.
 
-- [JS Sorting Algorithms](https://github.com/gSchool/js_sorting_algorithms)
+# Implementing Sorting Algorithms in Javascript
 
-## Further Reading
+## Part 1: Bubble Sort, Selection Sort, Insertion Sort
+
+Try to implement bubble sort, selection sort, and insertion sort (if you need a refresher on these algorithms, check out the [computer science curriculum](https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-2/04-sorting-intro.md)).
+
+For each of these algorithms, you'll also find it helpful to implement a `swap` function which swaps to values in an array.
+
+Your goal is to get the tests for `bubbleSort`, `selectionSort`, `insertionSort`, and `swap` to pass. Note: The tests for the three searching algorithms are the same, but don't use the same implementation for each! The goal of this exercise is for you to be able to implement the different algorithms, even though they have the same effect on the arrays in the tests.
+
+## Stretch Goal: Merge Sort, Quicksort
+
+Try to implement two more advanced sorting algorithms: merge sort and quicksort.
+
+For merge sort, you'll find it helpful to implement a `merge` function which takes two sorted arrays and merges them into one sorted array.
+
+Your goal is to get the tests for `mergeSort`, `quickSort`, and `merge` to pass. Note: As in Part 1, don't use the same implementations for these searching algorithms!
+
+### Helpful Resources
+
+* [https://study.cs50.net](https://study.cs50.net)
+* [http://www.sorting-algorithms.com/](http://www.sorting-algorithms.com/)
 * [Bubble Sort in JavaScript](http://www.nczonline.net/blog/2009/05/26/computer-science-in-javascript-bubble-sort/)
 * [Selection Sort in JavaScript](http://www.nczonline.net/blog/2009/09/08/computer-science-in-javascript-selection-sort/)
 * [Insertion Sort in JavaScript](http://www.nczonline.net/blog/2012/09/17/computer-science-in-javascript-insertion-sort/)
