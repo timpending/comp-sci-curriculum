@@ -46,7 +46,7 @@ We could write that in JavaScript like so:
 ```js
 function printLetters(node) {
   console.log(node.name);
-  node.forEach(function(childNode){
+  node.children.forEach(function(childNode){
     printLetters(childNode)
   }
 }
@@ -113,22 +113,22 @@ function firstGt(array, number) {
 
 ## Recursive Problem Set
 
-Make all of the tests pass in Unit-1/Exercises.
-
-### Further challenges
-
-Write both an iterative and recursive solution to each problem:
+First, practice a bit with the following challenges:
 
 1. Define a recursive function that takes an argument n and prints the lyrics to 99 bottles of beer on the wall, starting with that number `n`
-2. Define a recursive function that takes an argument n and returns the fibonacci value of that position. The fibonacci sequence is 0, 1, 1, 2, 3, 5, 8, 13, 21... So fib(5) should return 5 and fib(6) should return 8.
-3. Define a recursive function that returns true if a string is a palindrome and false otherwise.
-4.  Get the JSON data from this Reddit post using an http request: `http://www.reddit.com/r/aww/comments/zzg3k/my_local_humane_society_posts_pictures_of_new/.json`.  Write code to print out the text of each comment in your terminal.  Write code that counts the number of comments, as well.
+1. Define a recursive function that takes an argument n and returns the fibonacci value of that position. The fibonacci sequence is 0, 1, 1, 2, 3, 5, 8, 13, 21... So fib(5) should return 5 and fib(6) should return 8.
+1. Define a recursive function that returns true if a string is a palindrome and false otherwise.
+1.  Get the JSON data from this Reddit post using an http request: `http://www.reddit.com/r/aww/comments/zzg3k/my_local_humane_society_posts_pictures_of_new/.json`.  Write code to print out the text of each comment in your terminal.  Write code that counts the number of comments, as well.
 
-For further practice, also do:
+Then make all of the tests pass in [Exercises/src/recursive-iteration.js](../Exercises/src/recursive-iteration.js).
+
+> If you like, you can write an iterative solution to the problem first, then write the recursive solution.
+
+For further practice you can also do:
 
 [https://github.com/gSchool/js-hof-filter-map-reduce](https://github.com/gSchool/js-hof-filter-map-reduce)
 
-#### Bonus challenges
+#### Stretch goals
 
 1. Convert Roman Numerals to Integers
 1. [Recursion exercises](https://roman01la.github.io/recursion-exercises/)
