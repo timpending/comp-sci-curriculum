@@ -71,9 +71,9 @@ key = 1, hash_key = (1 * 122611) % 59 = 9
 key = 5001, hash_key = (5001 * 122611) % 59 = 51
 ```
 
-Notices that the hash key that is generated is always in the range 0 to 58 in this case.  The range is within the bounds of the array of size 59 that we have created to store the values for our hash.
+Notice that the hash key that is generated is always in the range 0 to 58 in this case.  The range is within the bounds of the array of size 59 that we have created to store the values for our hash.
 
-Now we have a function that maps an seemingly infinite set of keys to a finite set of keys between 0 and 58.
+Now we have a function that maps a seemingly infinite set of keys to a finite set of keys between 0 and 58.
 
 ### Hash Collisions
 
