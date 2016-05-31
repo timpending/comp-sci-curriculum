@@ -24,7 +24,7 @@ Here's a step-by-step description of merge sort:
 3. Sort each of your smaller subarrays using merge sort.
 4. Merge your two subarrays together, and return the merged array.
 
-![merge sort](../Unit-2/sort-gifs/mergesort.gif)
+![merge sort](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/172/mergesort.gif)
 
 Through this recursive process, you'll wind up with a sorted array!
 
@@ -71,7 +71,7 @@ Here's the gist of how quicksort works:
 2. Compare every other element to the pivot. If it's less than the pivot value, move it to the left of the pivot. If it's greater, move it to the right. Don't worry about where on the left or right you're putting these values; the only thing that matters is comparisons to the pivot.
 3. Once you're done, the pivot will be in the right place, and you can then recursively repeat this process with the left and right halves of the array.
 
-![quicksort](../Unit-2/sort-gifs/quicksort.gif)
+![quicksort](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/171/quicksort.gif)
 
 (Note: for arrays with unique values, you can think of this process as generating a binary search tree. The root node is the first pivot, and every subsequent node is a subsequently chosen pivot.)
 

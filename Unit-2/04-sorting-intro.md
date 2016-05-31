@@ -26,7 +26,7 @@ Here's how [bubble sort](https://en.wikipedia.org/wiki/Bubble_sort) works...
 
 Bubble sort can be implemented using nested loops or recursion.
 
-![bubble sort](./sort-gifs/bubblesort.gif)
+![bubble sort](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/175/bubblesort.gif)
 
 We know for sure that after 1 pass the rightmost element is sorted correctly, after 2 passes the right 2 elements are sorted correctly, and so on.
 
@@ -52,7 +52,7 @@ Bubble sort is NOT an efficient algorithm. Its worst case performance is O(n<sup
 1. Continue until you reach the end of the array.
 1. If the minimum value (index) is not the value (index) you started with, swap the two.
 
-![selection sort](./sort-gifs/selectionsort.gif)
+![selection sort](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/174/selectionsort.gif)
 
 > #### Practice with [this interactive card game](https://www.khanacademy.org/computing/computer-science/algorithms/sorting-algorithms/a/sorting)
 
@@ -71,7 +71,7 @@ Since selection sort is so similar to bubble sort, you can probably guess what t
 3. Keep swapping the element until you're at the beginning of the array.
 3. Else, move on to the next element.
 
-![selection sort](./sort-gifs/insertionsort.gif)
+![insertion sort](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/173/insertionsort.gif)
 
 Note that after step 1, the first two elements will be sorted. After step 2, the first three elements will be sorted. After repeating step 2 once, the first four elements will be sorted, and so on. After each step in the process, the sorted portion of the area increases in size by 1, until the entire array is sorted.
 
