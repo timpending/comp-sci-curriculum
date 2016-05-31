@@ -1,5 +1,5 @@
 const expect = require("chai").expect;
-const binaryToDecimal = require('../binary');
+const binaryToDecimal = require('../src/binary');
 
 describe("binary math", () => {
 

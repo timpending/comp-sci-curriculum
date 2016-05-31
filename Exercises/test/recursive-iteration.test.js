@@ -1,5 +1,5 @@
 const expect = require("chai").expect
-const lib = require('../recursive-iteration')
+const lib = require('../src/recursive-iteration')
 
 describe("Looping and recursion", () => {
 

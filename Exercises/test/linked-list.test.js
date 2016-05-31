@@ -1,5 +1,5 @@
-var LinkedList = require('../linked_list').LinkedList;
-var Node = require('../linked_list').Node;
+var LinkedList = require('../src/linked_list').LinkedList;
+var Node = require('../src/linked_list').Node;
 var assert = require('assert');
 
 var linkedList;
