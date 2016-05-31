@@ -1,7 +1,3 @@
-* Include https://github.com/gSchool/graphs
-* Include https://github.com/gSchool/graph-js/tree/master
-* Add overview / description to readme
-* Link files from outline
 * Include reference links to http://www.csfieldguide.org.nz/ and https://github.com/open-source-society/computer-science and http://www.mattzeunert.com/2015/08/19/viewing-assembly-code-generated-by-v8.html
 
 ## Unit 0 - Fundamentals Part 1 (the concepts)

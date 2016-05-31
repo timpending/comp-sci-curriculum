@@ -126,6 +126,12 @@ Make the `binary_tree.test.js` tests pass.  This assignment will require you to 
 
 Make the tests in `bfs-dfs` all pass.
 
-### Bonus
+### Stretch
 
 `remove`: removes a node from a binary tree. Remember that this method must take into account if the node has any children and if the node is a leaf. [Here](https://www.youtube.com/watch?v=3TOl3Fv4394) is a great video that explains this process.
+
+Also do all of these:
+
+- https://github.com/gSchool/maze-solvability
+- https://github.com/gSchool/text-tree-parser
+- https://github.com/gSchool/csv-to-tree
