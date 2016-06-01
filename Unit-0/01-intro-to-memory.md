@@ -4,7 +4,7 @@ So... What's the difference between Ruby and Java? PHP and C? Javascript and C++
 
 Don't know what a compiler is or what it does? Check out [this](https://www.youtube.com/watch?v=CSZLNYF4Klo&list=PLhQjrBD2T380dhmG9KMjsOQogweyjEeVQ&index=13) quick video for a good introduction.
 
-There is another huge difference between C, C++ and all the other languages listed.  C and C++ do not include memory management for you.  You must manually allocate and deallocate memory as you use it.  As a programmer that is familiar with higher level languages such as ruby, PHP and even Java, this concept may be new to you.  In all of the higher level languages mentioned, memory is automatically allocated for you.  Here is an example:
+There is another huge difference between C, C++ and all the other languages listed.  C and C++ do not include memory management for you.  You must manually allocate and deallocate memory as you use it.  As a programmer that is familiar with higher level languages such as Ruby, PHP and even Java, this concept may be new to you.  In all of the higher level languages mentioned, memory is automatically allocated for you.  Here is an example:
 
 ```javascript
 var num = 123
