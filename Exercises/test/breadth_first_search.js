@@ -1,7 +1,8 @@
-var bfs = require('../bfs');
-var Bst = require('../tree');
 var chai = require('chai');
 var sinon = require('sinon');
+
+var bfs = require('../src/breadth_first_search.js');
+var Bst = require('../helper_files/tree.js');
 
 var should = chai.should();
 
@@ -32,7 +33,7 @@ describe('breadth first search', () => {
     var isMatch = (data) => {return data === 10};
     isMatch = sinon.spy(isMatch);
 
-    bfs(bst.root, isMatch).should.be.true;
+    bfs(bst.root, isMatch).data.should.be.equal(10);
 
     isMatch.callCount.should.be.equal(1);
     isMatch.calledWith(10).should.be.true;
@@ -56,7 +57,7 @@ describe('breadth first search', () => {
     var isMatch = (data) => {return data === 15};
     isMatch = sinon.spy(isMatch);
 
-    bfs(bst.root, isMatch).should.be.true;
+    bfs(bst.root, isMatch).data.should.be.equal(15);
 
     isMatch.callCount.should.be.equal(3);
     isMatch.calledWith(10).should.be.true;
@@ -80,7 +81,7 @@ describe('breadth first search', () => {
     var isMatch = (data) => {return data === 7};
     isMatch = sinon.spy(isMatch);
 
-    bfs(bst.root, isMatch).should.be.true;
+    bfs(bst.root, isMatch).data.should.be.equal(7);
 
     isMatch.callCount.should.be.equal(5);
     isMatch.calledWith(10).should.be.true;
@@ -104,7 +105,7 @@ describe('breadth first search', () => {
     var isMatch = (data) => {return data === 18};
     isMatch = sinon.spy(isMatch);
 
-    bfs(bst.root, isMatch).should.be.true;
+    bfs(bst.root, isMatch).data.should.be.equal(18);
 
     isMatch.callCount.should.be.equal(15);
     isMatch.calledWith(10).should.be.true;

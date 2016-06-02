@@ -1,7 +1,8 @@
-var Bst = require('../tree');
-var dfs = require('../dfs');
 var chai = require('chai');
 var sinon = require('sinon');
+
+var Bst = require('../helper_files/tree.js');
+var dfs = require('../src/depth_first_search.js');
 
 var should = chai.should();
 
@@ -23,7 +24,7 @@ describe('Depth first search', () => {
   it('should find the number 10', () => {
     var isMatch = (data) => {return data === 10;};
     isMatch = sinon.spy(isMatch);
-    dfs(bst.root, isMatch).should.be.true;
+    dfs(bst.root, isMatch).data.should.be.equal(10);
 
     isMatch.calledWith(10).should.be.true;
     isMatch.callCount.should.be.equal(1);
@@ -32,7 +33,7 @@ describe('Depth first search', () => {
   it('should find the number 6', () => {
     var isMatch = (data) => {return data === 6;};
     isMatch = sinon.spy(isMatch);
-    dfs(bst.root, isMatch).should.be.true;
+    dfs(bst.root, isMatch).data.should.be.equal(6);
 
     isMatch.callCount.should.be.equal(4);
     isMatch.calledWith(10).should.be.true;
@@ -47,7 +48,7 @@ describe('Depth first search', () => {
   it('should find the number 16', () => {
     var isMatch = (data) => {return data === 16;};
     isMatch = sinon.spy(isMatch);
-    dfs(bst.root, isMatch).should.be.true;
+    dfs(bst.root, isMatch).data.should.be.equal(16);
 
     isMatch.callCount.should.be.equal(7);
     isMatch.calledWith(10).should.be.true;
