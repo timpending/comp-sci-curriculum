@@ -30,6 +30,9 @@ exports.reduce = function reduce(array, fn, initialValue) {
 exports.indexOf = function indexOf(array, value, position = 0) {
 }
 
+exports.leftPad = function leftPad(string, padNum, delimiter) {
+}
+
 exports.flatten = function flatten(array) {
 }
 

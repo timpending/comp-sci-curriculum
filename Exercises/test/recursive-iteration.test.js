@@ -146,6 +146,19 @@ describe("Looping and recursion", () => {
     it("does not use loops", checkForLoops('indexOf'))
   })
 
+  describe("leftPad", () => {
+    it("returns a string padded by the given delimiter, the given number of times", () => {
+      expect(lib.leftPad('',      5, '-')).to.eq("-----")
+      expect(lib.leftPad('a',     4, '|')).to.eq("|||a")
+      expect(lib.leftPad('ab',    4, '|')).to.eq("||ab")
+      expect(lib.leftPad('abc',   4, '|')).to.eq("|abc")
+      expect(lib.leftPad('abcd',  4, '|')).to.eq("abcd")
+      expect(lib.leftPad('abcde', 4, '|')).to.eq("abcde")
+    })
+
+    it("does not use loops", checkForLoops('leftPad'))
+  })
+
   describe("flatten", () => {
     it("returns a single-dimensional array of all of the values", () => {
       expect(lib.flatten([])).to.deep.equal([])
