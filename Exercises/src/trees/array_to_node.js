@@ -44,11 +44,6 @@
 var Node = require('./node');
 
 var arrayToNode = function(input) {
-  var node = new Node(input[0]);
-  input[1].forEach(function (element) {
-    node.addChild(arrayToNode(element));
-  });
-  return node;
 };
 
 module.exports = arrayToNode;

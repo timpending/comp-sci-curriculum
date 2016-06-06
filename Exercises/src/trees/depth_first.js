@@ -22,11 +22,6 @@
 */
 
 var depthFirst = function(node, callback, level) {
-  level = level || 0;
-  callback(node, level);
-  node.children.forEach(function (child) {
-    depthFirst(child, callback, level + 1);
-  });
 };
 
 module.exports = depthFirst;
