@@ -1,7 +1,7 @@
 'use strict';
 
 let expect = require('chai').expect;
-let Graph = require('../src/graph/graph');
+let Graph = require('../../src/graph/graph');
 let cityGraph;
 
 describe('Graph', function() {

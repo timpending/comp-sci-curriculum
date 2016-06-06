@@ -1,4 +1,4 @@
-var file = require('../src/linked-list/practice')
+var file = require('../../src/linked-list/practice')
 var LinkedList = file.LinkedList;
 var Node = file.Node;
 var DoublyLinkedList = file.DoublyLinkedList;
