@@ -10,7 +10,7 @@ describe("Looping and recursion", () => {
       const definition = lib[methodName].toString();
 
       const loopMessage = "You appear to be using loops instead of recursion";
-      expect(definition, loopMessage).to.not.match(/for|while|do|\.forEach|\.map/)
+      expect(definition, loopMessage).to.not.match(/for|while|do|\.forEach|\.map|\.join|\.split/)
     }
   }
 
@@ -119,6 +119,28 @@ describe("Looping and recursion", () => {
     })
 
     it("does not use loops", checkForLoops('map'))
+  })
+
+  describe("join", () => {
+    it("returns a string with the elements of the array joined by the delimiter", () => {
+      expect(lib.join([], ",")).to.eq("")
+      expect(lib.join(["a"], ",")).to.eq("a")
+      expect(lib.join(["a", "b"], ",")).to.eq("a,b")
+      expect(lib.join(["a", "b", "c"], "|")).to.eq("a|b|c")
+      expect(lib.join([1,2,3], "|")).to.eq("1|2|3")
+    })
+
+    it("does not use loops", checkForLoops('join'))
+  })
+
+  describe("split", () => {
+    it("returns an array of strings split on the delimiter", () => {
+      expect(lib.split("", '.')).to.deep.equal([])
+      expect(lib.split("a", '.')).to.deep.equal(['a'])
+      expect(lib.split("a.b", '.')).to.deep.equal(['a', 'b'])
+    })
+
+    it("does not use loops", checkForLoops('split'))
   })
 
   describe("reduce", () => {

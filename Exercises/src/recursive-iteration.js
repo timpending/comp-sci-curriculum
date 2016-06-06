@@ -24,6 +24,12 @@ exports.none = function none(array, fn) {
 exports.map = function map(array, fn) {
 }
 
+exports.join = function join(array, delimiter) {
+}
+
+exports.split = function split(string, delimiter) {
+}
+
 exports.reduce = function reduce(array, fn, initialValue) {
 }
 
