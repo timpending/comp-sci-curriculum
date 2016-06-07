@@ -49,4 +49,4 @@ And remember, the regular Array structure in Javascript is a Stack (first in, la
 
 ## Exercises
 
-* Use your linked list implementation to create an implementation of a stack and queue.
+Use your linked list implementation to create an implementation of a stack and queue.  There's a test suite for queues in the Exercises folder.

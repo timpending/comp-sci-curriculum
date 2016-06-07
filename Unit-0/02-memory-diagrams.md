@@ -29,7 +29,7 @@ For values, follow these rules:
 - Embed immutable values (strings, numbers, booleans) in the table for brevity
 - Draw mutable values (objects, and hence arrays, functions etc...) _outside_ the table and just point to them.
 
-![](images/ram-diagrams/ram-diagrams.001.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/178/ram-diagrams.001.png)
 
 > **Question:** Are mutable values really stored "inside" objects in real life in the heap?
 
@@ -45,7 +45,7 @@ typeof [1,2,3]
 
 Which means that representing an array is very simple:
 
-![](images/ram-diagrams/ram-diagrams.002.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/176/ram-diagrams.002.png)
 
 > **Question:** What about things like `length`?  Shouldn't we include that?
 
@@ -57,7 +57,7 @@ In JavaScript, functions are also special kinds of objects.  They can have prope
 
 So like arrays, you can easily represent functions like tables.  In this case, you probably want to label the function as `fn` so it's clear that it's a function, and not a regular object.  If you want to make notes about the contents of the function, add the `body` across the bottom:
 
-![](images/ram-diagrams/ram-diagrams.006.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/181/ram-diagrams.006.png)
 
 ### Variables / Scope
 
@@ -78,7 +78,7 @@ and
 
 Sound familiar?  Yup - this looks just like an object!
 
-![](images/ram-diagrams/ram-diagrams.003.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/177/ram-diagrams.003.png)
 
 But since variables aren't _quite_ as simple as objects, and you can't reference the scope directly, you'll probably want to label that one as "scope" to not be confused.  Same rules apply for objects:
 
@@ -98,11 +98,11 @@ Prototypes are an interesting concept.  While there are some ways you can intera
 
 So draw a dark line at the bottom to represent prototypes, and an arrow to point to the object's prototype.
 
-![](images/ram-diagrams/ram-diagrams.004.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/179/ram-diagrams.004.png)
 
 ### Putting it all together
 
-![](images/ram-diagrams/ram-diagrams.005.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/180/ram-diagrams.005.png)
 
 ## Summary
 

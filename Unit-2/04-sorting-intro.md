@@ -26,7 +26,7 @@ Here's how [bubble sort](https://en.wikipedia.org/wiki/Bubble_sort) works...
 
 Bubble sort can be implemented using nested loops or recursion.
 
-![bubble sort](./sort-gifs/bubblesort.gif)
+![bubble sort](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/175/bubblesort.gif)
 
 We know for sure that after 1 pass the rightmost element is sorted correctly, after 2 passes the right 2 elements are sorted correctly, and so on.
 
@@ -52,7 +52,7 @@ Bubble sort is NOT an efficient algorithm. Its worst case performance is O(n<sup
 1. Continue until you reach the end of the array.
 1. If the minimum value (index) is not the value (index) you started with, swap the two.
 
-![selection sort](./sort-gifs/selectionsort.gif)
+![selection sort](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/174/selectionsort.gif)
 
 > #### Practice with [this interactive card game](https://www.khanacademy.org/computing/computer-science/algorithms/sorting-algorithms/a/sorting)
 
@@ -66,11 +66,12 @@ Since selection sort is so similar to bubble sort, you can probably guess what t
 
 **Pseudo code**
 
-1. Compare the second element in the array to the first. If the second is less than the first, swap them.
-2. Take the third element in the array, and compare it to the previous elements, inserting before the first element if it's greater than (or inserting it at the front, if it's smaller than everything to the left of it).
-3. Repeat step 2 for every subsequent element in the array.
+1. For each element in the list, look at the element to the left.
+2. If the elements value is less than the value on the left, swap the two values.
+3. Keep swapping the element until you're at the beginning of the array.
+3. Else, move on to the next element.
 
-![selection sort](./sort-gifs/insertionsort.gif)
+![insertion sort](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/173/insertionsort.gif)
 
 Note that after step 1, the first two elements will be sorted. After step 2, the first three elements will be sorted. After repeating step 2 once, the first four elements will be sorted, and so on. After each step in the process, the sorted portion of the area increases in size by 1, until the entire array is sorted.
 
@@ -90,11 +91,24 @@ Most programming languages have a sorting mechanism built in. What sorting algor
 
 # Exercises:
 
-Once you're comfortable with the general idea of sorting algorithms, the best way to solidify your understanding is to write one out in code. Complete Part 1 in the following repo:
+Once you're comfortable with the general idea of sorting algorithms, the best way to solidify your understanding is to write one out in code.
 
-- [JS Sorting Algorithms](https://github.com/gSchool/js_sorting_algorithms)
+# Implementing Sorting Algorithms in Javascript
 
-## Further Reading
+Complete the `sortingAlgorithmsSpecPart1.js` tests.
+
+## Part 1: Bubble Sort, Selection Sort, Insertion Sort
+
+Try to implement bubble sort, selection sort, and insertion sort (if you need a refresher on these algorithms, check out the [computer science curriculum](https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-2/04-sorting-intro.md)).
+
+For each of these algorithms, you'll also find it helpful to implement a `swap` function which swaps to values in an array.
+
+Your goal is to get the tests for `bubbleSort`, `selectionSort`, `insertionSort`, and `swap` to pass. Note: The tests for the three searching algorithms are the same, but don't use the same implementation for each! The goal of this exercise is for you to be able to implement the different algorithms, even though they have the same effect on the arrays in the tests.
+
+### Helpful Resources
+
+* [https://study.cs50.net](https://study.cs50.net)
+* [http://www.sorting-algorithms.com/](http://www.sorting-algorithms.com/)
 * [Bubble Sort in JavaScript](http://www.nczonline.net/blog/2009/05/26/computer-science-in-javascript-bubble-sort/)
 * [Selection Sort in JavaScript](http://www.nczonline.net/blog/2009/09/08/computer-science-in-javascript-selection-sort/)
 * [Insertion Sort in JavaScript](http://www.nczonline.net/blog/2012/09/17/computer-science-in-javascript-insertion-sort/)

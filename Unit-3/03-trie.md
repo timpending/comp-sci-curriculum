@@ -12,7 +12,7 @@ For more information, the [Wikipedia article](https://en.wikipedia.org/wiki/Trie
 
 Tries are exceptionally powerful and used in dictionary lookups, such as one found on a mobile telephone or for autocompletion and spell-checking.
 
-You should trie to implement one [here](https://github.com/gSchool/trie-js)!
+You should trie to implement one by running `trie.test.js`!
 
 ### Other types of trees
 
@@ -24,10 +24,6 @@ AVL (or height-balanced) binary search tree is any node-based binary search tree
 
 B-tree is a tree data structure that keeps data sorted and allows searches, sequential access, insertions, and deletions in logarithmic time. Unlike a binary tree, a node in the B-tree can have much more than two children (Comer 1979, p. 123). Unlike self-balancing binary search trees, the B-tree is optimized for systems that read and write large blocks of data. It is commonly used in databases and filesystems to make lookup of data faster.
 
-## Resources + Exercises
-
-[https://github.com/gSchool/binary-tree-js/tree/master](https://github.com/gSchool/binary-tree-js/tree/master)
-
-[https://github.com/gSchool/BinarySearchTreeRuby](https://github.com/gSchool/BinarySearchTreeRuby)
+## Resources
 
 [http://visualgo.net/bst.html](http://visualgo.net/bst.html)

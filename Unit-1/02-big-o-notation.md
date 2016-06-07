@@ -2,7 +2,7 @@
 
 [Big-O notation](https://en.wikipedia.org/wiki/Big_O_notation) is how developers discuss the complexity of an algorithm as a way to understand how fast a program will run given it's input. Big-O notation deals with the **worst** case scenario for the algorithm.  In other words, if the program **may** run quickly, but there is a chance it could take a long time given some input, then the Big-O runtime will deal with the longer case.
 
-To put it yet another way, Big-O runtime deals with [asymptotic approximations](https://en.wikipedia.org/wiki/Asymptotic_analysis) of the complexity of the algorithm.  It tends to care much more about how complex a program is when the input size is very large because that is typically when the performance matters the most.
+To put it yet another way, Big-O runtime deals with [asymptotic approximations](https://en.wikipedia.org/wiki/Asymptotic_analysis) of the complexity of the algorithm (http://mathworld.wolfram.com/Asymptotic.html).  It tends to care much more about how complex a program is when the input size is very large because that is typically when the performance matters the most.
 
 ## Objectives
 
@@ -49,6 +49,8 @@ function testPerformance(callback, arr) {
   return t1 - t0;
 }
 ```
+
+NOTE: `performance` is not available in Node, so if you are using Node use https://nodejs.org/api/process.html#process_process_hrtime
 
 **Exercise** Create an array of length 1,000,000, where each entry is the number 2. Then test the performance of `square` on this array, using `testPerformance`.
 
@@ -244,3 +246,8 @@ Factorials are a little more straightforward. The factorial of a positive intege
 ### UC Berkeley
 
 * [Asymptotic Analysis](https://www.youtube.com/watch?v=V1xXmQkzkZI)
+
+### Others
+
+- http://bigocheatsheet.com/
+- http://web.engr.illinois.edu/~jeffe/teaching/algorithms/

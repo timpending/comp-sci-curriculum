@@ -37,7 +37,7 @@ __Imagine An Infinitely Long Array__
 
 If an infinitely long array existed, and we have numbers as keys, we could just use this infinitely long array as our hash table. In the example above:
 
-```
+```js
 arr[1] = "value 1";
 arr[5001] = "value 2";
 ```
@@ -52,7 +52,7 @@ It is extremely wasteful because we have to create a very large array to hold al
 
 A hash function is a function that maps keys into a smaller space.  This way, a hash table can take any key as input, and the hash function is responsible for mapping it into a smaller array.  A basic hash function looks like the following
 
-```
+```js
 hash_key = (key * LARGE_PRIME) % smaller_array_size
 ```
 
@@ -60,20 +60,20 @@ The function takes an arbitrary key, multiplies it times a large number to give 
 
 For example, if the smaller array has a length of 59, and the large prime number we choose is 122611, then our has function is:
 
-```
+```js
 hash_key = (key * 122611) % 59
 ```
 
 Let's map the two keys from the infinite array example:
 
-```
+```js
 key = 1, hash_key = (1 * 122611) % 59 = 9
 key = 5001, hash_key = (5001 * 122611) % 59 = 51
 ```
 
-Notices that the hash key that is generated is always in the range 0 to 58 in this case.  The range is within the bounds of the array of size 59 that we have created to store the values for our hash.
+Notice that the hash key that is generated is always in the range 0 to 58 in this case.  The range is within the bounds of the array of size 59 that we have created to store the values for our hash.
 
-Now we have a function that maps an seemingly infinite set of keys to a finite set of keys between 0 and 58.
+Now we have a function that maps a seemingly infinite set of keys to a finite set of keys between 0 and 58.
 
 ### Hash Collisions
 
@@ -93,7 +93,7 @@ For an example, take a look [at this description of chaining](http://www.algolis
 
 __Linear Probing__
 
-Another category of solving collision problems is probing.  Linear probing is one such scheme.  Rather than solve a collision with an extra data structure, the scheme tries to put the key and value in a different spot in the array.  With linear probing, if there is a collision at index i, the algorithm tries to put the key and value at index i + 1, then index i + 2, etc. Until it finds an open slot.  To find out of a key is in the hash, the algorithm must hash to an index.  If the key and value exists at that index, then it is found.  If the key and value do not exist at that index, then continue looking linearly through the array until the key and value are found, or an empty space is found in the array.  If there is an empty space, you know the key and value are not in the array.
+Another category of solving collision problems is probing.  Linear probing is one such scheme.  Rather than solve a collision with an extra data structure, the scheme tries to put the key and value in a different spot in the array.  With linear probing, if there is a collision at index i, the algorithm tries to put the key and value at index i + 1, then index i + 2, etc. Until it finds an open slot.  To find out if a key is in the hash, the algorithm must hash to an index.  If the key and value exists at that index, then it is found.  If the key and value do not exist at that index, then continue looking linearly through the array until the key and value are found, or an empty space is found in the array.  If there is an empty space, you know the key and value are not in the array.
 
 In the example below, John Smith and Sandra Dee have collided at 873. In order to resolve this, Sandra Dee is added right next to John Smith. In the event we're trying to find Sandra Dee (at 873), we'd go to that index and see that she is not there. We'd then continue until we found the next empty space (i.e. she's not there) or we'd find her.
 
