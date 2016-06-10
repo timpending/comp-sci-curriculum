@@ -3,6 +3,7 @@ var LinkedList = file.LinkedList;
 var Node = file.Node;
 var DoublyLinkedList = file.DoublyLinkedList;
 var CircularLinkedList = file.CircularLinkedList;
+const expect = require("chai").expect;
 
 var linkedList;
 var node;
