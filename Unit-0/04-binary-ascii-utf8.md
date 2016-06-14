@@ -48,8 +48,8 @@ Well, what they didn't explain to you at the time is that this is teaching you d
     <td>1</td>
     <td>1</td>
     <td>0</td>
-    <td>0</td>
     <td>1</td>
+    <td>0</td>
     <td>0</td>
   </tr>
 </table>
