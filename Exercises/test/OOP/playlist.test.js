@@ -96,6 +96,12 @@ describe('Playlist', function() {
       'It had to be you',
       'But Not for Me',
     ]);
+
+    playlist.removeSong(itHadToBeYou);
+
+    expect(playlist.songNames()).to.deep.equal([
+      'But Not for Me'
+    ]);
   });
 
 });
