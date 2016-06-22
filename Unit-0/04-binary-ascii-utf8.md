@@ -9,6 +9,18 @@ Computers only use the numbers zero and one. Everything that you see or hear on 
 * Convert Decimal to Binary and Hexadecimal Numbers
 * Describe UTF-8 and ASCII, including the differences between the two
 
+Since the bits 1 and 0 aren't that useful, they are more often used in 8-bit chunks called bytes.  To see a bunch of random bytes, run this in node:
+
+```js
+const crypto = require('crypto')
+let bytes = crypto.randomBytes(16)
+
+for (var i = 0; i < bytes.byteLength; i++) {
+  let binaryRepresentation = bytes[i].toString(2)
+  console.log("0".repeat(8 - binaryRepresentation.length) + binaryRepresentation);
+}
+```
+
 Numeric values can be represented in any base, though we are most familiar with decimal (using digits 0-9 to represent numbers). Binary represents numeric values with only zero and one.  
 
 If you remember back to grade school a number like `116` was taught as follows:
