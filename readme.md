@@ -126,6 +126,24 @@ Finally, it's appropriate to take 10 minutes to explore the history of computer 
 * [Data structures in JavaScript](http://blog.benoitvallon.com/data-structures-in-javascript/data-structures-in-javascript/)
 
 
+## Running The Exercises
+
+The exercises in this curriculum can be run individually, or as a large group. To get an idea of where you are in the overall curriculum, run them all by `cd`ing into the `Exercises/` directory and running `mocha`. **Note:** you might have to make sure your `node --version` is `6.0.0` or later.
+
+```
+cd Exercises
+node --version
+npm installnpm
+mocha
+```
+
+To run individual groups of exercises, you can type the name of the script after `mocha`.
+
+```
+mocha test/linked-list
+```
+That command will run all the tests in the linked-list folder.
+
 ## Bonus: When to use what data structure
 
 #### Flow Chart
