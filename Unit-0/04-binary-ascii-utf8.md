@@ -1,8 +1,13 @@
-# Binary
+# Binary, ASCII, and UTF-8
 
-Let's learn to count like computers!
+Let's learn to count, and write like computers!
 
-Computers only use the numbers zero and one. Everything that you see or hear on the computer, every interaction, click, scroll and computation is stored using just those two numbers! The zero and one, as it turns out, map very well to true and false, to on and off, to electrical current and no electrical current.
+Computers only use the numbers zero and one. Everything that you see or hear on the computer, every interaction, string, click, scroll and computation is stored using just those two numbers! The zero and one, as it turns out, map very well to true and false, to on and off, to electrical current and no electrical current.
+
+## Objectives
+* Define Bits and Bytes
+* Convert Decimal to Binary and Hexadecimal Numbers
+* Describe UTF-8 and ASCII, including the differences between the two
 
 Numeric values can be represented in any base, though we are most familiar with decimal (using digits 0-9 to represent numbers). Binary represents numeric values with only zero and one.  
 
@@ -381,7 +386,7 @@ Want to see the binary behind an emoji in JavaScript??
 
 Practice some basic binary math:
 
-### Convert
+### Convert to Decimal, and Hexadecimal
 - 10101010
 - 1100110
 - 11110010
@@ -398,7 +403,7 @@ Practice some basic binary math:
 
 ### Write a converter
 
-When you are ready, write a [binary-to-decimal converter](../Exercises/src/binary.js).
+After you've done the above manually, test yourself by writing a [binary-to-decimal converter](../Exercises/src/binary.js).
 
 ## Stretch
 
