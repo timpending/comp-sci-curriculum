@@ -40,7 +40,16 @@ In computer science, garbage collection (GC) is a form of automatic memory manag
 
 Garbage collection is often portrayed as the opposite of manual memory management, which requires the programmer to specify which objects to deallocate and return to the memory system. However, many systems use a combination of approaches, including other techniques such as [stack allocation](https://en.wikipedia.org/wiki/Stack-based_memory_allocation),  [region inference](https://en.wikipedia.org/wiki/Region-based_memory_management) or [automatic reference counting](https://en.wikipedia.org/wiki/Automatic_Reference_Counting). Like other memory management techniques, garbage collection may take a significant proportion of total processing time in a program and can thus have significant influence on performance.
 
-Garbage Collection works by looking through memory for objects that are "reachable" through all of the current stack frames. Local variables in the current execution context, parent contexts, global variables like `window` or `global` and anything allocated in the global stack frame. Anything in memory that doesn't have a way for you to refer back to it (such as through a variable, or in a property, or as a parameter) gets deallocated, and then that memory space can be used by other programs.
+Garbage Collection works by looking through memory for objects that are "reachable" through all of the current stack frames. Local variables in the current execution context, parent contexts, global variables like `window` or `global` and anything allocated in the global stack frame. Anything in memory that doesn't have a way for you to refer back to it (such as through a variable, or in a property, or as a parameter) gets deallocated, and then that memory space can be used by other programs. This process runs approximately every 16ms, and it takes up some of the time and processing resources that your program would normally be using to execute statements.
+
+### Exercise:
+[Read this article on JavaScript Memory Profiling](https://developer.chrome.com/devtools/docs/javascript-memory-profiling). Take a look at your Q1 and Q2 projects and see if you can see any major memory leaks with this tool.
+
+* Using the Memory Profiler, try to find at least one memory leak.
+* Write up where the memory leak is occurring, and give an example that can be replicated
+* File it as an issue on your Q1 or Q2 project
+
+Note that filing a memory leak issue on your own project shows that you're able to find memory leaks, even if you can't fix them yet. If you're able to fix it, turn the find and the fix into a blog post. This shows very deep knowledge of how JavaScript works, and will really impress potential employers!
 
 #### More on Garbage Collection
 
@@ -53,6 +62,8 @@ Garbage Collection works by looking through memory for objects that are "reachab
 ## Threads
 
 In computer science, a thread of execution is the smallest sequence of programmed instructions that can be managed independently by a scheduler (typically as part of an operating system). The implementation of threads and processes differs from one operating system to another, but in most cases, a thread is a component of a process. Multiple threads can exist within the same process and share resources such as memory, while different processes do not share these resources - this is known as [multi-threading](https://en.wikipedia.org/wiki/Multithreading_%28computer_architecture%29).
+
+Languages like JavaScript, Python and Ruby don't start off as multithreaded processes, but there are libraries and frameworks to help support that. Objective-C and Swift rely heavily on multithreading for performance reasons.
 
 > If you want to learn more about this, check out this [video](https://www.youtube.com/watch?v=3YD66bHehhQ&list=PLhQjrBD2T380dhmG9KMjsOQogweyjEeVQ&index=48).
 
@@ -92,3 +103,7 @@ In your own words, write down the following:
 2. If I declare a variable, such as `var x = 5`, where is that stored? What about `var arr = [3,5,6,73,56]`?
 
 3. If I connect to a database on another computer, what level of memory is that?
+
+4. When does the garbage collector run?
+
+5. What kinds of objects get deallocated by the garbage collector?
