@@ -1,4 +1,29 @@
-# Memory Management
+# Intro to Memory
+
+### Objectives
+
+* Define and describe the purpose of:
+  - Heap
+  - Stack
+  - Threads
+  - Bits
+  - Bytes
+  - Garbage Collection
+
+### What is Memory?
+Memory refers to the "working space" a program has available to it to store values and do calculations on those values. When we store strings, arrays, numbers, or objects- these items are kept in a computer's *memory*. There are 4 major memory storage levels- in this article we are concerned with the first two.
+
+1. **Internal Memory**  
+This covers stuff like Processor Registers- the individual places that our processor stores small amounts of information in order to do calculations on them. It also covers things like the L0-L4 Caches, which are where larger pieces of information are stored in order to be broken down and operated upon. You can't load an entire array of a few thousand numbers into this kind of storage, it would be broken down and processed in pieces. We're abstracted away from dealing with this by our operating system, but in some lower-level languages (such as COBOL) we have some access to this kind of memory.  
+2. **Main Memory**  
+Main Memory is the level of abstraction most programmers spend time thinking about. This refers to **RAM** (Random Access Memory) which is sometimes called Volatile Memory because it does not retain the information stored when it's not powered. When your program runs, the variables and files it reads and data it's working with is stored in RAM. RAM is where the **Heap** lives.
+3. **Online Mass Storage**  
+Today, this might sound like we're referring to a service like Dropbox. In reality, we're actually talking about "removable media", such as hard disks. We're talking about stuff that the processor does not have direct access to because it's not built into the actual main logic board of the computer. Because Hard Disk Drives (**HDDs**) are connected to the main logic board by a cable, they're called Auxiliary Memory. This is a throwback to the days when most programs didn't require more than the working memory of the computer to run. Hard Disks are *Non-Volatile*, so they can keep the data stored on them even when they are not powered.
+4. **Offline Bulk Storage**  
+This actually does refer to services like Dropbox, but it also refers to databases hosted on another computer, or to a backup service. This kind of storage is not meant to be frequently read or written to, but is only accessed a few times in the course of running the program. You might be thinking, "but I access my database many times when I'm running a webserver", but you access your database several orders of magnitude fewer times than you access locally scoped variables and files from the hard drive. When we refer to something as "offline", what we mean is "we must leave our immediate physical location to access it".
+
+
+##  Memory Management
 
 So... What's the difference between Ruby and Java? PHP and C? Javascript and C++? One of the main differences is that some of these languages are compiled (C, C++, Java) and others are interpreted (Ruby, PHP)!
 
@@ -17,7 +42,9 @@ In computer science, garbage collection (GC) is a form of automatic memory manag
 
 Garbage collection is often portrayed as the opposite of manual memory management, which requires the programmer to specify which objects to deallocate and return to the memory system. However, many systems use a combination of approaches, including other techniques such as [stack allocation](https://en.wikipedia.org/wiki/Stack-based_memory_allocation) and [region inference](https://en.wikipedia.org/wiki/Region-based_memory_management). Like other memory management techniques, garbage collection may take a significant proportion of total processing time in a program and can thus have significant influence on performance.
 
-> How does memory management work in JavaScript? Read about it [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management).
+> How does memory management work in JavaScript? Read about it [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management).  
+
+> [Here's a great video on performance in Javascript, that dives into memory management (advanced).](https://www.youtube.com/watch?v=VhpdsjBUS3g)
 
 ## Threads
 
@@ -50,3 +77,14 @@ The [heap](https://en.wikipedia.org/wiki/Heap_(data_structure)) is memory set as
 > Read [more](http://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap) on StackOverflow.
 >
 > Read about [whether Javascript allocates memory in the heap or the stack for your variable](http://stackoverflow.com/questions/5326300/garbage-collection-with-node-js/5328761#5328761)
+
+
+## Pause and Reflect
+
+In your own words, write down the following:
+
+1. What are the 4 levels of memory? Where are they located?
+
+2. If I declare a variable, such as `var x = 5`, where is that stored? What about `var arr = [3,5,6,73,56]`?
+
+3. If I connect to a database on another computer, what level of memory is that?
