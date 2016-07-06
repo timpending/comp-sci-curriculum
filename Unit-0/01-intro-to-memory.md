@@ -6,8 +6,6 @@
   - Heap
   - Stack
   - Threads
-  - Bits
-  - Bytes
   - Garbage Collection
 
 ### What is Memory?
@@ -42,7 +40,7 @@ Garbage collection is often portrayed as the opposite of manual memory managemen
 
 Garbage Collection works by looking through memory for objects that are "reachable" through all of the current stack frames. Local variables in the current execution context, parent contexts, global variables like `window` or `global` and anything allocated in the global stack frame. Anything in memory that doesn't have a way for you to refer back to it (such as through a variable, or in a property, or as a parameter) gets deallocated, and then that memory space can be used by other programs. This process runs approximately every 16ms, and it takes up some of the time and processing resources that your program would normally be using to execute statements.
 
-### Exercise:
+### Optional Exercise:
 [Read this article on JavaScript Memory Profiling](https://developer.chrome.com/devtools/docs/javascript-memory-profiling). Take a look at your Q1 and Q2 projects and see if you can see any major memory leaks with this tool.
 
 * Using the Memory Profiler, try to find at least one memory leak.
@@ -66,12 +64,6 @@ In computer science, a thread of execution is the smallest sequence of programme
 Languages like JavaScript, Python and Ruby don't start off as multithreaded processes, but there are libraries and frameworks to help support that. Objective-C and Swift rely heavily on multithreading for performance reasons.
 
 > If you want to learn more about this, check out this [video](https://www.youtube.com/watch?v=3YD66bHehhQ&list=PLhQjrBD2T380dhmG9KMjsOQogweyjEeVQ&index=48).
-
-## Bits & Bytes
-
-At the smallest scale in the computer, information is stored as bits and bytes. We will explore this a bit more later, but for know just know that 8 bits make up a byte.
-
-> Read more [here](https://web.stanford.edu/class/cs101/bits-bytes.html).
 
 ## Stack & Heap
 
