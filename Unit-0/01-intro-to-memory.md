@@ -107,3 +107,7 @@ In your own words, write down the following:
 4. When does the garbage collector run?
 
 5. What kinds of objects get deallocated by the garbage collector?
+
+
+## Writing Time!
+Ensure you completed the exercise in the Garbage Collection example above. Using the [JavaScript Memory Profiler](https://developer.chrome.com/devtools/docs/javascript-memory-profiling) is something that more advanced developers use to ensure their applications are performing and aren't leaking memory. It's a process you might get to take part in, and showing you're able to will be an asset in getting hired. Take the time to reflect and write on this critical concept, and try to explain it to yourself as you were before you knew about Garbage Collection.
