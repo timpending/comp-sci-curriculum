@@ -25,18 +25,16 @@ This actually does refer to services like Dropbox, but it also refers to databas
 
 ##  Memory Management
 
-So... What's the difference between Ruby and Java? PHP and C? Javascript and C++? One of the main differences is that some of these languages are compiled (C, C++, Java) and others are interpreted (Ruby, PHP)!
+JavaScript, Python, Ruby and PHP are all very high level languages. When we say "high level", what we mean is that many things that are manually managed in other languages have been abstracted, and so are handled for you. It's best to understand how these abstractions work, so that you understand what is automatically happening.
 
-Don't know what a compiler is or what it does? Check out [this](https://www.youtube.com/watch?v=CSZLNYF4Klo&list=PLhQjrBD2T380dhmG9KMjsOQogweyjEeVQ&index=13) quick video for a good introduction.
-
-There is another huge difference between C, C++ and all the other languages listed.  C and C++ do not include memory management for you.  You must manually allocate and deallocate memory as you use it.  As a programmer that is familiar with higher level languages such as Ruby, PHP and even Java, this concept may be new to you.  In all of the higher level languages mentioned, memory is automatically allocated for you.  Here is an example:
+One of the biggest things that higher level languages (like JavaScript, Python or Ruby) abstract away is Memory Management. With a language like C or C++, you must manually _allocate_ and _deallocate_ memory as you use it. Memory Allocation really just means that you reserve some space in memory, telling the operating system to reserve that space for your program. Inside of the program, your program has to decide how much space to allocate for any given type of information, because a string is usually much larger than a number. All of these considerations go into managing memory, but in higher level languages these concerns are handled automatically, such as in the following javascript code:
 
 ```javascript
 var num = 123
 ```
 In the above JavaScript code, memory is allocated for a number.  But you do not have to write any extra code to make sure that memory exists; this is handled for you.  Additionally, when that memory is no longer needed, it will be automatically removed from your computer.  This process is known as __garbage collection__.
 
-## Garbage collector
+## Garbage Collection
 
 In computer science, garbage collection (GC) is a form of automatic memory management. The garbage collector, or just collector, attempts to reclaim garbage, or memory occupied by objects that are no longer in use by the program. Garbage collection was invented by John McCarthy around 1959.
 
