@@ -36,13 +36,19 @@ In the above JavaScript code, memory is allocated for a number.  But you do not 
 
 ## Garbage Collection
 
-In computer science, garbage collection (GC) is a form of automatic memory management. The garbage collector, or just collector, attempts to reclaim garbage, or memory occupied by objects that are no longer in use by the program. Garbage collection was invented by John McCarthy around 1959.
+In computer science, garbage collection (GC) is a form of automatic memory management. The garbage collector attempts to reclaim memory occupied by objects that are no longer in use by the program. Garbage collection was invented by John McCarthy around 1959.
 
-Garbage collection is often portrayed as the opposite of manual memory management, which requires the programmer to specify which objects to deallocate and return to the memory system. However, many systems use a combination of approaches, including other techniques such as [stack allocation](https://en.wikipedia.org/wiki/Stack-based_memory_allocation) and [region inference](https://en.wikipedia.org/wiki/Region-based_memory_management). Like other memory management techniques, garbage collection may take a significant proportion of total processing time in a program and can thus have significant influence on performance.
+Garbage collection is often portrayed as the opposite of manual memory management, which requires the programmer to specify which objects to deallocate and return to the memory system. However, many systems use a combination of approaches, including other techniques such as [stack allocation](https://en.wikipedia.org/wiki/Stack-based_memory_allocation),  [region inference](https://en.wikipedia.org/wiki/Region-based_memory_management) or [automatic reference counting](https://en.wikipedia.org/wiki/Automatic_Reference_Counting). Like other memory management techniques, garbage collection may take a significant proportion of total processing time in a program and can thus have significant influence on performance.
 
-> How does memory management work in JavaScript? Read about it [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management).  
+Garbage Collection works by looking through memory for objects that are "reachable" through all of the current stack frames. Local variables in the current execution context, parent contexts, global variables like `window` or `global` and anything allocated in the global stack frame. Anything in memory that doesn't have a way for you to refer back to it (such as through a variable, or in a property, or as a parameter) gets deallocated, and then that memory space can be used by other programs.
 
-> [Here's a great video on performance in Javascript, that dives into memory management (advanced).](https://www.youtube.com/watch?v=VhpdsjBUS3g)
+#### More on Garbage Collection
+
+- [Garbage Collection in Node.js](https://strongloop.com/strongblog/node-js-performance-garbage-collection/)
+
+- [How does memory management work in JavaScript?](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management).  
+
+- [Here's a great video on performance in Javascript, that dives into memory management (advanced).](https://www.youtube.com/watch?v=VhpdsjBUS3g)
 
 ## Threads
 
