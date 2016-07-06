@@ -133,7 +133,7 @@ The exercises in this curriculum can be run individually, or as a large group. T
 ```
 cd Exercises
 node --version
-npm installnpm
+npm install
 mocha
 ```
 
