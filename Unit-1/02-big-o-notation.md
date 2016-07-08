@@ -163,6 +163,8 @@ This is O(n\*n + n).  The first n*n (n^2) comes from the while loop that iterate
 
 ## More Exercises
 
+Visit the [Big-O Notation Practice Repo here](https://github.com/gSchool/big-o-practice)
+
 **EXERCISE**
 
 1. Check out [this graph](https://www.desmos.com/calculator/isubf6mydg) for data on the functions you've explored today, as well as some data on different algorithms we've seen or will encounter later on: bubble sort, binary search, naive Fibonacci, merge sort, and bogo sort. Take a look at the data and the trends. What's the complexity of each algorithm? Which algorithm is the most/least efficient? (Need a refresher on some of the math functions that appear? Scroll down!)
