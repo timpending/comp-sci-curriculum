@@ -31,7 +31,6 @@
 - Graphs (BFS / DFS)
 - merge / quick sort
 - **Add Skip List**
-- **Add Djikstra**
 - **Add Heapsort / Radix Sort**
 
 ```
