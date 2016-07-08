@@ -1,14 +1,18 @@
 # Graphs
 
----
+Graphs are a very common data structure in computer science. Graphs are common because it's very easy to describe a lot of real world problems in the language of Graph Theory. Maps, networks of friends, word problems, the game of chess, computers on the internet... all of these can be readily modeled as graphs. Because graphs are well studied, once a problem can be described in the language of graphs, we can apply powerful and well known algorithms to answer questions about the problem.
 
-# Objectives
+## Objectives
 
 * Define and describe the relationships depicted in a Graph
-* Articulate real world examples of graphs
-* Define and describe ways to store a graph in memory
-
----
+* Use Graph Theory vocabulary, specifically define the following terms:
+  * Node/vertex
+  * Edge
+  * Directed/Undirected
+  * Weighted/Unweighted
+* Use Graph Theory Notation, specifically use the following to describe a graph:
+  * Ordered pairs
+  * Set notation
 
 ## Linear Data Structures Recap
 
@@ -19,11 +23,9 @@ So far we've talked about ***linear data structures***:
 * Stack
 * Queue
 
-In all these structures, data is arranged in a sequential manner.
+In all these structures, data is arranged in a sequential manner. That is, items in these structures are strictly ordered, and exactly one item follows one other item. If we want to examine every item in one of these data structures we can do so in a "straight line", looking at each item in order.
 
----
-
-### Non-linear Data Structures Recap
+## Non-linear Data Structures Recap
 
 We've also talked about a ***non-linear data structure***:
 
@@ -31,15 +33,9 @@ We've also talked about a ***non-linear data structure***:
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Binary_search_tree.svg" style="background: white !important" />
 
-A tree is a hierarchical structure.
+A tree is a hierarchical structure. It's easy to see that trees are __not__ linear. In order to examine every element in a tree, we have to travel down more than one path. Consider the example above -- to explore every node we have to go from 8 to 3 as well as from 8 to 10. If this were a linear data structure, we would never have a choice of paths.
 
----
-
-# What are the properties of a tree?
-
----
-
-## Tree
+Recall that trees have the following properties:
 
 * A tree with N nodes has exactly (N-1) edges
 * One edge for each parent/child relationship
@@ -47,94 +43,45 @@ A tree is a hierarchical structure.
 * All nodes must be reachable from the root
 * There must be exactly one path from the root to a given node
 
----
+## Graphs
 
-# Graphs
+This brings us to graphs. Very much like linked lists and trees, graphs are a collection of nodes. Nodes might represent any kind of information (people in a social network, computers on the internet, the position of pieces in a game of chess) and edges represent a connection between those two pieces of information (two people who are "friends", two computers connected by a network cable, moving a single chess piece to a new position).
 
-* Seen all throughout computer science
-* Model real world interconnected relationships very well
+Unlike linked lists and trees, there are no rules for how nodes can be connected. In linked lists, each node is connected to its "next" node (and "previous" node in a doubly linked list). In trees a node can __only__ be connected to it's children and it's parent. Not only that, but in trees there must be a single path from the root node to any other node. In graphs any node can be both:
 
----
+* connected to any node including itself.
+* connected any number of nodes, from 0 to `V` (the number of vertices in the graph)
 
-## Graph
+The lack of restrictions makes graphs a flexible data-structure; it's easy to model many real world systems and problems as graphs. This flexibility also introduces complications when writing algorithms to solve graph problems; the lack of restrictions means there are a lot of possibilities to explore.
 
-* Just like trees, a graph is a collection of objects or entities we call **nodes** or **vertices**
-* These nodes are connected together with a set of **edges**
-* Unlike a tree, there are _no_ rules dictating the connection between nodes.
+Here is an image of a graph:
 
 <img height="175" src="http://i.imgur.com/8lvkfF9.png" style="background: white !important">
 
----
+> A tree is a _type_ of graph with rules dictating the connection between nodes. A Linked List is a type of graph with __even more__ rules restricting the connections between nodes. This graph breaks all the rules for both lists and trees yet is a perfectly valid graph.
 
-### A tree is a _type_ of graph with rules dictating the connection between nodes.
+## Graph Vocabulary
 
----
+In order to talk about graphs, we need to define a few key terms.
 
-## Graph Theory
+### Node/Vertex & Edge
 
-* Graphs are studied _extensively_ in mathematics
-* In computer science, we study and implement this same concept
+* Just like trees, a graph is a collection of objects or entities we call **nodes**, these are also called **vertices**.
+* These nodes are connected together with a set of **edges**.
 
->A graph `G` is an ordered pair of a set `V` of vertices and a set `E` of edges.
+In general, a __node__ or a __vertex__ represents some piece of data, and an edge represents an association between nodes.
 
-`G = (V, E)`
+### Directed and Undirected Graphs
 
-----
-
-## Ordered Pair
-
-> a pair of mathematical objects, in which the order **matters**
-
-`(V, E)`
-
-Because order matters, `V` is the first object in the pair, and `E` is the second object in the pair
-
-Ordered pair, written with parenthesis:
-
-`(a, b) != (b, a)`
-
-`if a != b`
-
-----
-
-## Unordered pair
-
-> a set of two elements
-
-Order is not important here.
-
-Unordered pair, written with curly braces, also known as a set:
-
-`{a, b} == {b, a}`
-
----
-
-## Draw this graph
-
-<img height="175" src="http://i.imgur.com/8lvkfF9.png" style="background: white !important">
-
-* Label the vertices in the graph from v1 to v6
-* Write the set notation for the vertices in the graph
-
----
-
-## Edges
-
-Edges in graph can be either **undirected** or **directed**
+Edges in graph can be either **undirected** or **directed**. In an __undirected graph__ every __edge__ can be traversed in both directions. In a __directed graph__ every edge can be traversed in only one direction. However, even in directed graphs it can be possible to travel in both directions; consider these two graphs:
 
 <img src="http://www.cprogramming.com/tutorial/computersciencetheory/graph.jpg" style="background: white !important">
 
-**Undirected**: Connected vertices represent an unordered pair. No arrow. Direction is implied in both directions.
+> **Undirected**: Connected vertices represent an unordered pair. No arrow. Direction is implied in both directions.
 
-`{A, B}`
+> **Directed**: Connected vertices represent an ordered pair. There is an arrow pointing from one vertex to another.
 
-**Directed**: Connected vertices represent an ordered pair. There is an arrow pointing from one vertex to another.
-
-`(A, B), (B, A)`
-
----
-
-## Undirected Edges
+#### Small Undirected Graph
 
 In this example all the edges are undirected (There are no arrows pointing in either direction).
 
@@ -142,423 +89,176 @@ This means connected vertices can be represented as an unordered pair. Order doe
 
 <img height="175" src="http://i.imgur.com/8lvkfF9.png" style="background: white !important">
 
-If we were to label the vertex with 1 as v1 and the vertex 2 as v2, the edge would be represented as `{v1, v2}`
+#### Small Directed Graph
 
----
-
-## Undirected Edges
-
-<img height="175" src="http://i.imgur.com/8lvkfF9.png" style="background: white !important">
-
-* List all edges in the graph
-
----
-
-## Directed Edges
-
-In this example all the edges are directed (The arrows are pointing in a specific direction).
-
-This means connected vertices can be represented as an ordered pair. Order matters, and the relationship is from one vertex to another, but not vice versa (unless there are 2 edges).
+In this example all the edges are directed. The arrows are pointing in a specific direction, and that direction is the only direction you can travel. For example, in this image, we can go from node 1 to node 2, but not from node 2 to node 1.
 
 <img height="175" src="http://i.imgur.com/aIgNHkF.png" style="background: white !important">
 
-If we were to label the vertex with 1 as v1 and the vertex 2 as v2, the edge would be represented as `(v1, v2)`
+#### A Note About Direction
 
----
+In a very pedantic sense, direction applies to __edges__ not to __graphs__. Even though this is not strictly required, typically entire graph is either **undirected** or **directed**.
 
-## Directed Edges
-
-<img height="175" src="http://i.imgur.com/aIgNHkF.png" style="background: white !important">
-
-* List all edges in the graph
-
----
-
-### It is possible to have a graph that has both **undirected** _and_ **directed** edges, but we will only study graphs in which all edges are either directed or undirected
-
----
-
-## Types of graphs
+Because it is uncommon to mix directed and undirected __edges__ in a single graph we will only study graphs in which all edges are either directed or undirected. This leaves us with two kinds of __graphs__:
 
 * A graph with all _directed_ edges is called a directed graph or **digraph**
 * A graph with all _undirected_ edges is called an **undirected graph**
 
----
-
-## What type of graph is this?
-
-<img height="175" src="http://i.imgur.com/aIgNHkF.png" style="background: white !important">
-
----
-
-## What type of graph is this?
-
-<img height="175" src="http://i.imgur.com/8lvkfF9.png" style="background: white !important">
-
----
-
-### Graphs can be used to represent any collection of objects having some kind of pairwise relationship
-
----
-
-## A Social Network
-
-![](https://s3.amazonaws.com/ka-cs-algorithms/social_network.png)
-
-* Undirected graph, because a friendship is a mutual relationship (in most cases 😃)
-* Once a system is modeled as a graph, a lot of problems can be solved by applying standard algorithms in graph theory
-
----
-
-## Suggesting friends
-
-* Suggest friends for Audrey
-
-![](https://s3.amazonaws.com/ka-cs-algorithms/social_network_shortestpath.png)
-
-* One possible approach is to suggest friends of friends who are not connected already
-
----
-
-### Suggesting Friends: Graph Theory
-
-![](https://s3.amazonaws.com/ka-cs-algorithms/social_network_shortestpath.png)
-
-* This problem in Graph Theory terms would be to find all nodes having a shortest path length from a given node to equal 2.
-
-[Wikipedia Shortest Path Problem](https://en.wikipedia.org/wiki/Shortest_path_problem)
-
----
-
-## Interlinked Web Pages
-
-<img src="http://i.imgur.com/vBOLar6.png" style="height:175px"/>
-
-* A web page with a unique address (URL) is a node in the graph
-* A directed edge is when one web page links to another
-* This graph is directed, because the relationship between web pages is not mutual
-* If page A links to page B, then it is not necessary that page B will also have a link to A
-
----
-
-### Interlinked Web Pages: Graph Theory
-
-<img src="http://i.imgur.com/vBOLar6.png" style="height:175px"/>
-
-* Web crawlers: follow all links on a page, and store this information
-* Search engines then use this data to provide quick and accurate results against queries
-* In graph theory, web crawling would be an example of **graph traversal**, the act of visiting all nodes in a graph
-
----
-
-### Graphs are used to solve a huge swath of problems:
-
-* Accessible Data Storage (Binary Tree)
-* Trees (DOM, XML, etc.)
-* Flow Control
-* Abstract Syntax Trees (Lexing, JS, etc.)
-* Neural Network
-etc.
-
----
-
-# In some graphs, all edges may not be equal
-
----
-
 ## Weighted vs Unweighted
 
-In a weighted graph, we assign values to each edge.
+So far, we've only seen at graphs where each __edge__ has the same __weight__. In such  __unweighted__ graphs, we are only interested in whether a connection between two nodes __exists or not__. In a weighted graph, we assign values to each edge, which typically represents the cost of traveling between two nodes.
 
-<img height="175" src="http://i.imgur.com/MTZDefT.png" style="background: white !important">
+Consider these graphs:
 
----
+<img height="175" src="http://i.imgur.com/aIgNHkF.png" style="background: white !important"> <img height="175" src="http://i.imgur.com/MTZDefT.png" style="background: white !important">
 
-## City Network
+In the graph on the left, the shortest path from node 1 to node 2 is length one (a single edge must be traveled). You can go directly from node 1 to node 2. You can also travel from 1 to 2 on a path with length 3. To do so travel the edges in this order: 1 -> 3 -> 4 -> 2.
 
-![](https://s3.amazonaws.com/ka-cs-algorithms/undirected_road_map.png)
+In the graph on the right, the shortest path from node 1 to node 2 is still represented by the direct edge; this time the length of that path is 12, because the edge has a __weight__ of 12. The path from 1 -> 3 -> 4 -> 2 is length (-2 + 14 + 9) = 21. Note that instead of counting the number of edges, we sum the __edge weights__.
 
-* In this case, the weight is the distance between cities
-* This graph is undirected, so it is assumed there is a path between cities in both directions
-
----
-
-### Shortest Distance
-
-![](https://s3.amazonaws.com/ka-cs-algorithms/undirected_road_map.png)
-
-* Find the shortest distance from New York to Reading
-* If we were to only consider edges, it would appear to be the same, but if we account for weights (distance), the second path is shorter:
- * New York -> New Haven -> Providence -> Canton -> Weston -> Reading : 255
- * New York -> New Haven -> Hartford -> Sturbridge -> Weston -> Reading : 233
-
----
-
-### Shortest Distance: Graph Theory
-
-![](https://s3.amazonaws.com/ka-cs-algorithms/undirected_road_map.png)
-
-* In graph theory, this would be a shortest path problem, accounting for edge weights
-
----
+This added dimension makes our graphs even more flexible.
 
 ## Cyclic vs Acyclic
 
-A graph is cyclic, if a path can be followed from a node back to the same node, without repeating edges. _At least 1 cycle_
+For directed graphs, we can distinguish between __cyclic__ and __acyclic__ graphs. A graph is said to be cyclic if you can get from any one node, back to that same node. Consider the following graph, is it cyclic or acyclic?
 
 <img height="175" src="http://i.imgur.com/aIgNHkF.png" style="background: white !important">
 
-An acyclic graph is a graph with no cycles.
+This graph is acyclic, you cannot travel from any one node, back to itself. You can make this graph cyclic by reversing the direction of the edge from  node 1 to node 2. If that edge goes from node 2 to node 1 instead, then you can travel from `1` -> `3` -> `4` -> `2` -> `1`, creating a __cycle__.
 
----
+By their nature, undirected graphs all have cycles, because you can simple travel along one edge, then follow it back to the original node. A tree is an example of an acyclic graph when you think of the edges as being directed from parent to child.
 
-# What is one type of acyclic graph you've seen?
-
----
-
-# A tree!
-
----
+__Directed Acyclic Graphs__, sometimes called DAGs, have special properties that can be explioted to make some task more efficient.
 
 ## Connected vs Disconnected
 
-A disconnected graph is a graph made out of two or more sub-graphs, without a path between the sub-graphs
+The final classification of graphs we're introducing is connected vs disconnected graphs. A __connected__ graph is a graph where you cannot divide the nodes into two sub-graphs which have no paths between them. A __disconnected__ graph is a graph made out of two or more sub-graphs which do not have any paths between the sub-graphs. Here is a disconnected graph:
 
 <img height="175" src="http://i.imgur.com/XiVi0vk.png" style="background: white !important">
 
-* The roads in England and France can be considered a disconnected graph, since they aren't connected by land
+> This graph is disconnected, there are two sub-graphs which have no paths between them.
 
----
+The roads in England and The United States can be modeled with a disconnected graph. There are roads in England and there are roads in the USA, but there is no way to drive your car on a road from England to the USA.
 
-# Describe the Graphs
+## Practice, Describe These Graphs!
 
----
+We've done the first one for you.
 
 ![](http://www.xatlantis.ch/examples/graphics/graph1_example.png)
 
----
+Is this graph...
 
-* Undirected
-* Weighted
-* Cyclic
-* Connected
+* Directed/__Undirected__
+* __Weighted__/Unweighted
+* __Cyclic__/Acyclic
+* __Connected__/Disconnected
 
 ---
 
 <img src="http://upload.wikimedia.org/wikipedia/commons/a/a0/CPT-Graphs-directed-weighted-ex2.svg" style="background: white;" />
 
----
+Is this graph...
 
-* Directed
-* Weighted
-* Cyclic
-* Connected
+* Directed/Undirected
+* Weighted/Unweighted
+* Cyclic/Acyclic
+* Connected/Disconnected
 
 ---
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Directed_acyclic_graph.svg" style="background: white;" />
 
----
+Is this graph...
 
-* Directed
-* Unweighted
-* Acyclic
-* Connected
+* Directed/Undirected
+* Weighted/Unweighted
+* Cyclic/Acyclic
+* Connected/Disconnected
 
----
+## More Practice
 
-## Representing a graph in memory
+Draw a graph on a whiteboard or paper!
 
-[visualgo](http://visualgo.net/graphds)
+* Make sure it is directed, cyclic, connected, and weighted.
+* Add or remove edges to make this graph acyclic.
+* Add or remove more edges to make it disconnected.
 
----
+## Graph Theory Notation
 
-# Adjacency Matrix
+In academic writing, especially from mathematics departments, there are established mathematical notations for discussing graphs. Knowing this notation can help you read information about graphs from more varied sources, including academic papers, wikipedia, and more.
 
----
+#### Representing a Graph
 
-### Adjacency Matrix: Undirected Graph
+>A graph `G` is a set `V` of vertices and a set `E` of edges. The edges might be a set of ordered, or unordered pairs depending on if the graph is directed or undirected.
 
-<img src="http://i.imgur.com/yjiu6g3.png" style="height: 300px;background: white;" />
+`G = (V, E)`
 
-* Use a 2 dimensional array N*N, where N is the number of vertices
-* An edge between two vertices i, j, `A[i][j]` is represented as a 1, no edge is a zero
+This means, `G` (our graph), is entirely represented by all __vertices__ `V` and all __edges__ `E`. In this case `(V, E)` is called an "ordered pair".
 
----
+#### Ordered Pairs
 
-### Adjacency Matrix: Directed
+> a pair of mathematical objects, in which the order **matters**.
 
-<img src="http://i.imgur.com/UNrHEtS.png" style="height: 300px;background: white;" />
+`(V, E)`
 
-* We use 1 for the edge (i, j) and -1 for the edge from (j, i)
+Because order matters, `V` is the first object in the pair, and `E` is the second object in the pair. Ordered pairs are typically written with parenthesis to group the two objects. The following is true about __ordered pairs__:
 
----
+`(a, b) != (b, a)`
 
-### Adjacency Matrix: Weighted Directed
+`if a != b`
 
-<img src="http://i.imgur.com/SIKGgHb.png" style="height: 300px;background: white;" />
+Meaning, as long as `a` and `b` don't represent the same object, then the ordered pair `(a, b)` is not the same as the ordered pair `(b, a)`. We also use this notation to keep track of edges in a directed graph. If we have two nodes `n1` and `n2`, a directed edge from `n1` to `n2` can be written as `(n1, n2)`.
 
-* We store the weight of the edge instead of 1
+#### Unordered pairs
 
----
+> a spar of mathematical objects in which order __does not matter__
 
-# Adjacency List
+Unordered pairs are typically written with curly braces. When referring to a group of unordered mathematical objects which are larger than size 2, we use the term __set__:
 
----
+An "unordered pair": `{a, b} == {b, a}`  
+A set: `{a, b, c, d, e} == {d, b, a, c, e}`
 
-### Adjacency List: Unweighted Directed
+We can use set notation to represent the nodes in a graph, and unordered pairs to represent edges in the graph.
 
-<img src="http://i.imgur.com/0ro7KHC.png" style="height: 300px;background: white;" />
+## Practice Using These Terms and Notation
 
-* In this case for each vertex we store a linked lists consisting of all of its successors.
+#### Draw This Graph
 
----
+The following notation represents a graph with 3 nodes and 3 edges. Can you draw a representation of this graph?
 
-This is what the graph looks like in the form of an adjacency list that we are given:
-```Javascript
-var graphList = [
-  [1,2],
-  [0,2],
-  [0,1,3,6,7],
-  [2,5],
-  [5,6,8],
-  [3,4],
-  [2],
-  [2,8],
-  [4,7]
-]
-```
-## Further Explanation of what this array represents
+`G = (V, E)`  
+`V = {a, b, c}`  
+`E = {{a, b}, {b, c}, {a, c}}`
 
-![graphdata](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/191/graph-data-01-01.png)
+#### Write this Graph
 
-## Breadth-First Search
-Breadth-First Search (BFS) is an extremely important algorithm to have in our toolbelt.  Here we'll be using it to track the **distance** every **vertex** is from a given source.
+Consider this graph:
 
-BFS, at a high level, involves adding the children of a starting vertex to a queue, visiting them, and adding *their* children to the queue and so on until every vertex is visited.
+<img height="175" src="http://i.imgur.com/8lvkfF9.png" style="background: white !important">
 
- * Add children of source vertex to a queue of vertices to visit
+* Redraw it on paper or a whiteboard.
+* What kind of graph is this?
+* Label the vertices in the graph from v1 to v6 in your drawing.
+  * In __set notation__, list all the vertices.
+* Label each __edge__ using an __unordered pair__ of the nodes that it connects.
+>For example `{v1, v2}` is an edge that connects the two vertices `v1` and `v2`. It means we can go from `v1` to `v2` and from `v2` to `v1`
 
-![BFS1](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/193/bfs-1-01.png)
+#### Write this Graph As Well
 
-* Remove one of the children in the queue and visit that child
- * Add all the children of the visited vertex to the queue
+Consider this directed graph, which has similar nodes and edges to our previous graph, but where all the __edges__ are __directed__.
 
-![BFS2](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/192/bfs-2-01.png)
+<img height="175" src="http://i.imgur.com/aIgNHkF.png" style="background: white !important">
 
-* Repeat until all vertices are visited
+* Redraw it on paper or a whiteboard.
+* What kind of graph is this?
+* Label the vertices in the graph from v1 to v6 in your drawing.
+  * In __set notation__, list all the vertices.
+* Label each __edge__ using an __ordered pair__ of the nodes that it connects.
+>For example `(v1, v2)` is an edge that connects the two vertices `v1` and `v2`, specifically it means we can travel from `v1` to `v2`, and tells us nothing about whether or not we can travel from `v2` to `v1`.
 
-**BFS in practice:**
+# Additional Resources
 
-Here is what a partial output might look like for vertex 4, if the source node is 0. We would say that the distance from **vertex 0** to **vertex 4** is **4 degrees**.  That means that the shortest path from 0 to 4, is 4 edges.
-```
-{ vertex: 4,
-    edges: [ 5, 8 ],
-    distance: 4,
-    predecessor: { vertex: 5, edges: [Object], distance: 3, predecessor: [Object] } }
-```
-
-# Complexity
-
----
-
-## Complexity
-
-The basic operations of a graph are:
-
-* Adding an edge
-* Deleting an edge
-* Answering the question "is there an edge between i and j"
-* Finding the successors of a given vertex
-* Finding (if exists) a path between two vertices
-
-Depending on the representation, these operations have different complexities
-
----
-
-### Complexity: Adjacency Matrix
-
-* Adding an edge – `O(1)`
-* Deleting an edge – `O(1)`
-* Answering the question "is there an edge between i and j" – `O(1)`
-* Finding the successors of a given vertex – `O(n)`
-* Finding (if exists) a path between two vertices – `O(n²)`
-
----
-
-### Complexity: Adjacency List
-
-* Adding an edge – `O(log(n))`
-* Deleting an edge – `O(log(n))`
-* Answering the question "is there an edge between i and j" – `O(log(n))`
-* Finding the successors of a given vertex – `O(k)`, where "k" is the length of the lists containing the successors of i
-* Finding (if exists) a path between two vertices – `O(n+m)` – where `m <= n`;
-
----
-
-# Review
-
----
-
-# What is a graph composed of?
-
----
-
-# What is a directed graph?
-
----
-
-# What is an undirected graph?
-
----
-
-## What is the difference between a directed and undirected graph?
-
----
-
-# What is a cyclic graph?
-
----
-
-# What is an acyclic graph?
-
----
-
-## What is the difference between a cyclic and acyclic graph?
-
----
-
-## What is the difference between a connected and disconnected graph?
-
----
-
-## What are 2 ways to store a graph in memory?
-
----
-
-# Exercise
-
-### Graphs in JavaScript
-
-Run the tests in `test/graph` and make them pass.
-
-You'll be updating `graph/graph.js` to:
-
-- Calculate the size of the graph
-- Calculate the number of edges in the graph
-- Calculate the total weight of all nodes in the graph
-- Given a value, find all neighbors of the node with the given value
-- Given two values, find a path between them (array of nodes)
-- Find all nodes in the graph that have no edges connecting them
-
-### Graphs in python
-
-[https://github.com/gSchool/graphs](https://github.com/gSchool/graphs)
-
----
-
-# Resources
-
+* Read more about graphs from the [Data Science curriculum]((https://github.com/gSchool/graphs), which is all in Python!
 * [My Code School: Introduction to Graphs](https://www.youtube.com/watch?v=gXgEDyodOJU)
 * [Khan Academy: Describing Graphs](https://www.khanacademy.org/computing/computer-science/algorithms/graph-representation/a/describing-graphs)
 * [Computer Algorithms: Graphs and their Representation](http://www.stoimen.com/blog/2012/08/31/computer-algorithms-graphs-and-their-representation/)
