@@ -41,7 +41,7 @@ Garbage collection is often portrayed as the opposite of manual memory managemen
 Garbage Collection works by looking through memory for objects that are "reachable" through all of the current stack frames. Local variables in the current execution context, parent contexts, global variables like `window` or `global` and anything allocated in the global stack frame. Anything in memory that doesn't have a way for you to refer back to it (such as through a variable, or in a property, or as a parameter) gets deallocated, and then that memory space can be used by other programs. This process runs approximately every 16ms, and it takes up some of the time and processing resources that your program would normally be using to execute statements.
 
 ### Optional Exercise:
-[Read this article on JavaScript Memory Profiling](https://developer.chrome.com/devtools/docs/javascript-memory-profiling). Take a look at your Q1 and Q2 projects and see if you can see any major memory leaks with this tool.
+[Read this article on JavaScript Memory Profiling](https://developers.google.com/web/tools/chrome-devtools/profile/memory-problems/memory-diagnosis). Take a look at your Q1 and Q2 projects and see if you can see any major memory leaks with this tool.
 
 * Using the Memory Profiler, try to find at least one memory leak.
 * Write up where the memory leak is occurring, and give an example that can be replicated

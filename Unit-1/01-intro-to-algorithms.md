@@ -9,7 +9,7 @@ Algorithms:
 - take an input, and
 - produce output.
 
-## Objectives
+## Unit Objectives
 
 In this unit we will:
 
@@ -24,14 +24,14 @@ Let's think about the idea of an "algorithm". Say you have a problem that you ne
 ### Exercise
 In everyday programming, we're often putting together simple algorithms to perform simple tasks. Consider the following:
 
-- Ordering strings alphabetically by the second word in the string, such as ordering names by last name
-- Making a dictionary of users who share first names, and another of users who share last names
+- Ordering strings alphabetically
 - Finding out if a number is a prime number
 - Finding out if a number is a Harshad number
 - Searching an array of users: `[{name, lastSeen}]` to find the top 5 most recently logged in users.
+- Making a dictionary of users who share first names, and another of users who share last names
 - Determining who won in a game of Tic Tac Toe
 
-For as many as you can, instead of _writing code_, try to describe how to solve these in plain english. Use step-by-step instructions to describe, and make yourself a visualization of the problem that you can test your step by step instructions on.
+For as many of the above problems as you can, instead of _writing code_, try to describe how to solve these in plain english. Use step-by-step instructions to describe, and make yourself a visualization of the problem that you can test your step by step instructions on.
 
 Now, for each set of instructions, find out the following:
 - Identify the input of your problem
@@ -39,4 +39,6 @@ Now, for each set of instructions, find out the following:
 - Given an input for your algorithm, determine the number of steps.
   - When you increase the size of the input by 1, how many more steps are added to the number of steps?
   - When you increase the size of the input by an order of magnitude, how many more steps are added?
-- Plot inputs to each algorithm given an input size of 10, 50, 100, 500, 1000, 10,000 on a graph, where the X axis is the input size and the Y axis is the number of steps.
+- On a whiteboard, plot inputs to each algorithm given an input size of 10, 50, 100, 500, 1000, 10,000 on a graph, where the X axis is the input size and the Y axis is the number of steps.
+
+After you have graphed these problems, move on to reading about [Big O Notation!](./02-big-o-notation.md)
