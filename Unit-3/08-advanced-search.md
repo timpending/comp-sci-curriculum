@@ -1,6 +1,6 @@
 # Advanced Searching Algorithms
 
-BFS and DFS are great algorithms, but DFS never finds the shortest path, and BFS only finds the shortest path on unweighted graphs. In this section we introduce an algorithm that finds the shortest path for any graph which doesn't have negative edge weights: Dijkstra's Algorithm. We also introduce an algorithm used for searching __very large__ graphs, for instances where we need to cleverly avoid searching paths that are unlikely to yield a solution: A* (pronounced A-Star)
+BFS and DFS are great algorithms, but DFS rarely finds the shortest path, and BFS only finds the shortest path on unweighted graphs. In this section we introduce an algorithm that finds the shortest path for any graph which doesn't have negative edge weights: Dijkstra's Algorithm. We also introduce an algorithm used for searching __very large__ graphs, for instances where we need to cleverly avoid searching paths that are unlikely to yield a solution: A* (pronounced A-Star)
 
 ## Objectives
 
