@@ -6,9 +6,9 @@ A [linked list](https://en.wikipedia.org/wiki/Linked_list) is a data structure t
 
 By the end of this lesson you should be able to:
 
-1. Implement a singly linked list using JavaScript
-1. Write and describe basic algorithms associated with manipulating singly linked lists
-1. Reverse a singly linked list in place iteratively and recursively
+1. Implement linked lists using JavaScript
+1. Write and describe basic algorithms associated with manipulating linked lists
+1. Advanced: Reverse a linked list in place iteratively and recursively
 
 ## Data Structures And Memory
 
@@ -16,7 +16,9 @@ Modern programming languages hide a lot of the complexity of dealing with a comp
 
 ### Arrays
 
-The JavaScript array appears to hold an infinite amount of data simply by using the `push` method.  However, under the hood, there is a lot more going on.  When you first create an array, JavaScript allocates a certain amount of memory.
+The classical definition of an Array is a statically sized, contiguous, block of memory. The block of memory is divided into evenly sized buckets, each of which holds one item. When you create an array, you're really __reserving a block of memory__. In a classical array, we request a block __of a specific size__. If we run out of space we have to __create a new__ (bigger) block of memory and copy all the values into this new memory location.
+
+The JavaScript `Array` appears to hold an infinite amount of data simply by using the `push` method.  However, under the hood, there is a lot more going on.  When you first create an array, JavaScript allocates a certain amount of memory -- just like a classical array.
 
 ![](http://web.cs.ucla.edu/classes/winter12/cs111/scribe/1c/img4.jpg)
 
@@ -29,29 +31,59 @@ If you continue to push data, the allocated memory will eventually run out!  Onc
 * Update the size of the array.
 * Delete the old memory
 
-Since the algorithm above iterates over all items in the array, the runtime is O(n).
+This process is a convenience for programmers, but it also has performance implications. For example, since the algorithm above iterates over all items in the array (in the worst case), the runtime is O(n).
 
-If the runtime of pushing is important to your program, you may want to use a different data structure.  One option is a **singly linked list**
+If the runtime of pushing is important to your program, you may want to use a different data structure.  One option is a **linked list**; linked lists can ensure that `push` is __always__ constant time. Linked lists come in two styles, singly and doubly linked. We'll examine both.
 
-###Singly Linked List
+### Singly Linked List
 
-A singly linked list is stored in memory using references to other memory locations.  In the drawing below, the list looks as if it's all in a line; but, in fact, in memory, the list is scattered all over the place.  The first object could be at a very high memory address and the second object could be at a very low memory address.  The only thing that keeps the list together is the next pointers.  The next pointers are references to where the next element in the linked list list is located.
+A singly linked list is stored in memory using __nodes__ and __references or pointers__ to other nodes. We think of these references as being __linear__, after all Linked Lists are alternatives to Arrays. In the drawing below, we see this "linearity" of __nodes__.
 
 ![](http://www.cs.usfca.edu/~srollins/courses/cs112-f07/web/notes/linkedlists/ll2.gif)
 
-A nice thing about the singly linked list is that inserting at the end of the list is always [O(1)](https://en.wikipedia.org/wiki/Time_complexity#Constant_time).  Why is appending to a singly linked list O(1)? Because a variable, called the tail, is kept that points to the end of the list.  Whenever you need to add or remove an item from the end, you simply have to update the tail.
+> Each Square is a node. Each node a reference to the item which comes next.
+
+It looks like the nodes in our list are all in a line. In memory, the list is scattered all over the place. Recall that we do not have control over how Objects are stored in __The Heap__.
+
+The first object could be at a very high memory address and the second object could be at a very low memory address.  The only thing that keeps the list together is the __next__ pointers.  The next pointers are references to where the next element in the linked list list is located.
+
+Linked Lists typically have 2 very important pointers:
+
+1. The __head__, a pointer to the __first__ node in the list. Equivalent to `myArray[0]`.
+2. The __tail__, a pointer to the __last__ node. Equivalent to `myArray[myArray.length - 1]`.
+
+A nice thing about the singly linked list is that inserting at the end of the list is always [O(1)](https://en.wikipedia.org/wiki/Time_complexity#Constant_time).  Why is appending to a singly linked list O(1)? Because of the tail pointer, we always have constant access to the end of the list.  
+
+Whenever you need to add or remove an item from the end you follow 3 simple steps:
+
+1. Give the current tail a __next__ pointer to the new node.
+1. Change the tail to point to the new node.
+1. Give the new node a __next__ pointer of `undefined` or `null`.
 
 **EXERCISE**
 
-Look at the implementation of `pop` in the singly linked list.  What is the runtime of `pop`?
+Look at [this implementation](https://github.com/gSchool/computer-science-curriculum/blob/solutions/Exercises/src/singly_linked_list.js#L47) of `pop` on a singly linked list.  What is the runtime of `pop`, and why?
 
 ### Doubly Linked Lists
 
-A [doubly linked list](https://en.wikipedia.org/wiki/Doubly_linked_list) is a list where each node has two pointers - a next pointer and a previous pointer.  Keeping track of next and previous has some advantages.  For example, the `pop` method is now much easier.  Since we have access to the element before, the operations is [O(1)](https://en.wikipedia.org/wiki/Time_complexity#Constant_time).  Instead of O(n) with a singly linked list.
+A [doubly linked list](https://en.wikipedia.org/wiki/Doubly_linked_list) is a list where each node has two pointers - a next pointer and a previous pointer.  Take a look at these two visualizations of doubly linked lists:
 
 ![https://www.cs.auckland.ac.nz/~jmor159/PLDS210/fig/dllist.gif](https://www.cs.auckland.ac.nz/~jmor159/PLDS210/fig/dllist.gif)
 
 ![](http://www.geeksforgeeks.org/wp-content/uploads/DLL3.jpg)
+
+> Notice that in a doubly linked list `head.previous` and `tail.next` should both always be `undefined` or `null`.
+
+Keeping track of next and previous has some advantages.  For example, the `pop` method is now much easier.  Since we have access to the element before, the operations is [O(1)](https://en.wikipedia.org/wiki/Time_complexity#Constant_time).  Instead of O(n) with a singly linked list.
+
+To see why this is true, think about __push__ in singly linked lists. We grab the tail, and give it a brand new node as __next__. With doubly linked, we can __pop__ with the same pattern.
+
+1. Grab the __tail__ node.
+1. Use __tail.previous__ to get the *second to last* node.
+1. Point the *second to last node's* __next__ to `undefined` or `null`, effectively breaking the chain to that node.
+1. Point the __tail__ to the second to last node.
+
+After that process, nothing points at the __original tail__, so it will eventually be garbage collected.
 
 Here is an implementation of the push method for a doubly linked list (assuming a constructor function for Nodes):
 
@@ -102,21 +134,21 @@ DoublyLinkedList.prototype.pop = function() {
 
 Notice that both `push` and `pop` are now constant time operations.
 
-# EXERCISE
+#### Fun Aside: Circular Linked Lists
+
+A circular linked list is a list in which the tail element's `next` property is pointing to the `head` of the linked list, and the `previous` property of the `head` points to the `tail`. Can you think of a time you'd prefer to model things as a circularly linked list?
+
+![circular linked list](https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Circularly-linked-list.svg/700px-Circularly-linked-list.svg.png)
+
+# EXERCISES
 
 ### Part 1 - Singly Linked Lists
 
-The singly linked list is fully implemented in javascript.  To run just the tests for a singly linked list, run the  `singly_linked_list.test.js` in the exercises folder.
+Finish the `Exercises/src/singly_linked_list.js` in this repo. You can run the tests associated with JUST the linked list exercise using this command:
 
-Try to understand the code for a singly linked list.  Do not move on to the doubly linked list section until a singly linked list makes sense.  If you are stuck on a function, implement more tests to verify how things are working.  Try using the singly linked list to get an idea of the interface.
+`$ mocha Exercises/test/singly_linked_list.test.js`
 
-**Stretch**
-
-Implement reverse on a singly linked list.  Write tests first then make the tests pass.
-
-### Part 2 - Doubly Linked Lists
-
-You are given the start of an implementation for a doubly linked list.  Your goal is to implement the remaining functions and make the tests pass.
+Use the Red Green Refactor methodology to build your list. Here are the methods you must complete:
 
 `__getNodeAt`: A function for internal use to find a node at an index.  When implementing the function try to think of the most efficient way of finding the index.  For example, if the list has 3000 elements and the index that we want is at index 2950, does it make more sense to find the node by starting from the front or from the back?
 
@@ -132,53 +164,26 @@ You are given the start of an implementation for a doubly linked list.  Your goa
 
 `remove`: removes a value at an index
 
-### Part 3 - Practice Problems With Doubly Linked Lists
+If you feel lost, try this process:
+
+1. Pick a test from `Exercises/test/singly_linked_list.test.js`
+1. Read it carefully, try to understand what it does, and what that means your Linked List needs to do.
+1. If you're still confused about what your list should do, checkout this [reference implementation](https://github.com/gSchool/computer-science-curriculum/blob/solutions/Exercises/src/singly_linked_list.js). Challenge yourself to not copy/paste any code.
+
+**Stretch Goal**
+
+Implement reverse on a singly linked list: Write tests first then make the tests pass.
+
+### Part 2 - Doubly Linked Lists
+
+Doubly Linked Lists have the same API as Singly Linked Lists. Now that you've implemented Singly Linked Lists, extend your implementations to be doubly linked. Once again, there is a reference implementation in this repo called `doubly_linked_list_solution.js`. Use it for inspiration, but challenge yourself not to copy any code.
+
+### Part 3 - Bonus Problems With Doubly Linked Lists
+
+Red Green Refactor the following:
 
 1. Write a reverse function that reverses the list in one pass.
 1. Write a function to return the most frequent value in the linked list.
 1. Write a function called rotate that takes 2 parameters.  The first is how many locations the list should rotate.  The second is true if the list should rotate forward and false if it should rotate backwards.  For example, if the list is 1,2,3,4,5,6,7 and `rotate(3,true)` is called, the list would become 5,6,7,1,2,3,4.  If `rotate(1,false)` is called on the same list, the new list would be 2,3,4,5,6,7,1.
 1. Write a function that sorts the list (you can start with bubble sort, but try something more complicated like merge sort or quick sort).
 1. Make another class that uses the `DoublyLinkedList` class.  The class should be a `SortedLinkList`.  The `SortedLinkList` will always maintain a sorted order for you.  For example, if the list contains 4,8,11,22,55 and `insert(13)` is called, the new list will be 4,8,11,13,22,55.  Since this is now a `SortedLinkList`, the following methods aren't needed: `push`, `pop`, `shift`, `unshift`.  Also, `set`, should be replaced with `insert`, which does not take an index.  Insert takes a value, only.
-
-### Part 4
-
-# Linked Lists
-
-## Objectives
-
-* Explain what a linked list is, and describe 3 types of linked lists
-* Be comfortable implementing a basic linked list
-
-### What is a linked list?
-
-In it's simplest form, a singly linked list, it's an ordered list of nodes. The linked list itself will contain a pointer to the HEAD node and usually some other properties, like the length of the list. Every node element contains a pointer to the data contained at that node, and a pointer to the next element in the linked list. The last element in the list will have a null reference for it's 'next' value.
-
-![singly linked list](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Singly-linked-list.svg/816px-Singly-linked-list.svg.png)
-_A singly linked list whose nodes contain two fields: an integer value and a link to the next node_
-
-#### Exercise
-
-Implement `add` and `remove` functions to the stubbed out linked_list implementation here: https://github.com/gSchool/linked_list_practice
-
-The tests are written for you already, you just need to make them all pass.
-
-#### Doubly Linked Lists
-
-A doubly linked list contains node which contain both a `next` and a `prev` value. This can be useful when you need to easily traverse both directions along the list, instead of solely moving forward.
-
-![doubly linked lists](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Doubly-linked-list.svg/1220px-Doubly-linked-list.svg.png)
-_A doubly linked list whose nodes contain three fields: an integer value, the link forward to the next node, and the link backward to the previous node_
-
-#### Circular Linked Lists
-
-A circular linked list is a list in which the tail element's `next` property is pointing to the `head` of the linked list.
-
-![circular linked list](https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Circularly-linked-list.svg/700px-Circularly-linked-list.svg.png)
-
-### Exercise
-
-Add add/remove functionality to CircularLinkedLists and DoublyLinkedLists, there are stubs already there. Uncomment the specs, and make them pass!
-
-_Bonus_: Add Sentinel nodes. (https://en.wikipedia.org/wiki/Sentinel_node)
-
-_Bonus Bonus_: Add the ability to insert or delete nodes at arbitrary points in the list, instead of just at the end.

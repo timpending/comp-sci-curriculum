@@ -1,6 +1,6 @@
 'use strict'
 
-var DoublyLinkedList = require("../src/doubly_linked_list.2");
+var DoublyLinkedList = require("../src/doubly_linked_list");
 var expect = require("chai").expect
 var list;
 
