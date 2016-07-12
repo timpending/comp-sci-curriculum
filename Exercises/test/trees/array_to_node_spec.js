@@ -2,13 +2,34 @@ const expect = require('chai').expect
 var arrayToNode = require('../../src/trees/array_to_node');
 
 describe('arrayToNode', function() {
-  it("turns a two-element arrays into a node", function () {
+
+  it("returns nodes with a name property containing the first value of the input array", function () {
+    var input = [
+      'a',
+      []
+    ];
+    var rootNode = arrayToNode(input);
+    expect(rootNode).to.have.property('name');
+  });
+
+  it("returns nodes with a children property, which is an array", function () {
+    var input = [
+      'a',
+      []
+    ];
+    var rootNode = arrayToNode(input);
+    expect(rootNode).to.have.property('children');
+    expect(rootNode.children).to.be.a('array');
+  })
+
+  it("turns a two-element array into a node", function () {
     var input = [
       'a',
       []
     ];
     var rootNode = arrayToNode(input);
     expect(rootNode.name).to.deep.equal('a');
+    expect(rootNode.children).to.deep.equal([]);
   });
 
   it("turns nested arrays into child nodes", function () {
