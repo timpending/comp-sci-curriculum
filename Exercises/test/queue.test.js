@@ -10,7 +10,7 @@ describe("queue", () => {
 
     expect(queue.size()).to.eq(0)
     expect(queue.dequeue()).to.be.undefined
-  })
+  });
 
   it("can enqueue and dequeue a single item", () => {
     const queue = makeQueue()
@@ -22,7 +22,7 @@ describe("queue", () => {
 
     expect(queue.dequeue()).to.be.undefined
     expect(queue.size()).to.eq(0)
-  })
+  });
 
   it("can enqueue and dequeue multiple items", () => {
     const queue = makeQueue()
@@ -39,6 +39,5 @@ describe("queue", () => {
 
     expect(queue.dequeue()).to.be.undefined
     expect(queue.size()).to.eq(0)
-  })
-
-})
+  });
+});
