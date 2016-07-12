@@ -32,7 +32,7 @@ describe('arrayToNode', function() {
     expect(rootNode.children).to.deep.equal([]);
   });
 
-  it("turns nested arrays into child nodes", function () {
+  it("turns nested arrays into child nodes with references to their parents", function () {
     var input = [
       'a',
       [
@@ -49,7 +49,9 @@ describe('arrayToNode', function() {
     var rootNode = arrayToNode(input);
     expect(rootNode.name).to.deep.equal('a');
     expect(rootNode.children[0].name).to.deep.equal('b');
+    expect(rootNode.children[0].parent).to.deep.equal(rootNode);
     expect(rootNode.children[1].name).to.deep.equal('c');
+    expect(rootNode.children[1].parent).to.deep.equal(rootNode);
   });
 
   it("handles deeply nested nodes", function () {
@@ -75,7 +77,10 @@ describe('arrayToNode', function() {
     var rootNode = arrayToNode(input);
     expect(rootNode.name).to.deep.equal('a');
     expect(rootNode.children[0].name).to.deep.equal('b');
+    expect(rootNode.children[0].parent).to.deep.equal(rootNode);
     expect(rootNode.children[0].children[0].name).to.deep.equal('c');
+    expect(rootNode.children[0].children[0].parent).to.deep.equal(rootNode.children[0]);
     expect(rootNode.children[0].children[0].children[0].name).to.deep.equal('d');
+    expect(rootNode.children[0].children[0].children[0].parent).to.deep.equal(rootNode.children[0].children[0]);
   });
 });
