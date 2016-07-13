@@ -63,9 +63,8 @@ For each of these facts, write a paragraph which proves it:
 
 ## Exercise
 
-Open the `Exercises/src/trees` folder and run when you run `mocha ../test/trees`, make all of those tests pass.
+Open the `Exercises/src/trees` folder and run when you run `mocha ../test/trees`, make the following tests pass:
 
 - `Node` - Check this file first
 - `objectToNode` - Practice creating trees from JSON
 - `arrayToNode` - Practice creating trees from arrays
-- `depthFirst` - Traverse a tree using Pre-Order Depth First Search

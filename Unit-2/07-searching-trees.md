@@ -53,3 +53,8 @@ Here is some potential step by step pseudo code for implementing BFS (with a ret
 Which is better? From [Stack Overflow](http://stackoverflow.com/questions/3332947/when-is-it-practical-to-use-dfs-vs-bfs):
 
 > That heavily depends on the structure of the search tree and the number and location of solutions (aka searched-for items). If you know a solution is not far from the root of the tree, a breadth first search (BFS) might be better. If the tree is very deep and solutions are rare, depth first search (DFS) might take an extremely long time, but BFS could be faster. If the tree is very wide, a BFS might need too much memory, so it might be completely impractical. If solutions are frequent but located deep in the tree, BFS could be impractical. If the search tree is very deep you will need to restrict the search depth for depth first search (DFS), anyway (for example with iterative deepening).
+
+### Exercise - Implement DFS
+Open the `Exercises/src/trees` folder and run when you run `mocha ../test/trees`, make all the following tests pass:
+
+- `depthFirst` - Traverse a tree using Pre-Order Depth First Search
