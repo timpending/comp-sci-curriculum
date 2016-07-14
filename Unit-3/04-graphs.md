@@ -106,7 +106,7 @@ Because it is uncommon to mix directed and undirected __edges__ in a single grap
 
 ## Weighted vs Unweighted
 
-So far, we've only seen at graphs where each __edge__ has the same __weight__. In such  __unweighted__ graphs, we are only interested in whether a connection between two nodes __exists or not__. In a weighted graph, we assign values to each edge, which typically represents the cost of traveling between two nodes.
+So far, we've only seen graphs where each __edge__ has the same __weight__. In such  __unweighted__ graphs, we are only interested in whether a connection between two nodes __exists or not__. In a weighted graph, we assign values to each edge, which typically represents the cost of traveling between two nodes.
 
 Consider these graphs:
 
