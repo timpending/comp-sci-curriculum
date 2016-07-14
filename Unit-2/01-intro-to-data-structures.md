@@ -33,3 +33,9 @@ Some questions you have to ask and decisions you have to make are:
 Once again, the most important takeaway you can get from these lessons is an understanding of just __what__ these data structures are. This is called [Abstract Data Type](https://en.wikipedia.org/wiki/Abstract_data_type) (ADT). When learning about a data structure, the more important thing to remember is that you want to strive to gain an understanding of just __WHAT__ it is before you even think about how to implement one.
 
 The following lessons on data structures will focus mostly on the definition, application and value. The implementation will be left up to you!
+
+## Bonus: When to use what data structure
+
+#### Flow Chart
+
+![](http://i.stack.imgur.com/HNMy4.png)

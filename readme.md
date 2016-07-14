@@ -143,9 +143,3 @@ To run individual groups of exercises, you can type the name of the script after
 mocha test/linked-list
 ```
 That command will run all the tests in the linked-list folder.
-
-## Bonus: When to use what data structure
-
-#### Flow Chart
-
-![](http://i.stack.imgur.com/HNMy4.png)
