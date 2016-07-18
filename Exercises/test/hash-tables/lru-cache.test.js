@@ -1,5 +1,5 @@
 const expect = require('chai').expect;
-const makeCache = require('../src/lru-cache')
+const makeCache = require('../../src/hash-tables/lru-cache')
 
 describe("cache", () => {
 
