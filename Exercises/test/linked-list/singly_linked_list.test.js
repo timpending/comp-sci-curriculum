@@ -1,19 +1,60 @@
 'use strict'
-
 var SinglyLinkedList = require("../../src/linked-list/singly_linked_list");
-var list;
 var expect = require("chai").expect
 
 describe("Singly Linked List", function() {
+  var list;
+
   beforeEach(function() {
     list = new SinglyLinkedList();
   });
 
   describe("push", function() {
-    it("adds a value to the end of the list", function() {
-      expect(list.length).to.equal(0);
-      list.push(5);
+    it("Updates the length with each call", function() {
+      list.push(2);
       expect(list.length).to.equal(1);
+
+      list.push(4);
+      expect(list.length).to.equal(2);
+
+      list.push(10);
+      expect(list.length).to.equal(3);
+    });
+
+    it("Properly updates the head pointer", function() {
+      list.push(2);
+      expect(list.head.val).to.equal(2);
+      expect(list.head.next).to.equal(null);
+
+      list.push(4);
+      expect(list.head.val).to.equal(2);
+      expect(list.head.next.val).to.equal(4);
+
+      list.push(10);
+      expect(list.head.val).to.equal(2);
+      expect(list.head.next.val).to.equal(4);
+    });
+
+    it("Always points the tail to the most recently pushed item", function() {
+      list.push(2);
+      expect(list.tail.val).to.equal(2);
+      expect(list.tail.next).to.equal(null);
+
+      list.push(4);
+      expect(list.tail.val).to.equal(4);
+      expect(list.tail.next).to.equal(null);
+
+      list.push(10);
+      expect(list.tail.val).to.equal(10);
+      expect(list.tail.next).to.equal(null);
+    });
+
+    it("Properly updates head.next on lists of size 1", function() {
+      list.push(2);
+      expect(list.head.next).to.equal(null);
+
+      list.push(4);
+      expect(list.head.next.val).to.equal(4);
     });
 
     it("returns self so chaining works", function() {
@@ -21,14 +62,6 @@ describe("Singly Linked List", function() {
       list.push(1).push(2);
       expect(list.length).to.equal(2);
     });
-
-    it("stores the correct values", function() {
-      list.push(2).push(4)
-      expect(list.pop()).to.equal(4);
-      expect(list.length).to.equal(1);
-      expect(list.pop()).to.equal(2);
-      expect(list.length).to.equal(0);
-    })
   });
 
   describe("pop", function() {
@@ -36,25 +69,135 @@ describe("Singly Linked List", function() {
       expect(list.pop()).to.equal(undefined);
     });
 
-    it("returns the value at the end of the list", function() {
-      list.push(4).push(5);
+    it("Updates the length properly when called", function() {
+      list.push(4).push(5).push(6).push(7);
+
+      list.pop();
+      expect(list.length).to.equal(3);
+
+      list.pop();
       expect(list.length).to.equal(2);
+
+      list.pop();
+      expect(list.length).to.equal(1);
+
+      list.pop();
+      expect(list.length).to.equal(0);
+
+      // Popping on an empty list doesn't change the length
+      list.pop();
+      expect(list.length).to.equal(0);
+    });
+
+    it("returns the value at the end of the list", function() {
+      list.push(4).push(5).push(6).push(7);
+      expect(list.pop()).to.equal(7);
+      expect(list.pop()).to.equal(6);
+      expect(list.pop()).to.equal(5);
+      expect(list.pop()).to.equal(4);
+      expect(list.pop()).to.equal(null);
+    });
+
+    it("Updates the tail with each call", function(){
+      list.push(4).push(5).push(6).push(7);
+
+      list.pop();
+      expect(list.tail.val).to.equal(6);
+
+      list.pop();
+      expect(list.tail.val).to.equal(5);
+
+      list.pop();
+      expect(list.tail.val).to.equal(4);
+
+      list.pop();
+      expect(list.tail).to.equal(null);
+
+      // Popping on an empty list doesn't change the tail
+      list.pop();
+      expect(list.tail).to.equal(null);
+    });
+
+    it("Updates the head when the only node in the list is popped", function() {
+      list.push(4);
+      expect(list.head.val).to.equal(4);
+
+      list.pop();
+      expect(list.head).to.equal(null);
+    });
+
+    it("Using push and pop, we can store and remove values in order and the length will update properly", function() {
+      list.push(2).push(4).push(6);
+      expect(list.length).to.equal(3);
+      expect(list.head.val).to.equal(2);
+      expect(list.tail.val).to.equal(6);
+
+      expect(list.pop()).to.equal(6);
+      expect(list.length).to.equal(2);
+      expect(list.head.val).to.equal(2);
+      expect(list.tail.val).to.equal(4);
+
+      expect(list.pop()).to.equal(4);
+      expect(list.length).to.equal(1);
+      expect(list.head.val).to.equal(2);
+      expect(list.tail.val).to.equal(2);
+
+      list.push(5);
+      expect(list.length).to.equal(2);
+      expect(list.head.val).to.equal(2);
+      expect(list.tail.val).to.equal(5);
+
       expect(list.pop()).to.equal(5);
       expect(list.length).to.equal(1);
+      expect(list.head.val).to.equal(2);
+      expect(list.tail.val).to.equal(2);
+
+      expect(list.pop()).to.equal(2);
+      expect(list.length).to.equal(0);
+      expect(list.head.val).to.equal(null);
+      expect(list.tail.val).to.equal(null);
     });
   });
 
   describe("unshift", function() {
-    it("adds a value to the front of the list", function() {
-      list.push(4);
-      list.unshift(1);
-      expect(list.length).to.equal(2);
-      expect(list.pop()).to.equal(4);
+    it("Updates length with each call", function() {
+      list.unshift(2);
       expect(list.length).to.equal(1);
-      expect(list.pop()).to.equal(1);
-      expect(list.length).to.equal(0);
+
+      list.unshift(4);
+      expect(list.length).to.equal(2);
+
+      list.unshift(6);
+      expect(list.length).to.equal(3);
     });
 
+    it("Updates the head properly each time", function() {
+      list.unshift(2);
+      expect(list.head.val).to.equal(2);
+      expect(list.head.next).to.equal(null);
+
+      list.unshift(4);
+      expect(list.head.val).to.equal(4);
+      expect(list.head.next).to.equal(2);
+
+      list.unshift(6);
+      expect(list.head.val).to.equal(6);
+      expect(list.head.next).to.equal(4);
+    });
+
+    it("Updates the tail on an empty list, but not otherwise", function() {
+      list.unshift(2);
+      expect(list.tail.val).to.equal(2);
+      expect(list.tail.next).to.equal(null);
+
+      list.unshift(4);
+      expect(list.tail.val).to.equal(2);
+      expect(list.tail.next).to.equal(null);
+
+      list.unshift(6);
+      expect(list.tail.val).to.equal(2);
+      expect(list.tail.next).to.equal(null);
+    });
   });
 
   describe("shift", function() {
@@ -125,21 +268,20 @@ describe("Singly Linked List", function() {
       expect(list.get(2)).to.equal(3);
       expect(list.get(3)).to.equal(5);
       expect(list.get(4)).to.equal(undefined);
-
     });
   });
 
-  describe("reverse", function(){
+  // Bonus Tests -- write tests for these and remove the x to enable these tests
+  xdescribe("reverse", function(){
     it("It should...", function(){
 
     });
   });
 
 
-  describe("reverseRecursive", function(){
+  xdescribe("reverseRecursive", function(){
     it("It should...", function(){
 
     });
   });
-
 });
