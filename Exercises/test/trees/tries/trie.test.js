@@ -1,5 +1,5 @@
 const expect = require("chai").expect;
-var Trie = require("../src/trie.js");
+var Trie = require("../../../src/trees/tries/trie.js");
 
 describe("Trie", function() {
   it("can be initialized", function() {
