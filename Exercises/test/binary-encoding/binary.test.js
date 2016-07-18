@@ -1,7 +1,7 @@
 'use strict'
 
 const expect = require("chai").expect;
-const binaryToDecimal = require('../src/binary');
+const binaryToDecimal = require('../../src/binary-encoding/binary');
 
 describe("binary math", () => {
 
