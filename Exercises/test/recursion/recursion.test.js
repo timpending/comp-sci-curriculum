@@ -1,7 +1,7 @@
 'use strict'
 
 const expect = require("chai").expect
-const lib = require('../src/recursion')
+const lib = require('../../src/recursion/recursion')
 
 describe('factorial', function() {
 
