@@ -144,9 +144,9 @@ A circular linked list is a list in which the tail element's `next` property is 
 
 ### Part 1 - Singly Linked Lists
 
-Finish the `Exercises/src/singly_linked_list.js` in this repo. You can run the tests associated with JUST the linked list exercise using this command:
+Finish the `Exercises/src/linked-list/singly_linked_list.js` in this repo. You can run the tests associated with JUST the linked list exercise using this command:
 
-`$ mocha Exercises/test/singly_linked_list.test.js`
+`$ mocha Exercises/test/linked-list/singly_linked_list.test.js`
 
 Use the Red Green Refactor methodology to build your list. Here are the methods you must complete:
 
@@ -166,7 +166,7 @@ Use the Red Green Refactor methodology to build your list. Here are the methods 
 
 If you feel lost, try this process:
 
-1. Pick a test from `Exercises/test/singly_linked_list.test.js`
+1. Pick a test from `Exercises/test/linked-list/singly_linked_list.test.js`
 1. Read it carefully, try to understand what it does, and what that means your Linked List needs to do.
 1. If you're still confused about what your list should do, checkout this [reference implementation](https://github.com/gSchool/computer-science-curriculum/blob/solutions/Exercises/src/singly_linked_list.js). Challenge yourself to not copy/paste any code.
 

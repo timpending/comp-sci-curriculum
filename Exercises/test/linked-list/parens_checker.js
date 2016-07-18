@@ -1,4 +1,4 @@
-var parensChecker = require('../src/parens_checker');
+var parensChecker = require('../../src/linked-list/parens_checker');
 var expect = require('chai').expect;
 
 describe('ParensChecker', function() {

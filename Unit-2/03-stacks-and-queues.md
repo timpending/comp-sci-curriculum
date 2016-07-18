@@ -70,6 +70,6 @@ And remember, the regular Array structure in Javascript can be used as both a St
 
 ## Exercises
 
-1. Your solution to Linked Lists should behave as a stack already. Use it as a stack to complete `Exercises/src/parens_checker` to practice *using a stack*.
+1. Your solution to Linked Lists should behave as a stack already. Use it as a stack to complete `Exercises/src/linked-list/parens_checker` to practice *using a stack*.
 
-1. Use your linked list implementation to create an implementation of a queue.  Complete `Exercises/src/queue.js` so it passes the tests in `Exercises/test/queue.test.js`. You'll need to decide which functions to use as __enqueue__ and __dequeue__, but you should not have to rewrite much code.
+1. Use your linked list implementation to create an implementation of a queue.  Complete `Exercises/src/linked-list/queue.js` so it passes the tests in `Exercises/test/linked-list/queue.test.js`. You'll need to decide which functions to use as __enqueue__ and __dequeue__, but you should not have to rewrite much code.
