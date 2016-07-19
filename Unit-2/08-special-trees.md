@@ -101,7 +101,7 @@ A trie is a special tree used for alphabetizing strings. The root represents an 
 >
 >Consider where you'd place the following words and what the paths to them would be: _Aruba, arguable, initialize, innards, isle, tail, tenant, top._
 
-## Practice -- BONUS
+## Practice
 
 Implement `Exercises/src/trie.js` until it passes the test suite in `trie.test.js`!
 
