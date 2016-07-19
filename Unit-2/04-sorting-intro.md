@@ -95,7 +95,7 @@ Once you're comfortable with the general idea of sorting algorithms, the best wa
 
 # Implementing Sorting Algorithms in Javascript
 
-Complete the `sortingAlgorithmsSpecPart1.js` tests.
+Complete the `sorting/sortingAlgorithmsSpecPart1.js` tests.
 
 ## Part 1: Bubble Sort, Selection Sort, Insertion Sort
 

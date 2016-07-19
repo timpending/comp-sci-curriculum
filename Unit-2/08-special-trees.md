@@ -75,7 +75,7 @@ Make the `binary_tree.test.js` tests pass.  This assignment will require you to 
 - `bfs-dfs` : Make all of these tests pass
 - `remove`: removes a node from a binary tree. Remember that this method must take into account if the node has any children and if the node is a leaf. [Here](https://www.youtube.com/watch?v=3TOl3Fv4394) is a great video that explains this process.
 
-#### Stretch Goals 
+#### Stretch Goals
 
 - https://github.com/gSchool/maze-solvability
 - https://github.com/gSchool/text-tree-parser
@@ -103,7 +103,7 @@ A trie is a special tree used for alphabetizing strings. The root represents an 
 
 ## Practice -- BONUS
 
-Implement `Exercises/src/trie.js` until it passes the test suite in `trie.test.js`!
+Implement `Exercises/src/trees/tries/trie.js` until it passes the test suite in `Exercises/test/trees/tries/trie.test.js`!
 
 ### Bonus Trees
 

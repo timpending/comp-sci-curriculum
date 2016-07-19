@@ -120,7 +120,7 @@ First, practice a bit with the following challenges:
 1. Define a recursive function that returns true if a string is a palindrome and false otherwise.
 1.  Get the JSON data from this Reddit post using an http request: `http://www.reddit.com/r/aww/comments/zzg3k/my_local_humane_society_posts_pictures_of_new/.json`.  Write code to print out the text of each comment in your terminal.  Write code that counts the number of comments, as well.
 
-Then make all of the tests pass in [Exercises/src/recursive-iteration.js](../Exercises/src/recursive-iteration.js).
+Then make all of the tests pass in [Exercises/src/recursion/recursive-iteration.js](../Exercises/src/recursion/recursive-iteration.js).
 
 > If you like, you can write an iterative solution to the problem first, then write the recursive solution.
 

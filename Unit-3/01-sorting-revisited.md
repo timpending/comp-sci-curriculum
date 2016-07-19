@@ -121,7 +121,7 @@ Well, it depends. As of 2012, according to Nicholas C. Zakas (reference below):
 
 # Exercises:
 
-Complete the `sortingAlgorithmsSpecPart2.js` tests.
+Complete the `sorting/sortingAlgorithmsSpecPart2.js` tests.
 
 ## Stretch Goal: Merge Sort, Quicksort
 
