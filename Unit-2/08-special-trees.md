@@ -101,7 +101,7 @@ A trie is a special tree used for alphabetizing strings. The root represents an 
 >
 >Consider where you'd place the following words and what the paths to them would be: _Aruba, arguable, initialize, innards, isle, tail, tenant, top._
 
-## Practice
+## Practice -- BONUS
 
 Implement `Exercises/src/trie.js` until it passes the test suite in `trie.test.js`!
 
@@ -120,3 +120,4 @@ B-tree is a tree data structure that keeps data sorted and allows searches, sequ
 ## Resources
 
 [http://visualgo.net/bst.html](http://visualgo.net/bst.html)
+To run the tests for binary trees: run ```mocha test/trees``` from the Exercises folder of the CS curriculum.
