@@ -120,4 +120,5 @@ B-tree is a tree data structure that keeps data sorted and allows searches, sequ
 ## Resources
 
 [http://visualgo.net/bst.html](http://visualgo.net/bst.html)
+
 To run the tests for binary trees: run ```mocha test/trees``` from the Exercises folder of the CS curriculum.
