@@ -63,7 +63,7 @@ For each of these facts, write a paragraph which proves it:
 
 ## Exercise
 
-Open the `Exercises/src/trees` folder and run when you run `mocha ../test/trees`, make the following tests pass:
+Open the `Exercises/src/trees` folder for the exercises. To run the tests, use the command `mocha ../test/trees/[testFile]`, make the tests pass for each of these exercies:
 
 - `Node` - Check this file first
 - `objectToNode` - Practice creating trees from JSON

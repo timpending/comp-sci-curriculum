@@ -1,7 +1,7 @@
 'use strict'
 
 const expect = require('chai').expect
-const makeQueue = require('../src/queue')
+const makeQueue = require('../../src/linked-list/queue')
 
 describe("queue", () => {
 

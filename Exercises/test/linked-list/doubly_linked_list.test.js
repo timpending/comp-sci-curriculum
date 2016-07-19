@@ -1,12 +1,13 @@
 'use strict'
 
-var SinglyLinkedList = require("../src/singly_linked_list");
-var list;
+var DoublyLinkedList = require("../../src/linked-list/doubly_linked_list");
 var expect = require("chai").expect
+var list;
 
-describe("Singly Linked List", function() {
+describe("DoublyLinkedList", function() {
+
   beforeEach(function() {
-    list = new SinglyLinkedList();
+    list = new DoublyLinkedList();
   });
 
   describe("push", function() {
@@ -24,10 +25,9 @@ describe("Singly Linked List", function() {
 
     it("stores the correct values", function() {
       list.push(2).push(4)
-      expect(list.pop()).to.equal(4);
-      expect(list.length).to.equal(1);
-      expect(list.pop()).to.equal(2);
-      expect(list.length).to.equal(0);
+      expect(list.head.val).to.equal(2);
+      expect(list.length).to.equal(2);
+      expect(list.head.next.val).to.equal(4);
     })
   });
 
@@ -93,6 +93,31 @@ describe("Singly Linked List", function() {
     });
   });
 
+  describe("insert", function() {
+    it("inserts a value into an empty list", function() {
+      list.insert(0, 5);
+      expect(list.length).to.equal(1);
+      expect(list.get(0)).to.equal(5);
+    });
+
+    it("inserts a value into a list with values", function() {
+      list.push(1).push(3).insert(1, 5);
+      expect(list.length).to.equal(3);
+      expect(list.get(0)).to.equal(1);
+      expect(list.get(1)).to.equal(5);
+      expect(list.get(2)).to.equal(3);
+    });
+
+    it("allows inserting at the end of the list", function() {
+      list.push(1).push(3).push(7).insert(3, 5);
+      expect(list.length).to.equal(4);
+      expect(list.get(0)).to.equal(1);
+      expect(list.get(1)).to.equal(3);
+      expect(list.get(2)).to.equal(7);
+      expect(list.get(3)).to.equal(5);
+    });
+  })
+
   describe("remove", function() {
     it("removes the first element in a list of size 1", function() {
       list.push(1);
@@ -120,26 +145,6 @@ describe("Singly Linked List", function() {
       expect(list.length).to.equal(5);
       expect(list.remove(3)).to.equal(4);
       expect(list.length).to.equal(4);
-      expect(list.get(0)).to.equal(1);
-      expect(list.get(1)).to.equal(2);
-      expect(list.get(2)).to.equal(3);
-      expect(list.get(3)).to.equal(5);
-      expect(list.get(4)).to.equal(undefined);
-
     });
   });
-
-  describe("reverse", function(){
-    it("It should...", function(){
-
-    });
-  });
-
-
-  describe("reverseRecursive", function(){
-    it("It should...", function(){
-
-    });
-  });
-
 });

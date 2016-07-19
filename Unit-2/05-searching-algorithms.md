@@ -26,7 +26,7 @@ https://en.wikipedia.org/wiki/Binary_search_algorithm
 
 ## Exercise
 
-Make the `search-algorithms` tests pass in the exercises directory.
+Make the `array-search/search-algorithms` tests pass in the exercises directory.
 
 ### Visualization
 

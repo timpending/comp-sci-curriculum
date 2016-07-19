@@ -60,10 +60,6 @@ Whenever you need to add or remove an item from the end you follow 3 simple step
 1. Change the tail to point to the new node.
 1. Give the new node a __next__ pointer of `undefined` or `null`.
 
-**EXERCISE**
-
-Look at [this implementation](https://github.com/gSchool/computer-science-curriculum/blob/solutions/Exercises/src/singly_linked_list.js#L47) of `pop` on a singly linked list.  What is the runtime of `pop`, and why?
-
 ### Doubly Linked Lists
 
 A [doubly linked list](https://en.wikipedia.org/wiki/Doubly_linked_list) is a list where each node has two pointers - a next pointer and a previous pointer.  Take a look at these two visualizations of doubly linked lists:
@@ -144,9 +140,9 @@ A circular linked list is a list in which the tail element's `next` property is 
 
 ### Part 1 - Singly Linked Lists
 
-Finish the `Exercises/src/singly_linked_list.js` in this repo. You can run the tests associated with JUST the linked list exercise using this command:
+Finish the `Exercises/src/linked-list/singly_linked_list.js` in this repo. You can run the tests associated with JUST the linked list exercise using this command:
 
-`$ mocha Exercises/test/singly_linked_list.test.js`
+`$ mocha Exercises/test/linked-list/singly_linked_list.test.js`
 
 Use the Red Green Refactor methodology to build your list. Here are the methods you must complete:
 
@@ -166,9 +162,9 @@ Use the Red Green Refactor methodology to build your list. Here are the methods 
 
 If you feel lost, try this process:
 
-1. Pick a test from `Exercises/test/singly_linked_list.test.js`
+1. Pick a test from `Exercises/test/linked-list/singly_linked_list.test.js`
 1. Read it carefully, try to understand what it does, and what that means your Linked List needs to do.
-1. If you're still confused about what your list should do, checkout this [reference implementation](https://github.com/gSchool/computer-science-curriculum/blob/solutions/Exercises/src/singly_linked_list.js). Challenge yourself to not copy/paste any code.
+1. If you're still confused use Google, you should be able to find some reference implementations for clues on how to get started.
 
 **Stretch Goal**
 

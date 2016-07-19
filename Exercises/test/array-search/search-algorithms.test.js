@@ -1,7 +1,7 @@
 'use strict'
 
 const expect = require("chai").expect
-const lib = require('../src/search-algorithms')
+const lib = require('../../src/array-search/search-algorithms')
 const positiveArr = [1,2,3,4,5,6];
 const negativeArr = [-5,-4,-3,-2,-1];
 const decimalArr = [1.1,2.4,5.5,5.6,5.7];

@@ -58,3 +58,4 @@ Which is better? From [Stack Overflow](http://stackoverflow.com/questions/333294
 Open the `Exercises/src/trees` folder and run when you run `mocha ../test/trees`, make all the following tests pass:
 
 - `depthFirst` - Traverse a tree using Pre-Order Depth First Search
+- This is NOT `Exercises/src/trees/binary-trees/depth_first_search.js` which you should do after reading about special trees.

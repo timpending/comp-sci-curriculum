@@ -415,7 +415,7 @@ Practice some basic binary math:
 
 ### Write a converter
 
-After you've done the above manually, test yourself by writing a [binary-to-decimal converter](../Exercises/src/binary.js).
+After you've done the above manually, test yourself by writing a [binary-to-decimal converter](../Exercises/src/binary-encoding/binary.js).
 
 ## Stretch
 

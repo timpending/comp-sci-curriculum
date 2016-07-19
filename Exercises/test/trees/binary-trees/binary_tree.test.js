@@ -1,7 +1,7 @@
 'use strict'
 
 const expect = require("chai").expect
-const data = require("../src/binary_tree.js");
+const data = require("../../../src/trees/binary-trees/binary_tree.js");
 
 describe("Node", function(){
   var node;
