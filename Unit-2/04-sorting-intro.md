@@ -1,4 +1,6 @@
-# Sorting Algorithms - part 1
+# Sorting Algorithms
+
+When you're dealing with data, sorting is a very common task. While [sorting algorithms](https://en.wikipedia.org/wiki/Sorting_algorithm) are well-understood, they also make great fodder for interview questions, so it's essential that you understand, implement, and talk about some simple sorting algorithms.
 
 ## Objectives
 
@@ -6,19 +8,30 @@
 * Implement a selection sort algorithm in JavaScript
 * Implement an insertion sort algorithm in JavaScript
 
-## Introduction
+## Sorting Efficiency
 
-When you're dealing with data, sorting is a very common task. While [sorting algorithms](https://en.wikipedia.org/wiki/Sorting_algorithm) are well-understood, they also make great fodder for interview questions, so it's essential that you understand, implement, and talk about some simple sorting algorithms.
+There are several ways to sort data, some faster than others. Consider for example this horribly slow sorting algorithm, called [Bogosort](https://en.wikipedia.org/wiki/Bogosort):
 
-Below you will see three common sorting algorithms (bubble sort, selection sort, and insertion sort) and some links to see them in action. One of the best ways to learn these algorithms is to try to implement them yourself. Use sticky notes, pen and paper, cups, colored blocks, or whatever you find best and try to recreate these sorting scenarios. Not only will this help you tremendously in your understanding of the algorithm, but it is __essential__ to have a fundamental knowledge before trying to implement them.
+1. Randomly shuffle the list.
+2. Check if it is sorted.
+  * If the list is not sorted, repeat steps 1 and 2.
+  * If the list is sorted return the sorted list.
 
-## Sorting Algorithms
+It's easy to understand that creating random permutations of the list is not an efficient way to sort data. When we talk about sorting data, we typically perform two major operations: __comparisons__ and __swaps__. We use comparisons to find where data is out-of-order, and we use swaps to get the data closer to being in order. Algorithms compete for efficiency by trying to minimize the number of swaps and comparisons that must be done before our data is completely sorted.
+
+> Note: Because swapping is part of all these sorting algorithms it may be helpful to implement a function called `swap` which takes in an array and two indices, and swaps the values in the array at those two indices.
+
+## The Intuitive Algorithms
+
+Below you will see three common sorting algorithms (__bubble sort, selection sort, and insertion sort__) and some links to see them in action. These algorithms are presented before __quick sort__ and __merge sort__ because they are more intuitive.  
+
+One of the best ways to learn these algorithms is to try to perform them yourself. Use sticky notes, pen and paper, cups, colored blocks, or whatever you find best and try to recreate these sorting scenarios. Not only will this help you tremendously in your understanding of the algorithm, but it is __essential__ to have a fundamental knowledge before trying to implement them in a programing language.
 
 ### Bubble Sort
 
-Here's how [bubble sort](https://en.wikipedia.org/wiki/Bubble_sort) works...
+Of the algorithms we'll be presenting, [Bubble Sort](https://en.wikipedia.org/wiki/Bubble_sort) is the sorting algorithm with the worst complexity. The algorithm works by running through the array from left to right and swapping any two values it finds such that `array[i] > array[i+1]`. Each time you run this process, *at least* one element ends up in its sorted position.
 
-**Pseudo code**
+##### Pseudo code
 
 1. For each element in the list, look at the element to the right.
 2. If the value on the left is greater than the value on the right, swap the two values.
@@ -28,13 +41,7 @@ Bubble sort can be implemented using nested loops or recursion.
 
 ![bubble sort](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/175/bubblesort.gif)
 
-We know for sure that after 1 pass the rightmost element is sorted correctly, after 2 passes the right 2 elements are sorted correctly, and so on.
-
-How can we make bubble sort even smarter?
-
-We can always count to see the number of swaps and if there are none we know it's sorted.
-
-> Note: for this algorithm (and for later ones), it may be helpful to implement a simple helper function called `swap` which takes in an array and two indices, and swaps the values in the array at those two indices.
+> We know for sure that after 1 pass the rightmost element is sorted correctly, after 2 passes the right 2 elements are sorted correctly, and so on.
 
 #### Complexity
 
@@ -42,36 +49,47 @@ Bubble sort is NOT an efficient algorithm. Its worst case performance is O(n<sup
 
 ### Selection Sort
 
-[Selection sort](https://en.wikipedia.org/wiki/Selection_sort) is very similar to bubble sort. The difference is that instead of comparing each array item to its neighbor, the goal is to locate the *smallest* remaining value and drop it into the correct place in the array. The basic algorithm looks like this:
+[Selection sort](https://en.wikipedia.org/wiki/Selection_sort) is very similar to bubble sort. The difference is that instead of comparing each array item to its neighbor, the goal is to locate the *smallest* remaining value and drop it into the correct place in the array. This algorithm breaks the array into two sections, the __sorted__ and __unsorted__ sections. At the start of the algorithm, the whole array is the __unsorted__ section.
 
-**Pseudo code**
+The basic algorithm looks like this:
 
-1. Assume the first item is the smallest value (minimum).
-1. Compare this item to the second item.
-1. If the second item is smaller than the first, set the second item as the new minimum.
-1. Continue until you reach the end of the array.
-1. If the minimum value (index) is not the value (index) you started with, swap the two.
+#### Pseudo code
+
+1. Pick the item at the left-most point in the __unsorted section__. Call this the __current minimum__.
+1. Compare this current minimum to each item in the unsorted section.
+  * If any item in the unsorted section is smaller than the  current minimum, set that item as the current minimum.
+  * When you've reached the end of the __unsorted section__ the __current minimum__ must be the absolute minimum value in the unsorted section.
+1. Swap the __absolute minimum__ to the left-most index in the __unsorted section__. This item is now the __right most__ member of the __sorted section__.
 
 ![selection sort](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/174/selectionsort.gif)
 
-> #### Practice with [this interactive card game](https://www.khanacademy.org/computing/computer-science/algorithms/sorting-algorithms/a/sorting)
+> The __sorted section__ is colored gold, the __current minimum__ is colored red, the __unsorted section__ is colored light blue.
+
+>Practice with [this interactive card game](https://www.khanacademy.org/computing/computer-science/algorithms/sorting-algorithms/a/sorting)
 
 #### Complexity
 
 Since selection sort is so similar to bubble sort, you can probably guess what the complexity of this sorting algorithm is. Once you've gotten your tests to pass in the exercise below, try to analyze your code to determine the complexity a little more rigorously.
 
+__Specifically, prove that this claim is true or false__: Although bubble sort and selection sort are both `O(n^2)`, bubble sort will __always__ perform more total operations (swaps + comparisons).
+
 ### Insertion Sort
 
-[Insertion sort](https://en.wikipedia.org/wiki/Insertion_sort) works by taking your array and incrementally sorting the values on the left hand side.
+[Insertion sort](https://en.wikipedia.org/wiki/Insertion_sort) works by taking your array and incrementally sorting the values on the left hand side. Similar to selection sort, this algorithm makes  distinction between a __sorted section__ and an __unsorted section__. Unlike selection sort, insertion sort grabs the __next unsorted item__ (as opposed to the smallest unsorted item) and places it into the correct place in the __sorted section__. Selection sort always places an item in the right-most position of the sorted section, insertion sort will search for the __right__ index within the __sorted section__.
 
-**Pseudo code**
+#### Pseudo code
 
-1. For each element in the list, look at the element to the left.
-2. If the elements value is less than the value on the left, swap the two values.
-3. Keep swapping the element until you're at the beginning of the array.
-3. Else, move on to the next element.
+1. Select the left-most item in the __unsorted section__, call this the __current item__.
+2. Select the right-most index of the __sorted section__ and call this element __current sorted item__.
+  * Compare the __current item__ to the __current sorted item__
+  * If __current item__ is less than the value of __current sorted item__, swap the two.
+  * Now update __current sorted item__ to be the item to the left of __current item's__ new position.
+  * Repeat this process until __current item__ is greater than or equal to the __current sorted item__. Now __current item__ is part of the __sorted section__.
+3. Repeat until the __unsorted section__ is empty.
 
 ![insertion sort](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/173/insertionsort.gif)
+
+> __current item__ turns gets pulled off the image to the bottom of the screen. __current sorted item__ is colored green. The __sorted section__ is colored gold, and the __unsorted section__ is colored light blue. 
 
 Note that after step 1, the first two elements will be sorted. After step 2, the first three elements will be sorted. After repeating step 2 once, the first four elements will be sorted, and so on. After each step in the process, the sorted portion of the area increases in size by 1, until the entire array is sorted.
 
