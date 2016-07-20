@@ -17,7 +17,7 @@ Finally, it's appropriate to take 10 minutes to explore the history of computer 
 * Implement, evaluate, and use some common data structures
 
 
-## Unit 0: Fundamentals Part 1
+## Unit 0: Memory Fundamentals
 
 #### Standards
 
@@ -39,7 +39,7 @@ Finally, it's appropriate to take 10 minutes to explore the history of computer 
 * [Binary-ASCII-UTF8](Unit-0/04-binary-ascii-utf8.md)
 
 
-## Unit 1: Fundamentals Part 2
+## Unit 1: Algorithms Fundamentals
 
 #### Standards
 
@@ -60,8 +60,32 @@ Finally, it's appropriate to take 10 minutes to explore the history of computer 
 * [Pointers](Unit-1/03-pointers.md)
 * [Recursion](Unit-1/04-recursion.md)
 
+## Unit 2: Algorithms For Arrays
 
-## Unit 2: Data Structures + Algorithms Part 1
+#### Standards
+
+* Implement common algorithms and describe more complex algorithms
+
+#### Objectives
+
+* Describe and implement the following search algorithms:
+  * Linear Search
+  * Binary Search _( also should be able to implement )_
+* Describe and implement the following sorting algorithms:
+  * Bubble Sort _( also should be able to implement )_
+  * Selection Sort
+  * Insertion Sort
+  * Quick Sort
+  * Merge Sort
+
+#### Lessons
+
+* [Intro to Data Structures](Unit-2/01-intro-to-data-structures.md)
+* [Array Search](Unit-2/02-searching-algorithms.md)
+* [Sorting Introduction](Unit-2/03-sorting-intro.md)
+* [Advanced Sorting](Unit-2/04-advanced-sorting.md)
+
+## Unit 3: Linked Lists and Trees
 
 #### Standards
 
@@ -72,13 +96,8 @@ Finally, it's appropriate to take 10 minutes to explore the history of computer 
 
 * Describe and implement Singly & Doubly Linked Lists
 * Describe and implement Stacks & Queues
-* Describe the concepts of LIFO & FIFO and give real-life analogies
-* Describe the differences between:
-  * Bubble Sort _( also should be able to implement )_
-  * Selection Sort
-  * Insertion Sort
-  * Linear Search
-  * Binary Search _( also should be able to implement )_
+  * Describe the concepts of LIFO & FIFO and give real-life analogies
+  * Use stacks and queues to process data
 * Describe the purpose of trees in programming and define:
   * Binary Trees
   * Binary Search Trees
@@ -88,19 +107,17 @@ Finally, it's appropriate to take 10 minutes to explore the history of computer 
 
 #### Lessons
 
-* [Intro to Data Structures](Unit-2/01-intro-to-data-structures.md)
-* [Linked Lists](Unit-2/02-linked-lists-intro.md)
-* [Stacks and Queues](Unit-2/03-stacks-and-queues.md)
-* [Sorting Algorithms - Part 1](Unit-2/04-sorting-intro.md)
-* [Searching Algorithms](Unit-2/05-searching-algorithms.md)
-* [Trees](Unit-2/06-trees.md)
+* [Linked Lists](Unit-3/01-linked-lists-intro.md)
+* [Stacks and Queues](Unit-3/02-stacks-and-queues.md)
+* [Trees](Unit-3/03-trees.md)
+* [Searching Trees](Unit-3/04-searching-trees.md)
+* [Special Trees](Unit-3/05-special-trees.md)
 
 #### Additional Resources
 
 * [Data structures in JavaScript](http://blog.benoitvallon.com/data-structures-in-javascript/data-structures-in-javascript/)
 
-
-## Unit 3: Data Structures +  Algorithms Part 2
+## Unit 4: Graphs
 
 #### Standards
 
@@ -109,17 +126,33 @@ Finally, it's appropriate to take 10 minutes to explore the history of computer 
 
 #### Objectives
 
-* Implement and describe the difference between Merge Sort and Quick Sort
-* Describe why hash tables are used instead of infinity arrays
-* Define Tries
 * Define and describe the relationships depicted in a Graph
+* Implement graphs using different representations
+  * Adjacency matrix
+  * Adjacency list
+  * Edge list
+* Implement BFS and DFS on graphs
+* Describe Dijkstra's algorithm and `A*`
 
 #### Lessons
 
-* [Sorting Algorithms - Part 2](Unit-3/01-sorting-revisited.md)
-* [Hash Tables](Unit-3/02-hash-tables.md)
-* [Tries](Unit-3/03-trie.md)
-* [Graphs](Unit-3/04-graphs.md)
+* [Graphs](Unit-4/01-graphs.md)
+* [Modeling Problems With Graphs](Unit-4/01-graphs.md)
+* [Representing Graphs in Programs](Unit-4/01-graphs.md)
+* [Searching in Graphs](Unit-4/01-graphs.md)
+* [Advanced Graph Search](Unit-4/01-graphs.md)
+
+## Unit 5: Hash Tables
+
+#### Standards
+
+* Implement common algorithms and describe more complex algorithms
+* Implement, evaluate, and use some common data structures
+
+#### Objectives
+
+* Define a hash function
+* Describe when to use hash tables instead of arrays
 
 #### Additional Resources
 
@@ -142,4 +175,8 @@ To run individual groups of exercises, you can type the name of the script after
 ```
 mocha test/linked-list
 ```
-That command will run all the tests in the linked-list folder.
+That command will run all the tests in the linked-list folder. To run a single test suite, you can use mocha with the file path:
+
+```
+mocha test/linked-list/singly_linked_list.test.js
+```
