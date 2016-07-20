@@ -9,7 +9,7 @@
 */
 function Trie (isWord){
   this.characters = {};
-  this.isWord = isWord || false;
+  this.isWord = isWord || null;
 }
 
 /*
