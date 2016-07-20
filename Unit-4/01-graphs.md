@@ -211,7 +211,7 @@ Meaning, as long as `a` and `b` don't represent the same object, then the ordere
 
 #### Unordered pairs
 
-> a spar of mathematical objects in which order __does not matter__
+> a pair of mathematical objects in which order __does not matter__
 
 Unordered pairs are typically written with curly braces. When referring to a group of unordered mathematical objects which are larger than size 2, we use the term __set__:
 
