@@ -1,5 +1,7 @@
 # Searching Algorithms
 
+Before we examine new data-structures, we're going to look at some algorithms for a data-structure we know and love: the Array. First we're examining how to search through an array to find a specific value. Later in this unit, we'll look at ways to sort arrays. 
+
 ## Linear Search
 
 [Linear search](https://en.wikipedia.org/wiki/Linear_search) (or sequential) search is a method for finding a particular value in an array, that consists of checking every one of its elements, one at a time and in sequence, until the desired one is found. Linear search is the simplest search algorithm; it is a type of [brute-force search](https://en.wikipedia.org/wiki/Brute-force_search).
