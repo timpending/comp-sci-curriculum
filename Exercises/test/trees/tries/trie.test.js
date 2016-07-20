@@ -78,7 +78,7 @@ describe("Trie", function() {
 
       it("gets its own node if it is a word", function(){
         t.learn("a");
-        expect(t.characters.a.getWords()).to.deep.equal([""]);
+        expect(t.characters.a.getWords()).to.deep.equal(["a"]);
       });
 
       it("returns an empty array if there are no words", function(){
