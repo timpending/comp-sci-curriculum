@@ -24,7 +24,7 @@ describe("Singly Linked List", function() {
     it("Properly updates the head pointer", function() {
       list.push(2);
       expect(list.head.val).to.equal(2);
-      expect(list.head.next).to.equal(null);
+      expect(list.head.next).to.not.exist;
 
       list.push(4);
       expect(list.head.val).to.equal(2);
@@ -38,20 +38,20 @@ describe("Singly Linked List", function() {
     it("Always points the tail to the most recently pushed item", function() {
       list.push(2);
       expect(list.tail.val).to.equal(2);
-      expect(list.tail.next).to.equal(null);
+      expect(list.tail.next).to.not.exist;
 
       list.push(4);
       expect(list.tail.val).to.equal(4);
-      expect(list.tail.next).to.equal(null);
+      expect(list.tail.next).to.not.exist;
 
       list.push(10);
       expect(list.tail.val).to.equal(10);
-      expect(list.tail.next).to.equal(null);
+      expect(list.tail.next).to.not.exist;
     });
 
     it("Properly updates head.next on lists of size 1", function() {
       list.push(2);
-      expect(list.head.next).to.equal(null);
+      expect(list.head.next).to.not.exist;
 
       list.push(4);
       expect(list.head.next.val).to.equal(4);
@@ -65,8 +65,8 @@ describe("Singly Linked List", function() {
   });
 
   describe("pop", function() {
-    it("returns undefined when called on an empty list", function() {
-      expect(list.pop()).to.equal(undefined);
+    it("returns undefined or null when called on an empty list", function() {
+      expect(list.pop()).to.not.exist;
     });
 
     it("Updates the length properly when called", function() {
@@ -95,7 +95,7 @@ describe("Singly Linked List", function() {
       expect(list.pop()).to.equal(6);
       expect(list.pop()).to.equal(5);
       expect(list.pop()).to.equal(4);
-      expect(list.pop()).to.equal(null);
+      expect(list.pop()).to.not.exist;
     });
 
     it("Updates the tail with each call", function(){
@@ -111,11 +111,11 @@ describe("Singly Linked List", function() {
       expect(list.tail.val).to.equal(4);
 
       list.pop();
-      expect(list.tail).to.equal(null);
+      expect(list.tail).to.not.exist;
 
       // Popping on an empty list doesn't change the tail
       list.pop();
-      expect(list.tail).to.equal(null);
+      expect(list.tail).to.not.exist;
     });
 
     it("Updates the head when the only node in the list is popped", function() {
@@ -123,7 +123,7 @@ describe("Singly Linked List", function() {
       expect(list.head.val).to.equal(4);
 
       list.pop();
-      expect(list.head).to.equal(null);
+      expect(list.head).to.not.exist;
     });
 
     it("Using push and pop, we can store and remove values in order and the length will update properly", function() {
@@ -154,8 +154,8 @@ describe("Singly Linked List", function() {
 
       expect(list.pop()).to.equal(2);
       expect(list.length).to.equal(0);
-      expect(list.head.val).to.equal(null);
-      expect(list.tail.val).to.equal(null);
+      expect(list.head.val).to.not.exist;
+      expect(list.tail.val).to.not.exist;
     });
   });
 
@@ -174,7 +174,7 @@ describe("Singly Linked List", function() {
     it("Updates the head properly each time", function() {
       list.unshift(2);
       expect(list.head.val).to.equal(2);
-      expect(list.head.next).to.equal(null);
+      expect(list.head.next).to.not.exist;
 
       list.unshift(4);
       expect(list.head.val).to.equal(4);
@@ -188,15 +188,15 @@ describe("Singly Linked List", function() {
     it("Updates the tail on an empty list, but not otherwise", function() {
       list.unshift(2);
       expect(list.tail.val).to.equal(2);
-      expect(list.tail.next).to.equal(null);
+      expect(list.tail.next).to.not.exist;
 
       list.unshift(4);
       expect(list.tail.val).to.equal(2);
-      expect(list.tail.next).to.equal(null);
+      expect(list.tail.next).to.not.exist;;
 
       list.unshift(6);
       expect(list.tail.val).to.equal(2);
-      expect(list.tail.next).to.equal(null);
+      expect(list.tail.next).to.not.exist;
     });
   });
 
@@ -217,7 +217,7 @@ describe("Singly Linked List", function() {
       expect(list.length).to.equal(5);
       expect(list.get(2)).to.equal(2);
       expect(list.get(0)).to.equal(0);
-      expect(list.get(5)).to.equal(undefined);
+      expect(list.get(5)).to.not.exist;
       expect(list.get(4)).to.equal(4);
       expect(list.get(3)).to.equal(3);
     });
@@ -267,7 +267,7 @@ describe("Singly Linked List", function() {
       expect(list.get(1)).to.equal(2);
       expect(list.get(2)).to.equal(3);
       expect(list.get(3)).to.equal(5);
-      expect(list.get(4)).to.equal(undefined);
+      expect(list.get(4)).to.not.exist;
     });
   });
 
