@@ -6,10 +6,12 @@
   this node in the Trie represents a word.
 
   @param {boolean} isWord - a boolean which should only be true if this node is a word.
+  @param {string} character - the character this node represents
 */
-function Trie (isWord){
+function Trie (isWord, character){
   this.characters = {};
   this.isWord = isWord || null;
+  this.character = character || '';
 }
 
 /*
@@ -101,4 +103,4 @@ Trie.prototype.autoComplete = function(prefix){
 
 };
 
-module.exports =Trie;
+module.exports = Trie;
