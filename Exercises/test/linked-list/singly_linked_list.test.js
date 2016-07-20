@@ -154,8 +154,8 @@ describe("Singly Linked List", function() {
 
       expect(list.pop()).to.equal(2);
       expect(list.length).to.equal(0);
-      expect(list.head.val).to.not.exist;
-      expect(list.tail.val).to.not.exist;
+      expect(list.head).to.not.exist;
+      expect(list.tail).to.not.exist;
     });
   });
 
