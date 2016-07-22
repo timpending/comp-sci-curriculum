@@ -137,10 +137,11 @@ Finally, it's appropriate to take 10 minutes to explore the history of computer 
 #### Lessons
 
 * [Graphs](Unit-4/01-graphs.md)
-* [Modeling Problems With Graphs](Unit-4/01-graphs.md)
-* [Representing Graphs in Programs](Unit-4/01-graphs.md)
-* [Searching in Graphs](Unit-4/01-graphs.md)
-* [Advanced Graph Search](Unit-4/01-graphs.md)
+* [Modeling Problems With Graphs](Unit-4/02-modeling-problems-with-graphs.md)
+* [Representing Graphs in Programs](Unit-4/03-representing-graphs.md)
+* [Searching in Graphs](Unit-4/04-searching-graphs.md)
+* [Advanced Graph Search](Unit-4/05-advanced-search.md)
+* [Graph Review Questions](06-graph-review-questions.md)
 
 ## Unit 5: Hash Tables
 
