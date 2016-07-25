@@ -8,7 +8,7 @@ function HashTable(size, prime) {
 }
 
 /*
-  Given a key for the hashmap compute the index to store our value.
+  Given a key for the hashmap, compute the index to store our value.
   Specifically, this hash function will reduce a key to an integer, then
   multiplies it by this.prime, and finally returns
   (numKey * this.prime) % this.arr.length.
