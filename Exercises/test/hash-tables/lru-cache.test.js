@@ -1,16 +1,16 @@
 const expect = require('chai').expect;
-const makeCache = require('../../src/hash-tables/lru-cache')
+const LRUCache = require('../../src/hash-tables/lru-cache')
 
 describe("cache", () => {
 
   it("can put and get items", () => {
-    const cache = makeCache(1);
+    const cache = new LRUCache(1);
     cache.put("a", "hello");
     expect(cache.get("a")).to.equal("hello");
   })
 
   it("expires items older than the max", () => {
-    const cache = makeCache(1);
+    const cache = new LRUCache(1);
     cache.put("a", "hello");
     cache.put("b", "still here");
     expect(cache.get("a")).to.be.undefined;
@@ -18,7 +18,7 @@ describe("cache", () => {
   })
 
   it("expires the least recently used items", () => {
-    const cache = makeCache(2);
+    const cache = new LRUCache(2);
     cache.put("a", "hello");
     cache.put("b", "still here");
     expect(cache.get("a")).to.equal("hello");
@@ -29,7 +29,7 @@ describe("cache", () => {
   })
 
   it("works with a more complex example", () => {
-    const cache = makeCache(5);
+    const cache = new LRUCache(5);
     cache.put("a", "all");
     cache.put("b", "bees");
     cache.put("c", "can");

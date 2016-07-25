@@ -11,7 +11,7 @@ A hash table is a data structure that maps a set of keys to a set of values. A h
 
 In JavaScript, the closest data structure to a hash table is the object. In the following example notice how an object maps keys to values:
 
-```
+```js
 myObj = {};
 myObj['key'] = 'value';
 myObj[1] = 'another value';
