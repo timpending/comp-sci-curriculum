@@ -48,7 +48,7 @@ function printLetters(node) {
   console.log(node.name);
   node.children.forEach(function(childNode){
     printLetters(childNode)
-  }
+  });
 }
 ```
 

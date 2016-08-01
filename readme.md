@@ -37,6 +37,7 @@ Finally, it's appropriate to take 10 minutes to explore the history of computer 
 * [Memory Diagrams](Unit-0/02-memory-diagrams.md)
 * [Memory Diagrams Exercises](Unit-0/03-memory-diagrams-exercises.md)
 * [Binary-ASCII-UTF8](Unit-0/04-binary-ascii-utf8.md)
+* [Object-Oriented Programming](Unit-0/05-object-oriented-programming.md)
 
 
 ## Unit 1: Algorithms Fundamentals
