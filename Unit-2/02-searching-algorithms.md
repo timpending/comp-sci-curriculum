@@ -14,7 +14,7 @@ https://en.wikipedia.org/wiki/Linear_search
 
 ## Binary Search
 
-The key here is that we have a array of n element(s).
+The key here is that we have an array of n element(s).
 
 [Binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm) or half-interval search finds the position of a specified input value (the search "key") within an array sorted by key value.
 
