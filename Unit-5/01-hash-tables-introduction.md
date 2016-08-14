@@ -58,7 +58,7 @@ hash_key = (key * LARGE_PRIME) % smaller_array_size
 
 The function takes an arbitrary key, multiplies it times a large number to give it some entropy, and then mods the result by the size of a finite array (the max size of the new space).
 
-For example, if the smaller array has a length of 59, and the large prime number we choose is 122611, then our has function is:
+For example, if the smaller array has a length of 59, and the large prime number we choose is 122611, then our hash function is:
 
 ```js
 hash_key = (key * 122611) % 59
@@ -81,7 +81,7 @@ A collision occurs in the hash table when two keys map to the same index.  The h
 
 __Chaining__
 
-Chaining is way to resolve collisions in a hash table. Instead of starting with an empty array, each array element contains a data structure to store collisions.  A common data structure to use is a linked list, but others can be used such a binary search tree or even another hash table.  Whenever an element is inserted, both the key and the value are inserted into the data structure as that index.
+Chaining is a way to resolve collisions in a hash table. Instead of starting with an empty array, each array element contains a data structure to store collisions.  A common data structure to use is a linked list, but others can be used such as a binary search tree or even another hash table.  Whenever an element is inserted, both the key and the value are inserted into the data structure at that index.
 
 In the below image, the table is categorizing the values by the last name.
 
