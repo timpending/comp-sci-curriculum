@@ -89,7 +89,7 @@ __Specifically, prove that this claim is true or false__: Although bubble sort a
 
 ![insertion sort](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/173/insertionsort.gif)
 
-> __current item__ turns gets pulled off the image to the bottom of the screen. __current sorted item__ is colored green. The __sorted section__ is colored gold, and the __unsorted section__ is colored light blue. 
+> __current item__ turns gets pulled off the image to the bottom of the screen. __current sorted item__ is colored green. The __sorted section__ is colored gold, and the __unsorted section__ is colored light blue.
 
 Note that after step 1, the first two elements will be sorted. After step 2, the first three elements will be sorted. After repeating step 2 once, the first four elements will be sorted, and so on. After each step in the process, the sorted portion of the area increases in size by 1, until the entire array is sorted.
 
@@ -119,7 +119,7 @@ Complete the `sorting/sortingAlgorithmsSpecPart1.js` tests.
 
 Try to implement bubble sort, selection sort, and insertion sort (if you need a refresher on these algorithms, check out the [computer science curriculum](https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-2/04-sorting-intro.md)).
 
-For each of these algorithms, you'll also find it helpful to implement a `swap` function which swaps to values in an array.
+For each of these algorithms, you'll also find it helpful to implement a `swap` function which swaps two values in an array.
 
 Your goal is to get the tests for `bubbleSort`, `selectionSort`, `insertionSort`, and `swap` to pass. Note: The tests for the three searching algorithms are the same, but don't use the same implementation for each! The goal of this exercise is for you to be able to implement the different algorithms, even though they have the same effect on the arrays in the tests.
 

@@ -8,7 +8,7 @@ describe("Part 1", function() {
 
     let swap = require("../../src/sorting/sort-helpers").swap;
 
-    it("swaps to elements in an array", function() {
+    it("swaps two elements in an array", function() {
       let arr = [6, 7, 4, 3, 1];
       swap(arr, 1, 4);
       expect(arr).to.deep.equal([6, 1, 4, 3, 7]);
