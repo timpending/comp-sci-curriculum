@@ -1,9 +1,8 @@
-var file = require('../../src/linked-list/circular_linked_list')
-var CircularLinkedList = file.CircularLinkedList;
+var CircularLinkedList = require('../../src/linked-list/circular_linked_list')
 const expect = require("chai").expect;
 
 
-xdescribe('circular linked list', function() {
+describe('circular linked list', function() {
   var linkedList;
 
   beforeEach(function() {
