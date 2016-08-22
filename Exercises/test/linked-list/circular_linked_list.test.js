@@ -43,7 +43,6 @@ describe('circular linked list', function() {
   });
 
   describe('removeLast', function() {
-    var linkedList;
     var node;
 
     beforeEach(function() {
