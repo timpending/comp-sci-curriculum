@@ -2,7 +2,7 @@
 
 Computer Science fundamentals are important because it's better to understand something based on [first, basic principles](https://www.youtube.com/watch?v=L-s_3b5fRd8&t=22m38s). Before you dive in, you should know a few things:
 
-1. These are fascinating topics that I really hope you enjoy learning about. It's hard, but totally worth it!
+1. These are fascinating topics that we really hope you enjoy learning about. It's hard, but totally worth it!
 2. Most of this will be useful in the job interview process.
 3. You don't need a computer science degree to learn about computer science.
 
@@ -38,7 +38,6 @@ Finally, it's appropriate to take 10 minutes to explore the history of computer 
 * [Memory Diagrams Exercises](Unit-0/03-memory-diagrams-exercises.md)
 * [Binary-ASCII-UTF8](Unit-0/04-binary-ascii-utf8.md)
 * [Object-Oriented Programming](Unit-0/05-object-oriented-programming.md)
-
 
 ## Unit 1: Algorithms Fundamentals
 
