@@ -47,7 +47,7 @@ We could write that in JavaScript like so:
 function printLetters(node) {
   console.log(node.name);
   node.children.forEach(function(childNode){
-    printLetters(childNode)
+    printLetters(childNode);
   });
 }
 ```
@@ -90,7 +90,7 @@ Often times recursive problems require you to split a big problem into smaller p
 function firstGt(array, number) {
   for (var i = 0; i < array.length; i++) {
     if (array[i] > number) {
-      return array[i]
+      return array[i];
     }
   }
 }
@@ -104,9 +104,9 @@ Here, you could split this into two sub-problems:
 ```js
 function firstGt(array, number) {
   if (array[0] > number) {
-    return array[0]
+    return array[0];
   } else {
-    return firstGt(array.slice(1), number)
+    return firstGt(array.slice(1), number);
   }
 }
 ```
