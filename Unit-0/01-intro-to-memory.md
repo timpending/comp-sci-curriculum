@@ -28,7 +28,7 @@ JavaScript, Python, Ruby and PHP are all very high level languages. When we say 
 One of the biggest things that higher level languages (like JavaScript, Python or Ruby) abstract away is Memory Management. With a language like C or C++, you must manually _allocate_ and _deallocate_ memory as you use it. Memory Allocation really just means that you reserve some space in memory, telling the operating system to reserve that space for your program. Inside of the program, your program has to decide how much space to allocate for any given type of information, because a string is usually much larger than a number. All of these considerations go into managing memory, but in higher level languages these concerns are handled automatically, such as in the following javascript code:
 
 ```javascript
-var num = 123
+var num = 123;
 ```
 In the above JavaScript code, memory is allocated for a number.  But you do not have to write any extra code to make sure that memory exists; this is handled for you.  Additionally, when that memory is no longer needed, it will be automatically removed from your computer.  This process is known as __garbage collection__.
 
@@ -92,7 +92,7 @@ In your own words, write down the following:
 
 1. What are the 4 levels of memory? Where are they located?
 
-2. If I declare a variable, such as `var x = 5`, where is that stored? What about `var arr = [3,5,6,73,56]`?
+2. If I declare a variable, such as `var x = 5;`, where is that stored? What about `var arr = [3,5,6,73,56];`?
 
 3. If I connect to a database on another computer, what level of memory is that?
 
