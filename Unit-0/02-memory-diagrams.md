@@ -103,7 +103,7 @@ So draw a dark line at the bottom to represent prototypes, and an arrow to point
 ### Putting it all together
 
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/377/memory-diagram-example.png
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/377/memory-diagram-example.png)
 
 ## Summary
 
