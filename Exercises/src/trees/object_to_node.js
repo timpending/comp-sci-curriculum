@@ -42,6 +42,29 @@
 */
 
 var Node = require('./node');
+var object = {
+  name: 'a',
+  children: [
+    {
+      name: 'b',
+      children: [
+        {
+          name: 'd',
+          children: []
+        },
+        {
+          name: 'e',
+          children: []
+        },
+      ]
+    },
+    {
+      name: 'c',
+      children: []
+    }
+  ]
+}
+
 //Start on the above file- you'll want to use the class from that file!
 //It has properties already set up for you, such as 'name' and 'children'.
 //It also has a method, addChild(), which is essential.
@@ -49,6 +72,42 @@ var Node = require('./node');
 
 //Make sure that this function calls new Node()
 var objectToNode = function(object) {
+  var node = new Node(object['name']);
+  object.children.forEach((chil)=>{
+    node.addChild(objectToNode(chil))
+  })
+  return node
 };
+
+// console.log(`node: ${objectToNode(object)}`);
+
+var nodeCount = function(object){
+  let count = 1
+  var node = new Node(object['name']);
+  object.children.forEach((chil)=>{
+    if (chil.children.length == 0){
+      count++
+    } else {
+      count+=nodeCount(chil);
+    }
+    node.addChild(objectToNode(chil))
+  })
+  return count
+};
+
+console.log(nodeCount(object));
+// console.log(`nodeCount: ${objectToNode(object)}`);
+
+var treeHeight = function(object){
+  let height = 0;
+  var node = new Node(object['name']);
+  object.children.forEach((chil)=>{
+    node.addChild(objectToNode(chil))
+    height++
+  })
+  return height
+};
+
+// console.log(`treeHeight: ${treeHeight(object)}`);
 
 module.exports = objectToNode;
